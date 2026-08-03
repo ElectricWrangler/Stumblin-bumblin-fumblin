@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stumblin' Bumblin' & Fumblin'</title>
+  <meta name="description" content="The official home of the Stumblin' Bumblin' & Fumblin' fantasy football league.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">SBF</span>
+      <div>
+        <p class="eyebrow">Fantasy Football Headquarters</p>
+        <h1>Stumblin' Bumblin' & Fumblin'</h1>
+      </div>
+    </div>
+    <span id="season-pill" class="pill">Loading league…</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">2026 Season</p>
+        <h2 id="league-name">League Central</h2>
+        <p id="league-status" class="hero-copy">Connecting to Sleeper league data…</p>
+      </div>
+      <div class="hero-card">
+        <span>Latest Edition</span>
+        <strong>Preseason Headquarters</strong>
+        <p>The draft recap and weekly newsletters will appear here.</p>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="League ticker">
+      <span>POWER RANKINGS</span>
+      <span>DRAFT GRADES</span>
+      <span>FRAUD WATCH</span>
+      <span>VEGAS ODDS</span>
+      <span>WEEKLY AWARDS</span>
+    </section>
+
+    <section class="dashboard">
+      <div class="panel standings-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">League Table</p>
+            <h3>Standings</h3>
+          </div>
+          <span id="team-count" class="muted"></span>
+        </div>
+        <div id="standings" class="standings">
+          <p class="loading">Loading teams…</p>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <p class="eyebrow">Commissioner's Desk</p>
+        <h3>Welcome to League HQ</h3>
+        <p>This site will automatically pull Sleeper results, standings and rosters. Weekly recaps, power rankings and awards will be published here throughout the season.</p>
+        <div class="stat-grid">
+          <div><strong id="roster-count">—</strong><span>Teams</span></div>
+          <div><strong id="week-number">—</strong><span>Week</span></div>
+          <div><strong id="league-year">2026</strong><span>Season</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">League Members</p>
+          <h3>Owners & Teams</h3>
+        </div>
+      </div>
+      <div id="teams" class="team-grid">
+        <p class="loading">Loading league members…</p>
+      </div>
+    </section>
+
+    <section class="panel newsletter">
+      <p class="eyebrow">The Stumblin' Bumblin' Times</p>
+      <h3>Weekly Recaps Coming Soon</h3>
+      <p>After the draft, this section will feature team grades, biggest steals, biggest reaches, matchup recaps, power rankings, Vegas-style odds, Fraud Watch and weekly awards.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Powered by Sleeper public league data</span>
+    <span>League ID: 1371503267833475072</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
