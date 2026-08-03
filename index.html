@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stumblin' Bumblin' & Fumblin'</title>
+  <title>SBF Network | Fantasy Football Headquarters</title>
   <meta name="description" content="The official home of the Stumblin' Bumblin' & Fumblin' fantasy football league.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,87 +11,253 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark">SBF</span>
-      <div>
-        <p class="eyebrow">Fantasy Football Headquarters</p>
-        <h1>Stumblin' Bumblin' & Fumblin'</h1>
-      </div>
-    </div>
-    <span id="season-pill" class="pill">Loading league…</span>
+  <header class="site-header">
+    <a class="logo-wrap" href="#home" aria-label="SBF Network home">
+      <span class="logo-box">SBF</span>
+      <span class="logo-copy">
+        <small>Fantasy Football</small>
+        <strong>Network</strong>
+      </span>
+    </a>
+
+    <button id="menu-button" class="menu-button" aria-expanded="false" aria-controls="main-nav">☰</button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="#home" data-section="home" class="active">Home</a>
+      <a href="#standings" data-section="standings">Standings</a>
+      <a href="#teams" data-section="teams">Teams</a>
+      <a href="#draft" data-section="draft">Draft</a>
+      <a href="#recaps" data-section="recaps">Recaps</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">2026 Season</p>
-        <h2 id="league-name">League Central</h2>
-        <p id="league-status" class="hero-copy">Connecting to Sleeper league data…</p>
-      </div>
-      <div class="hero-card">
-        <span>Latest Edition</span>
-        <strong>Preseason Headquarters</strong>
-        <p>The draft recap and weekly newsletters will appear here.</p>
-      </div>
-    </section>
-
-    <section class="ticker" aria-label="League ticker">
+  <div class="scorebar">
+    <span id="status-label">CONNECTING TO SLEEPER</span>
+    <div class="scorebar-track">
       <span>POWER RANKINGS</span>
-      <span>DRAFT GRADES</span>
+      <span>CHAMPIONSHIP ODDS</span>
       <span>FRAUD WATCH</span>
-      <span>VEGAS ODDS</span>
       <span>WEEKLY AWARDS</span>
-    </section>
+      <span>DRAFT GRADES</span>
+    </div>
+  </div>
 
-    <section class="dashboard">
-      <div class="panel standings-panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">League Table</p>
-            <h3>Standings</h3>
+  <main>
+    <section id="home" class="page-section active">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Official League Media Home</p>
+          <h1 id="league-name">Stumblin' Bumblin' & Fumblin'</h1>
+          <p id="league-meta">Loading league information…</p>
+          <div class="hero-actions">
+            <button class="primary-button" data-go="recaps">Read Latest Recap</button>
+            <button class="secondary-button" data-go="standings">View Standings</button>
           </div>
-          <span id="team-count" class="muted"></span>
         </div>
-        <div id="standings" class="standings">
-          <p class="loading">Loading teams…</p>
-        </div>
-      </div>
 
-      <aside class="panel">
-        <p class="eyebrow">Commissioner's Desk</p>
-        <h3>Welcome to League HQ</h3>
-        <p>This site will automatically pull Sleeper results, standings and rosters. Weekly recaps, power rankings and awards will be published here throughout the season.</p>
-        <div class="stat-grid">
-          <div><strong id="roster-count">—</strong><span>Teams</span></div>
-          <div><strong id="week-number">—</strong><span>Week</span></div>
-          <div><strong id="league-year">2026</strong><span>Season</span></div>
-        </div>
-      </aside>
+        <article class="feature-card">
+          <span class="feature-label">Latest Edition</span>
+          <h2>Preseason Headquarters</h2>
+          <p>The draft recap, power rankings, championship odds and weekly chaos will live here.</p>
+          <button data-go="draft">Enter Draft Hub →</button>
+        </article>
+      </section>
+
+      <section class="headline-grid">
+        <article class="headline-card lead-story">
+          <p class="eyebrow">Top Story</p>
+          <h2>The league is live. The bad decisions are coming.</h2>
+          <p>Ten teams enter draft season undefeated. By October, at least three managers will blame injuries, luck and the commissioner.</p>
+        </article>
+
+        <article class="mini-card">
+          <span class="mini-label">Teams</span>
+          <strong id="home-team-count">—</strong>
+          <p>Managers chasing one trophy.</p>
+        </article>
+
+        <article class="mini-card">
+          <span class="mini-label">Current Week</span>
+          <strong id="home-week">—</strong>
+          <p>Updates automatically from Sleeper.</p>
+        </article>
+      </section>
+
+      <section class="two-column">
+        <article class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">League Table</p>
+              <h2>Standings Snapshot</h2>
+            </div>
+            <button class="text-button" data-go="standings">Full standings →</button>
+          </div>
+          <div id="home-standings" class="standings-list loading-state">Loading teams…</div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The Book</p>
+              <h2>Championship Odds</h2>
+            </div>
+          </div>
+          <div id="home-odds" class="odds-list loading-state">Building the early market…</div>
+          <p class="fine-print">Entertainment-only odds generated from current standings and points.</p>
+        </article>
+      </section>
+
+      <section class="three-column">
+        <article class="panel feature-panel">
+          <span class="feature-icon">🚨</span>
+          <p class="eyebrow">Fraud Watch</p>
+          <h3>No suspects yet</h3>
+          <p>Everyone is 0-0. Enjoy the innocence while it lasts.</p>
+        </article>
+
+        <article class="panel feature-panel">
+          <span class="feature-icon">📈</span>
+          <p class="eyebrow">Stock Up</p>
+          <h3>Managers who showed up</h3>
+          <p>The first victory of the season is remembering the draft time.</p>
+        </article>
+
+        <article class="panel feature-panel">
+          <span class="feature-icon">🏆</span>
+          <p class="eyebrow">Weekly Award</p>
+          <h3>Preseason Optimist</h3>
+          <p>A ten-way tie. Every manager currently believes they drafted a champion.</p>
+        </article>
+      </section>
     </section>
 
-    <section class="panel">
-      <div class="panel-heading">
+    <section id="standings" class="page-section">
+      <div class="page-hero">
+        <p class="eyebrow">League Table</p>
+        <h1>Standings & Power Rankings</h1>
+        <p>Live records from Sleeper with an SBF power score based on wins, points and momentum.</p>
+      </div>
+
+      <section class="two-column">
+        <article class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Official</p>
+              <h2>Standings</h2>
+            </div>
+            <span id="standings-team-count" class="badge">— teams</span>
+          </div>
+          <div id="full-standings" class="standings-list loading-state">Loading standings…</div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">SBF Analytics</p>
+              <h2>Power Rankings</h2>
+            </div>
+          </div>
+          <div id="power-rankings" class="power-list loading-state">Calculating rankings…</div>
+        </article>
+      </section>
+    </section>
+
+    <section id="teams" class="page-section">
+      <div class="page-hero">
+        <p class="eyebrow">League Headquarters</p>
+        <h1>Teams & Owners</h1>
+        <p>Every franchise, owner and current record in one place.</p>
+      </div>
+      <div id="team-grid" class="team-grid loading-state">Loading teams…</div>
+    </section>
+
+    <section id="draft" class="page-section">
+      <div class="page-hero">
+        <p class="eyebrow">Draft Central</p>
+        <h1>2026 Draft Hub</h1>
+        <p>Draft order, grades, steals, reaches and post-draft power rankings will publish here.</p>
+      </div>
+
+      <section class="draft-banner">
         <div>
-          <p class="eyebrow">League Members</p>
-          <h3>Owners & Teams</h3>
+          <p class="eyebrow">Coming After Draft Night</p>
+          <h2>The SBF Draft Night Special</h2>
+          <p>Every roster will receive a grade, best pick, biggest reach, team roast and championship odds.</p>
         </div>
-      </div>
-      <div id="teams" class="team-grid">
-        <p class="loading">Loading league members…</p>
-      </div>
+        <div class="draft-grade">A+</div>
+      </section>
+
+      <section class="three-column">
+        <article class="panel">
+          <p class="eyebrow">Best Draft</p>
+          <h3>To be determined</h3>
+          <p>The manager who lets value fall instead of drafting entirely on vibes.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Biggest Reach</p>
+          <h3>Pending disaster</h3>
+          <p>Someone will take “their guy” two rounds early and demand respect.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Draft Day MVP</p>
+          <h3>Awaiting kickoff</h3>
+          <p>The spreadsheet warrior is preparing as we speak.</p>
+        </article>
+      </section>
+
+      <article class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Draft Order</p>
+            <h2>League Franchises</h2>
+          </div>
+        </div>
+        <div id="draft-teams" class="draft-order loading-state">Loading franchises…</div>
+      </article>
     </section>
 
-    <section class="panel newsletter">
-      <p class="eyebrow">The Stumblin' Bumblin' Times</p>
-      <h3>Weekly Recaps Coming Soon</h3>
-      <p>After the draft, this section will feature team grades, biggest steals, biggest reaches, matchup recaps, power rankings, Vegas-style odds, Fraud Watch and weekly awards.</p>
+    <section id="recaps" class="page-section">
+      <div class="page-hero">
+        <p class="eyebrow">The Stumblin' Bumblin' Times</p>
+        <h1>Weekly Recap Archive</h1>
+        <p>Each Tuesday’s newsletter will be saved here so the whole season becomes one running story.</p>
+      </div>
+
+      <article class="recap-card featured-recap">
+        <div>
+          <span class="recap-week">Preseason Edition</span>
+          <h2>Hope Springs Eternal Until Week 3</h2>
+          <p>The league site is live. Draft coverage is next. Regrettable trade offers will follow shortly after.</p>
+        </div>
+        <span class="recap-arrow">→</span>
+      </article>
+
+      <div class="archive-grid">
+        <article class="recap-card locked">
+          <span class="recap-week">Draft Night</span>
+          <h3>Draft grades and roster roasts</h3>
+          <p>Unlocks after your Sleeper draft is completed.</p>
+        </article>
+        <article class="recap-card locked">
+          <span class="recap-week">Week 1</span>
+          <h3>The opening-week overreaction</h3>
+          <p>Scores, awards, fraud watch and updated odds.</p>
+        </article>
+        <article class="recap-card locked">
+          <span class="recap-week">Week 2</span>
+          <h3>First signs of panic</h3>
+          <p>The waiver-wire mistakes begin.</p>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer>
-    <span>Powered by Sleeper public league data</span>
-    <span>League ID: 1371503267833475072</span>
+    <div>
+      <strong>SBF Network</strong>
+      <span>Stumblin' Bumblin' & Fumblin'</span>
+    </div>
+    <span id="footer-status">Powered by Sleeper public league data</span>
   </footer>
 
   <script src="app.js"></script>
