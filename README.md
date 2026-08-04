@@ -1,41 +1,27 @@
-# SBF Network — Version 2
+# SBF Network Version 5
 
-Official companion website for the **Stumblin' Bumblin' & Fumblin'** fantasy football league.
+Version 5 restructures the website into small reusable modules.
 
-## What's included
+## New structure
 
-- New SBF Network branding
-- Mobile navigation
-- Live Sleeper league data
-- Standings
-- SBF power rankings
-- Championship odds board
-- Team and owner directory
-- Draft hub
-- Weekly recap archive
-- Responsive phone-first design
+- `app.js` — routing and startup
+- `components/data.js` — Sleeper API and shared calculations
+- `components/home.js` — homepage
+- `components/matchups.js` — weekly matchup center
+- `components/standings.js` — standings and power rankings
+- `components/teams.js` — team cards
+- `components/recaps.js` — recap reader and archive
+- `styles.css` — app-wide responsive design
 
 ## Install
 
-Replace the current repository files with:
+Upload all files and folders to the root of the GitHub repository.
 
-- `index.html`
-- `styles.css`
-- `app.js`
-- `README.md`
+Keep the existing:
 
-GitHub Pages will usually update within a few minutes.
+- `.github/`
+- `recaps/`
 
-## League
+folders already in the repository.
 
-Sleeper League ID: `1371503267833475072`
-
-## Next phase
-
-The next update will add:
-
-- Completed-draft import
-- Real draft grades and team roasts
-- GitHub Actions weekly automation
-- AI-generated Tuesday newsletters
-- Permanent weekly recap archive
+GitHub Pages will publish automatically after the commit.
