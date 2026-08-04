@@ -35,7 +35,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           REQUESTED_WEEK: ${{ inputs.week }}
           LEAGUE_ID: "1371503267833475072"
-          OPENAI_MODEL: "gpt-5.6-luna"
+          OPENAI_MODEL: "gpt-5.6"
         run: |
           python - <<'PY'
           import json
