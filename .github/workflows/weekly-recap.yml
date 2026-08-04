@@ -1,0 +1,245 @@
+name: Generate SBF Weekly Recap
+
+on:
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Sleeper week to recap (leave blank for automatic)"
+        required: false
+        type: string
+  schedule:
+    - cron: "17 15 * * 2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sbf-weekly-recap
+  cancel-in-progress: false
+
+jobs:
+  generate-recap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate recap from Sleeper
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REQUESTED_WEEK: ${{ inputs.week }}
+          LEAGUE_ID: "1371503267833475072"
+          OPENAI_MODEL: "gpt-5.6-luna"
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import pathlib
+          import urllib.error
+          import urllib.request
+          from datetime import datetime, timezone
+
+          LEAGUE_ID = os.environ["LEAGUE_ID"]
+          OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+          MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.6-luna")
+          requested_week = os.environ.get("REQUESTED_WEEK", "").strip()
+          SLEEPER = "https://api.sleeper.app/v1"
+
+          def get_json(url):
+              request = urllib.request.Request(url, headers={"User-Agent": "SBF-Network/1.0"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  return json.load(response)
+
+          def post_json(url, payload, headers):
+              data = json.dumps(payload).encode("utf-8")
+              request = urllib.request.Request(url, data=data, headers=headers, method="POST")
+              try:
+                  with urllib.request.urlopen(request, timeout=120) as response:
+                      return json.load(response)
+              except urllib.error.HTTPError as error:
+                  detail = error.read().decode("utf-8", errors="replace")
+                  raise RuntimeError(f"OpenAI API returned {error.code}: {detail}") from error
+
+          league = get_json(f"{SLEEPER}/league/{LEAGUE_ID}")
+          users = get_json(f"{SLEEPER}/league/{LEAGUE_ID}/users")
+          rosters = get_json(f"{SLEEPER}/league/{LEAGUE_ID}/rosters")
+          state = get_json(f"{SLEEPER}/state/nfl")
+
+          users_by_id = {user["user_id"]: user for user in users}
+          roster_info = {}
+
+          for roster in rosters:
+              roster_id = roster["roster_id"]
+              owner = users_by_id.get(roster.get("owner_id"), {})
+              settings = roster.get("settings") or {}
+              metadata = owner.get("metadata") or {}
+              roster_info[roster_id] = {
+                  "roster_id": roster_id,
+                  "owner": owner.get("display_name") or f"Owner {roster_id}",
+                  "team": metadata.get("team_name") or owner.get("display_name") or f"Team {roster_id}",
+                  "wins": settings.get("wins", 0),
+                  "losses": settings.get("losses", 0),
+                  "ties": settings.get("ties", 0),
+                  "points_for": settings.get("fpts", 0) + settings.get("fpts_decimal", 0) / 100,
+                  "points_against": settings.get("fpts_against", 0) + settings.get("fpts_against_decimal", 0) / 100,
+              }
+
+          def get_matchups(week):
+              return get_json(f"{SLEEPER}/league/{LEAGUE_ID}/matchups/{week}")
+
+          if requested_week:
+              week = int(requested_week)
+              matchups = get_matchups(week)
+          else:
+              candidate = int(state.get("leg") or state.get("week") or 1)
+              matchups = get_matchups(candidate)
+              has_scores = any(float(row.get("points") or 0) > 0 for row in matchups)
+              if not has_scores and candidate > 1:
+                  candidate -= 1
+                  matchups = get_matchups(candidate)
+              week = candidate
+
+          grouped = {}
+          for row in matchups:
+              matchup_id = row.get("matchup_id")
+              if matchup_id is None:
+                  continue
+              grouped.setdefault(str(matchup_id), []).append({
+                  **roster_info.get(row["roster_id"], {
+                      "roster_id": row["roster_id"],
+                      "team": f"Team {row['roster_id']}",
+                      "owner": "Unknown"
+                  }),
+                  "week_points": round(float(row.get("points") or 0), 2),
+              })
+
+          games = []
+          for matchup_id, teams in grouped.items():
+              teams = sorted(teams, key=lambda team: team["week_points"], reverse=True)
+              games.append({"matchup_id": matchup_id, "teams": teams})
+
+          games.sort(key=lambda game: max([team["week_points"] for team in game["teams"]] or [0]), reverse=True)
+
+          standings = sorted(
+              roster_info.values(),
+              key=lambda team: (-team["wins"], team["losses"], -team["points_for"])
+          )
+
+          transactions = []
+          try:
+              raw_transactions = get_json(f"{SLEEPER}/league/{LEAGUE_ID}/transactions/{week}")
+              for transaction in raw_transactions[:25]:
+                  transactions.append({
+                      "type": transaction.get("type"),
+                      "status": transaction.get("status"),
+                      "roster_ids": transaction.get("roster_ids", []),
+                      "adds": transaction.get("adds") or {},
+                      "drops": transaction.get("drops") or {},
+                      "waiver_bid": (transaction.get("settings") or {}).get("waiver_bid"),
+                  })
+          except Exception as error:
+              print(f"Transactions unavailable: {error}")
+
+          league_data = {
+              "league": league.get("name"),
+              "season": league.get("season"),
+              "week": week,
+              "generated_at": datetime.now(timezone.utc).isoformat(),
+              "standings": standings,
+              "matchups": games,
+              "transactions": transactions,
+          }
+
+          prompt = f"""
+          You are the lead writer for SBF Network, covering a private fantasy-football league called {league_data['league']}.
+
+          Write a polished Week {week} recap using ONLY the supplied data.
+          Never invent player performances, injuries, trades, quotes, draft picks, or events not present in the data.
+
+          Tone:
+          - ESPN-style sports coverage mixed with funny league trash talk
+          - confident, energetic, readable on a phone
+          - roast bad results without being hateful
+          - do not use profanity stronger than mild cable-TV language
+
+          Include:
+          1. A dramatic headline
+          2. Opening summary
+          3. Every matchup with scores and a short recap
+          4. Biggest win and closest game, when supported by the scores
+          5. Updated power rankings for every team
+          6. Fraud Watch
+          7. Stock Up and Stock Down
+          8. Weekly awards
+          9. Vegas-style championship odds marked as entertainment only
+          10. A closing commissioner-style message
+
+          Return clean HTML only. Use h2, h3, p, ul, li, strong and table.
+          Do not return markdown fences, a full HTML document, scripts, styles, links, or unsupported factual claims.
+
+          LEAGUE DATA:
+          {json.dumps(league_data, indent=2)}
+          """
+
+          response = post_json(
+              "https://api.openai.com/v1/responses",
+              {
+                  "model": MODEL,
+                  "input": prompt,
+                  "reasoning": {"effort": "low"},
+                  "max_output_tokens": 6000,
+              },
+              {
+                  "Authorization": f"Bearer {OPENAI_API_KEY}",
+                  "Content-Type": "application/json",
+              }
+          )
+
+          recap_html = response.get("output_text", "").strip()
+          if not recap_html:
+              text_parts = []
+              for output in response.get("output", []):
+                  for content in output.get("content", []):
+                      if content.get("type") == "output_text":
+                          text_parts.append(content.get("text", ""))
+              recap_html = "\n".join(text_parts).strip()
+
+          if not recap_html:
+              raise RuntimeError("OpenAI returned no recap text.")
+
+          recap_dir = pathlib.Path("recaps")
+          recap_dir.mkdir(exist_ok=True)
+
+          record = {
+              "week": week,
+              "season": league.get("season"),
+              "league": league.get("name"),
+              "generated_at": league_data["generated_at"],
+              "headline": f"Week {week} Recap",
+              "html": recap_html,
+          }
+
+          week_path = recap_dir / f"week-{week}.json"
+          week_path.write_text(json.dumps(record, indent=2), encoding="utf-8")
+          (recap_dir / "latest.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
+
+          print(f"Generated {week_path}")
+          PY
+
+      - name: Commit generated recap
+        run: |
+          git config user.name "SBF Network Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add recaps/
+          if git diff --cached --quiet; then
+            echo "No recap changes to commit."
+          else
+            git commit -m "Publish automated weekly recap"
+            git push
+          fi
