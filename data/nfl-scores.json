@@ -1,63 +1,28 @@
 {
-  "week": 1,
-  "updatedAt": "2026-09-10T20:15:00-04:00",
+  "week": "Preseason 1",
+  "updatedAt": "2026-08-07T13:55:49.769Z",
   "games": [
     {
-      "id": "test-1",
-      "status": "live",
-      "detail": "Q3 • 8:42",
-      "network": "NBC",
-      "startTime": "2026-09-10T20:20:00-04:00",
-      "away": {
-        "name": "Dallas Cowboys",
-        "record": "0-0",
-        "score": 17,
-        "logo": ""
-      },
-      "home": {
-        "name": "Philadelphia Eagles",
-        "record": "0-0",
-        "score": 21,
-        "logo": ""
-      }
-    },
-    {
-      "id": "test-2",
-      "status": "scheduled",
-      "detail": "",
-      "network": "CBS",
-      "startTime": "2026-09-13T13:00:00-04:00",
-      "away": {
-        "name": "Pittsburgh Steelers",
-        "record": "0-0",
-        "score": null,
-        "logo": ""
-      },
-      "home": {
-        "name": "Cleveland Browns",
-        "record": "0-0",
-        "score": null,
-        "logo": ""
-      }
-    },
-    {
-      "id": "test-3",
+      "id": "401873271",
       "status": "final",
       "detail": "Final",
-      "network": "FOX",
-      "startTime": "2026-09-13T13:00:00-04:00",
+      "network": "NBC",
+      "startTime": "2026-08-07T00:00Z",
       "away": {
-        "name": "Buffalo Bills",
+        "name": "Carolina Panthers",
+        "abbr": "CAR",
         "record": "1-0",
-        "score": 31,
-        "logo": ""
+        "score": 33,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "home": {
-        "name": "New England Patriots",
+        "name": "Arizona Cardinals",
+        "abbr": "ARI",
         "record": "0-1",
-        "score": 20,
-        "logo": ""
-      }
+        "score": 30,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+      },
+      "note": "Hall of Fame Game"
     }
   ]
 }
