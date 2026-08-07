@@ -630,4 +630,224 @@ main {
     border-top: 1px solid var(--line);
     box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.35);
   }
+}/* ===== 6-button mobile navigation ===== */
+@media (max-width: 600px) {
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .mobile-nav a {
+    min-width: 0;
+    padding: 6px 2px;
+  }
+
+  .mobile-nav a span {
+    font-size: 18px;
+  }
+
+  .mobile-nav a small {
+    font-size: 8px;
+    white-space: nowrap;
+  }
+}/* ===== NFL ScoreCenter ===== */
+
+.nfl-scorecenter-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.nfl-scorecenter-meta > div {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+}
+
+.nfl-scorecenter-meta span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.nfl-scorecenter-meta strong {
+  font-size: 22px;
+}
+
+.nfl-games-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.nfl-game-card {
+  background: linear-gradient(
+    145deg,
+    rgba(27, 77, 133, 0.95),
+    rgba(13, 30, 54, 0.98)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+}
+
+.nfl-game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nfl-status {
+  font-weight: 800;
+}
+
+.nfl-status.live {
+  color: #ff6961;
+}
+
+.nfl-status.final {
+  color: #f4c542;
+}
+
+.nfl-status.scheduled {
+  color: var(--muted);
+}
+
+.nfl-team-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.nfl-team-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.nfl-team-info img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.nfl-team-info div {
+  min-width: 0;
+}
+
+.nfl-team-info strong {
+  display: block;
+  font-size: 17px;
+  line-height: 1.05;
+}
+
+.nfl-team-info span {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.nfl-score {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.nfl-game-note {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .nfl-games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nfl-scorecenter-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nfl-game-card {
+    padding: 14px;
+  }
+
+  .nfl-team-info strong {
+    font-size: 15px;
+  }
+
+  .nfl-score {
+    font-size: 28px;
+  }
+}/* ===== NFL ScoreCenter polish ===== */
+
+.nfl-score-section {
+  margin-top: 28px;
+}
+
+.nfl-score-section:first-of-type {
+  margin-top: 18px;
+}
+
+.nfl-team-abbr {
+  font-size: 18px !important;
+}
+
+.nfl-team-name {
+  font-size: 11px !important;
+  color: var(--muted);
+}
+
+.nfl-team-record {
+  font-size: 9px !important;
+  opacity: 0.8;
+}
+
+.nfl-team-logo {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.live-games .heading h2 {
+  color: #ff6961;
+}
+
+.final-games .heading h2 {
+  color: #f4c542;
+}
+
+@media (max-width: 600px) {
+  .nfl-team-logo {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .nfl-team-abbr {
+    font-size: 16px !important;
+  }
+
+  .nfl-score-section {
+    margin-top: 24px;
+  }
 }
