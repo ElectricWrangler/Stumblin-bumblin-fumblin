@@ -1,0 +1,63 @@
+{
+  "week": 1,
+  "updatedAt": "2026-09-10T20:15:00-04:00",
+  "games": [
+    {
+      "id": "test-1",
+      "status": "live",
+      "detail": "Q3 • 8:42",
+      "network": "NBC",
+      "startTime": "2026-09-10T20:20:00-04:00",
+      "away": {
+        "name": "Dallas Cowboys",
+        "record": "0-0",
+        "score": 17,
+        "logo": ""
+      },
+      "home": {
+        "name": "Philadelphia Eagles",
+        "record": "0-0",
+        "score": 21,
+        "logo": ""
+      }
+    },
+    {
+      "id": "test-2",
+      "status": "scheduled",
+      "detail": "",
+      "network": "CBS",
+      "startTime": "2026-09-13T13:00:00-04:00",
+      "away": {
+        "name": "Pittsburgh Steelers",
+        "record": "0-0",
+        "score": null,
+        "logo": ""
+      },
+      "home": {
+        "name": "Cleveland Browns",
+        "record": "0-0",
+        "score": null,
+        "logo": ""
+      }
+    },
+    {
+      "id": "test-3",
+      "status": "final",
+      "detail": "Final",
+      "network": "FOX",
+      "startTime": "2026-09-13T13:00:00-04:00",
+      "away": {
+        "name": "Buffalo Bills",
+        "record": "1-0",
+        "score": 31,
+        "logo": ""
+      },
+      "home": {
+        "name": "New England Patriots",
+        "record": "0-1",
+        "score": 20,
+        "logo": ""
+      }
+    }
+  ]
+}
