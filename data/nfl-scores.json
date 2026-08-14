@@ -1,18 +1,18 @@
 {
   "week": "Preseason 2",
-  "updatedAt": "2026-08-14T05:20:07.608Z",
+  "updatedAt": "2026-08-14T23:49:25.425Z",
   "games": [
     {
       "id": "401873278",
-      "status": "scheduled",
-      "detail": "8/14 - 7:00 PM EDT",
+      "status": "live",
+      "detail": "13:35 - 2nd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-14T23:00Z",
       "away": {
         "name": "Denver Broncos",
         "abbr": "DEN",
         "record": "0-0",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "home": {
@@ -26,8 +26,8 @@
     },
     {
       "id": "401873276",
-      "status": "scheduled",
-      "detail": "8/14 - 7:00 PM EDT",
+      "status": "live",
+      "detail": "12:48 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-14T23:00Z",
       "away": {
@@ -41,22 +41,22 @@
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "0-0",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "note": ""
     },
     {
       "id": "401873277",
-      "status": "scheduled",
-      "detail": "8/14 - 7:00 PM EDT",
+      "status": "live",
+      "detail": "15:00 - 2nd",
       "network": "WUSA9",
       "startTime": "2026-08-14T23:00Z",
       "away": {
         "name": "Miami Dolphins",
         "abbr": "MIA",
         "record": "0-0",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
       },
       "home": {
