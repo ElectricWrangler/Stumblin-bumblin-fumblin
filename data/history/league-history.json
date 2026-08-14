@@ -1,0 +1,5672 @@
+{
+  "generatedAt": "2026-08-14T18:08:07.273Z",
+  "seasons": [
+    {
+      "year": 2022,
+      "leagueName": "Stumblin Bumblin and Fumblin",
+      "teams": [
+        {
+          "id": 1,
+          "name": "Slim Pickens",
+          "abbrev": "SLIM",
+          "owners": [
+            "Bobbyg309"
+          ],
+          "finalStanding": 1,
+          "playoffSeed": 2,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1733.5799999999997,
+          "pointsAgainst": 1714.1999999999998
+        },
+        {
+          "id": 2,
+          "name": "Villeland Oogers ",
+          "abbrev": "OOGs",
+          "owners": [
+            "ESPNFAN3753567837"
+          ],
+          "finalStanding": 4,
+          "playoffSeed": 5,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1871.86,
+          "pointsAgainst": 1735.2000000000003
+        },
+        {
+          "id": 3,
+          "name": "Davantes Inferno",
+          "abbrev": "MJV",
+          "owners": [
+            "ESPNFAN5697222911"
+          ],
+          "finalStanding": 5,
+          "playoffSeed": 6,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1657.96,
+          "pointsAgainst": 1563.7000000000003
+        },
+        {
+          "id": 4,
+          "name": "Nuts 2 Butts",
+          "abbrev": "N2B",
+          "owners": [
+            "jrosoler"
+          ],
+          "finalStanding": 8,
+          "playoffSeed": 9,
+          "wins": 4,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1518.16,
+          "pointsAgainst": 1669.8600000000001
+        },
+        {
+          "id": 5,
+          "name": "Team Horton",
+          "abbrev": "HORT",
+          "owners": [
+            "JHorton19"
+          ],
+          "finalStanding": 9,
+          "playoffSeed": 8,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1485.0200000000002,
+          "pointsAgainst": 1616.7599999999998
+        },
+        {
+          "id": 6,
+          "name": "Upstate u heard Hollywood ",
+          "abbrev": "JETS",
+          "owners": [
+            "ESPNFAN98339850"
+          ],
+          "finalStanding": 2,
+          "playoffSeed": 1,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1821.1600000000003,
+          "pointsAgainst": 1689.06
+        },
+        {
+          "id": 7,
+          "name": "Team Towny",
+          "abbrev": "PLUg",
+          "owners": [
+            "ESPNFAN4989902394"
+          ],
+          "finalStanding": 3,
+          "playoffSeed": 3,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1720.4399999999998,
+          "pointsAgainst": 1526.4599999999998
+        },
+        {
+          "id": 8,
+          "name": "Your moms Bussy",
+          "abbrev": "BUSs",
+          "owners": [
+            "Schyler4057"
+          ],
+          "finalStanding": 10,
+          "playoffSeed": 7,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1585.08,
+          "pointsAgainst": 1588.54
+        },
+        {
+          "id": 9,
+          "name": "Mr. Barkley@TheMoon",
+          "abbrev": "Bark",
+          "owners": [
+            "ESPNFAN5964584044"
+          ],
+          "finalStanding": 6,
+          "playoffSeed": 4,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1688.48,
+          "pointsAgainst": 1630.8600000000001
+        },
+        {
+          "id": 10,
+          "name": "Team Degen",
+          "abbrev": "DEG",
+          "owners": [
+            "espnfan3475975028"
+          ],
+          "finalStanding": 7,
+          "playoffSeed": 10,
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1534.2799999999997,
+          "pointsAgainst": 1881.3799999999997
+        }
+      ],
+      "champion": {
+        "teamId": 1,
+        "name": "Slim Pickens",
+        "owners": [
+          "Bobbyg309"
+        ]
+      },
+      "runnerUp": {
+        "teamId": 6,
+        "name": "Upstate u heard Hollywood ",
+        "owners": [
+          "ESPNFAN98339850"
+        ]
+      },
+      "matchups": [
+        {
+          "id": 1,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 139.76
+          },
+          "away": {
+            "teamId": 2,
+            "score": 146.88
+          },
+          "margin": 7.1200000000000045
+        },
+        {
+          "id": 2,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 90.06
+          },
+          "away": {
+            "teamId": 3,
+            "score": 84.88
+          },
+          "margin": 5.180000000000007
+        },
+        {
+          "id": 3,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 107.22
+          },
+          "away": {
+            "teamId": 6,
+            "score": 126.92
+          },
+          "margin": 19.700000000000003
+        },
+        {
+          "id": 4,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 156.7
+          },
+          "away": {
+            "teamId": 1,
+            "score": 114.6
+          },
+          "margin": 42.099999999999994
+        },
+        {
+          "id": 5,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 91.1
+          },
+          "away": {
+            "teamId": 8,
+            "score": 109.82
+          },
+          "margin": 18.72
+        },
+        {
+          "id": 6,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 108.44
+          },
+          "away": {
+            "teamId": 6,
+            "score": 153.82
+          },
+          "margin": 45.379999999999995
+        },
+        {
+          "id": 7,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 107.26
+          },
+          "away": {
+            "teamId": 5,
+            "score": 125.76
+          },
+          "margin": 18.5
+        },
+        {
+          "id": 8,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 94.18
+          },
+          "away": {
+            "teamId": 2,
+            "score": 132.18
+          },
+          "margin": 38
+        },
+        {
+          "id": 9,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 79.3
+          },
+          "away": {
+            "teamId": 7,
+            "score": 144.78
+          },
+          "margin": 65.48
+        },
+        {
+          "id": 10,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 134.58
+          },
+          "away": {
+            "teamId": 10,
+            "score": 115.32
+          },
+          "margin": 19.26000000000002
+        },
+        {
+          "id": 11,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 106.7
+          },
+          "away": {
+            "teamId": 8,
+            "score": 96.46
+          },
+          "margin": 10.240000000000009
+        },
+        {
+          "id": 12,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 124.2
+          },
+          "away": {
+            "teamId": 9,
+            "score": 98.78
+          },
+          "margin": 25.42
+        },
+        {
+          "id": 13,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 137.4
+          },
+          "away": {
+            "teamId": 4,
+            "score": 101.76
+          },
+          "margin": 35.64
+        },
+        {
+          "id": 14,
+          "week": 3,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 97.88
+          },
+          "away": {
+            "teamId": 7,
+            "score": 107.34
+          },
+          "margin": 9.460000000000008
+        },
+        {
+          "id": 15,
+          "week": 3,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 127.2
+          },
+          "away": {
+            "teamId": 10,
+            "score": 145.92
+          },
+          "margin": 18.719999999999985
+        },
+        {
+          "id": 16,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 122.26
+          },
+          "away": {
+            "teamId": 4,
+            "score": 113
+          },
+          "margin": 9.260000000000005
+        },
+        {
+          "id": 17,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 135.68
+          },
+          "away": {
+            "teamId": 1,
+            "score": 130.28
+          },
+          "margin": 5.400000000000006
+        },
+        {
+          "id": 18,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 113.86
+          },
+          "away": {
+            "teamId": 8,
+            "score": 153.58
+          },
+          "margin": 39.72000000000001
+        },
+        {
+          "id": 19,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 119.2
+          },
+          "away": {
+            "teamId": 3,
+            "score": 115.2
+          },
+          "margin": 4
+        },
+        {
+          "id": 20,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 147.82
+          },
+          "away": {
+            "teamId": 6,
+            "score": 97.66
+          },
+          "margin": 50.16
+        },
+        {
+          "id": 21,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 145.14
+          },
+          "away": {
+            "teamId": 10,
+            "score": 138.36
+          },
+          "margin": 6.779999999999973
+        },
+        {
+          "id": 22,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 126.98
+          },
+          "away": {
+            "teamId": 5,
+            "score": 97.52
+          },
+          "margin": 29.460000000000008
+        },
+        {
+          "id": 23,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 81.78
+          },
+          "away": {
+            "teamId": 2,
+            "score": 175.86
+          },
+          "margin": 94.08000000000001
+        },
+        {
+          "id": 24,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 85.28
+          },
+          "away": {
+            "teamId": 3,
+            "score": 149.84
+          },
+          "margin": 64.56
+        },
+        {
+          "id": 25,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 126.42
+          },
+          "away": {
+            "teamId": 6,
+            "score": 109.66
+          },
+          "margin": 16.760000000000005
+        },
+        {
+          "id": 26,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 114.96
+          },
+          "away": {
+            "teamId": 3,
+            "score": 122.7
+          },
+          "margin": 7.740000000000009
+        },
+        {
+          "id": 27,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 100.2
+          },
+          "away": {
+            "teamId": 1,
+            "score": 99.8
+          },
+          "margin": 0.4000000000000057
+        },
+        {
+          "id": 28,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 115.18
+          },
+          "away": {
+            "teamId": 9,
+            "score": 128.02
+          },
+          "margin": 12.840000000000003
+        },
+        {
+          "id": 29,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 69.74
+          },
+          "away": {
+            "teamId": 7,
+            "score": 93.36
+          },
+          "margin": 23.620000000000005
+        },
+        {
+          "id": 30,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 124.6
+          },
+          "away": {
+            "teamId": 5,
+            "score": 98.82
+          },
+          "margin": 25.78
+        },
+        {
+          "id": 31,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 150.94
+          },
+          "away": {
+            "teamId": 2,
+            "score": 140.74
+          },
+          "margin": 10.199999999999989
+        },
+        {
+          "id": 32,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 130.22
+          },
+          "away": {
+            "teamId": 6,
+            "score": 111.28
+          },
+          "margin": 18.939999999999998
+        },
+        {
+          "id": 33,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 107.58
+          },
+          "away": {
+            "teamId": 8,
+            "score": 89.26
+          },
+          "margin": 18.319999999999993
+        },
+        {
+          "id": 34,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 116.52
+          },
+          "away": {
+            "teamId": 4,
+            "score": 65.56
+          },
+          "margin": 50.959999999999994
+        },
+        {
+          "id": 35,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 153.8
+          },
+          "away": {
+            "teamId": 10,
+            "score": 98.9
+          },
+          "margin": 54.900000000000006
+        },
+        {
+          "id": 36,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 84.42
+          },
+          "away": {
+            "teamId": 9,
+            "score": 124.08
+          },
+          "margin": 39.66
+        },
+        {
+          "id": 37,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 155.8
+          },
+          "away": {
+            "teamId": 7,
+            "score": 155.4
+          },
+          "margin": 0.4000000000000057
+        },
+        {
+          "id": 38,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 144.04
+          },
+          "away": {
+            "teamId": 5,
+            "score": 117.88
+          },
+          "margin": 26.159999999999997
+        },
+        {
+          "id": 39,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 108.34
+          },
+          "away": {
+            "teamId": 3,
+            "score": 125.1
+          },
+          "margin": 16.75999999999999
+        },
+        {
+          "id": 40,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 138.32
+          },
+          "away": {
+            "teamId": 1,
+            "score": 173.08
+          },
+          "margin": 34.76000000000002
+        },
+        {
+          "id": 41,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 119.7
+          },
+          "away": {
+            "teamId": 2,
+            "score": 127
+          },
+          "margin": 7.299999999999997
+        },
+        {
+          "id": 42,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 82.1
+          },
+          "away": {
+            "teamId": 9,
+            "score": 133.64
+          },
+          "margin": 51.53999999999999
+        },
+        {
+          "id": 43,
+          "week": 9,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 160.52
+          },
+          "away": {
+            "teamId": 10,
+            "score": 104.12
+          },
+          "margin": 56.400000000000006
+        },
+        {
+          "id": 44,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 111.5
+          },
+          "away": {
+            "teamId": 1,
+            "score": 139.94
+          },
+          "margin": 28.439999999999998
+        },
+        {
+          "id": 45,
+          "week": 9,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 113.2
+          },
+          "away": {
+            "teamId": 4,
+            "score": 66.14
+          },
+          "margin": 47.06
+        },
+        {
+          "id": 46,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 90.94
+          },
+          "away": {
+            "teamId": 6,
+            "score": 142.5
+          },
+          "margin": 51.56
+        },
+        {
+          "id": 47,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 100.82
+          },
+          "away": {
+            "teamId": 7,
+            "score": 91.9
+          },
+          "margin": 8.919999999999987
+        },
+        {
+          "id": 48,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 155
+          },
+          "away": {
+            "teamId": 8,
+            "score": 138.16
+          },
+          "margin": 16.840000000000003
+        },
+        {
+          "id": 49,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 135.7
+          },
+          "away": {
+            "teamId": 9,
+            "score": 132.44
+          },
+          "margin": 3.259999999999991
+        },
+        {
+          "id": 50,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 73.02
+          },
+          "away": {
+            "teamId": 4,
+            "score": 142.28
+          },
+          "margin": 69.26
+        },
+        {
+          "id": 51,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 115.9
+          },
+          "away": {
+            "teamId": 8,
+            "score": 109.64
+          },
+          "margin": 6.260000000000005
+        },
+        {
+          "id": 52,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 81.6
+          },
+          "away": {
+            "teamId": 1,
+            "score": 106.6
+          },
+          "margin": 25
+        },
+        {
+          "id": 53,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 106.92
+          },
+          "away": {
+            "teamId": 6,
+            "score": 125.9
+          },
+          "margin": 18.980000000000004
+        },
+        {
+          "id": 54,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 144.5
+          },
+          "away": {
+            "teamId": 9,
+            "score": 105.36
+          },
+          "margin": 39.14
+        },
+        {
+          "id": 55,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 124.26
+          },
+          "away": {
+            "teamId": 2,
+            "score": 116.98
+          },
+          "margin": 7.280000000000001
+        },
+        {
+          "id": 56,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 117.3
+          },
+          "away": {
+            "teamId": 4,
+            "score": 107.8
+          },
+          "margin": 9.5
+        },
+        {
+          "id": 57,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 125
+          },
+          "away": {
+            "teamId": 3,
+            "score": 117.64
+          },
+          "margin": 7.359999999999999
+        },
+        {
+          "id": 58,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 109.1
+          },
+          "away": {
+            "teamId": 10,
+            "score": 87.36
+          },
+          "margin": 21.739999999999995
+        },
+        {
+          "id": 59,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 99.84
+          },
+          "away": {
+            "teamId": 5,
+            "score": 128.36
+          },
+          "margin": 28.52000000000001
+        },
+        {
+          "id": 60,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 126.62
+          },
+          "away": {
+            "teamId": 2,
+            "score": 170.62
+          },
+          "margin": 44
+        },
+        {
+          "id": 61,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 107.82
+          },
+          "away": {
+            "teamId": 10,
+            "score": 99.94
+          },
+          "margin": 7.8799999999999955
+        },
+        {
+          "id": 62,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 156.34
+          },
+          "away": {
+            "teamId": 7,
+            "score": 153.6
+          },
+          "margin": 2.740000000000009
+        },
+        {
+          "id": 63,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 126.92
+          },
+          "away": {
+            "teamId": 4,
+            "score": 183.16
+          },
+          "margin": 56.239999999999995
+        },
+        {
+          "id": 64,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 91.04
+          },
+          "away": {
+            "teamId": 5,
+            "score": 102.4
+          },
+          "margin": 11.36
+        },
+        {
+          "id": 65,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 147.4
+          },
+          "away": {
+            "teamId": 8,
+            "score": 102.48
+          },
+          "margin": 44.92
+        },
+        {
+          "id": 66,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 105.28
+          },
+          "away": {
+            "teamId": 5,
+            "score": 86.28
+          },
+          "margin": 19
+        },
+        {
+          "id": 67,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 125.48
+          },
+          "away": {
+            "teamId": 3,
+            "score": 136.9
+          },
+          "margin": 11.420000000000002
+        },
+        {
+          "id": 68,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 83.56
+          },
+          "away": {
+            "teamId": 1,
+            "score": 109.76
+          },
+          "margin": 26.200000000000003
+        },
+        {
+          "id": 69,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 146
+          },
+          "away": {
+            "teamId": 9,
+            "score": 117.88
+          },
+          "margin": 28.120000000000005
+        },
+        {
+          "id": 70,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 63.08
+          },
+          "away": {
+            "teamId": 7,
+            "score": 131.56
+          },
+          "margin": 68.48
+        },
+        {
+          "id": 72,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 119.34
+          },
+          "away": {
+            "teamId": 2,
+            "score": 122.36
+          },
+          "margin": 3.019999999999996
+        },
+        {
+          "id": 73,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 133.14
+          },
+          "away": {
+            "teamId": 3,
+            "score": 128
+          },
+          "margin": 5.139999999999986
+        },
+        {
+          "id": 75,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 94.5
+          },
+          "away": {
+            "teamId": 5,
+            "score": 124.12
+          },
+          "margin": 29.620000000000005
+        },
+        {
+          "id": 76,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 133.78
+          },
+          "away": {
+            "teamId": 10,
+            "score": 132.42
+          },
+          "margin": 1.3600000000000136
+        },
+        {
+          "id": 77,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 114.5
+          },
+          "away": {
+            "teamId": 2,
+            "score": 95.48
+          },
+          "margin": 19.019999999999996
+        },
+        {
+          "id": 78,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 135.8
+          },
+          "away": {
+            "teamId": 7,
+            "score": 121.78
+          },
+          "margin": 14.02000000000001
+        },
+        {
+          "id": 79,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 99.16
+          },
+          "away": {
+            "teamId": 3,
+            "score": 158.46
+          },
+          "margin": 59.30000000000001
+        },
+        {
+          "id": 80,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 114.4
+          },
+          "away": {
+            "teamId": 4,
+            "score": 125.5
+          },
+          "margin": 11.099999999999994
+        },
+        {
+          "id": 81,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 83.2
+          },
+          "away": {
+            "teamId": 10,
+            "score": 86.76
+          },
+          "margin": 3.5600000000000023
+        },
+        {
+          "id": 82,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 95.06
+          },
+          "away": {
+            "teamId": 1,
+            "score": 114.8
+          },
+          "margin": 19.739999999999995
+        },
+        {
+          "id": 83,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 77.68
+          },
+          "away": {
+            "teamId": 2,
+            "score": 56.9
+          },
+          "margin": 20.78000000000001
+        },
+        {
+          "id": 84,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 115.42
+          },
+          "away": {
+            "teamId": 3,
+            "score": 119.9
+          },
+          "margin": 4.480000000000004
+        },
+        {
+          "id": 85,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 110
+          },
+          "away": {
+            "teamId": 10,
+            "score": 121.68
+          },
+          "margin": 11.680000000000007
+        },
+        {
+          "id": 86,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 33.9
+          },
+          "away": {
+            "teamId": 5,
+            "score": 135.88
+          },
+          "margin": 101.97999999999999
+        }
+      ],
+      "records": {
+        "highestSingleTeamScore": 183.16,
+        "biggestBlowout": {
+          "week": 17,
+          "margin": 101.97999999999999,
+          "home": {
+            "teamId": 8,
+            "score": 33.9
+          },
+          "away": {
+            "teamId": 5,
+            "score": 135.88
+          }
+        },
+        "closestGame": {
+          "week": 6,
+          "margin": 0.4000000000000057,
+          "home": {
+            "teamId": 6,
+            "score": 100.2
+          },
+          "away": {
+            "teamId": 1,
+            "score": 99.8
+          }
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "leagueName": "Stumblin Bumblin and Fumblin",
+      "teams": [
+        {
+          "id": 1,
+          "name": "Slim Pickens",
+          "abbrev": "SLIM",
+          "owners": [
+            "Bobbyg309"
+          ],
+          "finalStanding": 1,
+          "playoffSeed": 3,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1891.3000000000002,
+          "pointsAgainst": 1720.7
+        },
+        {
+          "id": 2,
+          "name": "Voodoo oogers ",
+          "abbrev": "OOGs",
+          "owners": [
+            "ESPNFAN3753567837"
+          ],
+          "finalStanding": 10,
+          "playoffSeed": 7,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1679.3,
+          "pointsAgainst": 1755.3200000000002
+        },
+        {
+          "id": 3,
+          "name": "Hasbulla's Bane",
+          "abbrev": "HBB",
+          "owners": [
+            "ESPNFAN5697222911"
+          ],
+          "finalStanding": 3,
+          "playoffSeed": 1,
+          "wins": 13,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 1774.3199999999997,
+          "pointsAgainst": 1526.74
+        },
+        {
+          "id": 4,
+          "name": "Nuts 2 Butts",
+          "abbrev": "N2B",
+          "owners": [
+            "jrosoler"
+          ],
+          "finalStanding": 7,
+          "playoffSeed": 9,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1617.22,
+          "pointsAgainst": 1757.1
+        },
+        {
+          "id": 5,
+          "name": "Tons of Hort",
+          "abbrev": "TONS",
+          "owners": [
+            "JHorton19"
+          ],
+          "finalStanding": 8,
+          "playoffSeed": 10,
+          "wins": 2,
+          "losses": 12,
+          "ties": 0,
+          "pointsFor": 1436.8400000000001,
+          "pointsAgainst": 1788.18
+        },
+        {
+          "id": 6,
+          "name": "Upstate u heard Hollywood ",
+          "abbrev": "JETS",
+          "owners": [
+            "ESPNFAN98339850"
+          ],
+          "finalStanding": 4,
+          "playoffSeed": 2,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1808.36,
+          "pointsAgainst": 1652.6
+        },
+        {
+          "id": 7,
+          "name": "Call me Dad",
+          "abbrev": "PLUg",
+          "owners": [
+            "ESPNFAN4989902394"
+          ],
+          "finalStanding": 5,
+          "playoffSeed": 5,
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1858.8999999999999,
+          "pointsAgainst": 1729.8600000000001
+        },
+        {
+          "id": 8,
+          "name": "Fronto Spliff Nuggets",
+          "abbrev": "FHG",
+          "owners": [
+            "ESPNFAN2932377394"
+          ],
+          "finalStanding": 2,
+          "playoffSeed": 4,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1609.4599999999998,
+          "pointsAgainst": 1678.8400000000001
+        },
+        {
+          "id": 9,
+          "name": "Mr. Barkley@TheMoon",
+          "abbrev": "Bark",
+          "owners": [
+            "ESPNFAN5964584044"
+          ],
+          "finalStanding": 9,
+          "playoffSeed": 8,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1633.2599999999998,
+          "pointsAgainst": 1691.5600000000002
+        },
+        {
+          "id": 10,
+          "name": "Team Degen",
+          "abbrev": "DEG",
+          "owners": [
+            "espnfan3475975028"
+          ],
+          "finalStanding": 6,
+          "playoffSeed": 6,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1686.1200000000001,
+          "pointsAgainst": 1694.1799999999996
+        }
+      ],
+      "champion": {
+        "teamId": 1,
+        "name": "Slim Pickens",
+        "owners": [
+          "Bobbyg309"
+        ]
+      },
+      "runnerUp": {
+        "teamId": 8,
+        "name": "Fronto Spliff Nuggets",
+        "owners": [
+          "ESPNFAN2932377394"
+        ]
+      },
+      "matchups": [
+        {
+          "id": 1,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 86.94
+          },
+          "away": {
+            "teamId": 3,
+            "score": 115.76
+          },
+          "margin": 28.820000000000007
+        },
+        {
+          "id": 2,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 167.24
+          },
+          "away": {
+            "teamId": 2,
+            "score": 118.28
+          },
+          "margin": 48.96000000000001
+        },
+        {
+          "id": 3,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 90.44
+          },
+          "away": {
+            "teamId": 1,
+            "score": 105.4
+          },
+          "margin": 14.960000000000008
+        },
+        {
+          "id": 4,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 93.64
+          },
+          "away": {
+            "teamId": 6,
+            "score": 108.06
+          },
+          "margin": 14.420000000000002
+        },
+        {
+          "id": 5,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 106.56
+          },
+          "away": {
+            "teamId": 8,
+            "score": 133.34
+          },
+          "margin": 26.78
+        },
+        {
+          "id": 6,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 109.88
+          },
+          "away": {
+            "teamId": 6,
+            "score": 103.3
+          },
+          "margin": 6.579999999999998
+        },
+        {
+          "id": 7,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 159.82
+          },
+          "away": {
+            "teamId": 5,
+            "score": 115.9
+          },
+          "margin": 43.91999999999999
+        },
+        {
+          "id": 8,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 118.26
+          },
+          "away": {
+            "teamId": 2,
+            "score": 98.68
+          },
+          "margin": 19.58
+        },
+        {
+          "id": 9,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 113.44
+          },
+          "away": {
+            "teamId": 7,
+            "score": 106.04
+          },
+          "margin": 7.3999999999999915
+        },
+        {
+          "id": 10,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 104.8
+          },
+          "away": {
+            "teamId": 10,
+            "score": 125.86
+          },
+          "margin": 21.060000000000002
+        },
+        {
+          "id": 11,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 157.34
+          },
+          "away": {
+            "teamId": 8,
+            "score": 123.26
+          },
+          "margin": 34.08
+        },
+        {
+          "id": 12,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 121.78
+          },
+          "away": {
+            "teamId": 9,
+            "score": 116.86
+          },
+          "margin": 4.920000000000002
+        },
+        {
+          "id": 13,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 178.7
+          },
+          "away": {
+            "teamId": 4,
+            "score": 131.98
+          },
+          "margin": 46.72
+        },
+        {
+          "id": 14,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 119.98
+          },
+          "away": {
+            "teamId": 7,
+            "score": 117.04
+          },
+          "margin": 2.9399999999999977
+        },
+        {
+          "id": 15,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 123.86
+          },
+          "away": {
+            "teamId": 10,
+            "score": 112.02
+          },
+          "margin": 11.840000000000003
+        },
+        {
+          "id": 16,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 93.18
+          },
+          "away": {
+            "teamId": 4,
+            "score": 118.44
+          },
+          "margin": 25.25999999999999
+        },
+        {
+          "id": 17,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 147.7
+          },
+          "away": {
+            "teamId": 1,
+            "score": 139.76
+          },
+          "margin": 7.939999999999998
+        },
+        {
+          "id": 18,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 121.2
+          },
+          "away": {
+            "teamId": 8,
+            "score": 123.08
+          },
+          "margin": 1.8799999999999955
+        },
+        {
+          "id": 19,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 71.92
+          },
+          "away": {
+            "teamId": 3,
+            "score": 99.64
+          },
+          "margin": 27.72
+        },
+        {
+          "id": 20,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 121
+          },
+          "away": {
+            "teamId": 6,
+            "score": 107.98
+          },
+          "margin": 13.019999999999996
+        },
+        {
+          "id": 21,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 137.28
+          },
+          "away": {
+            "teamId": 10,
+            "score": 149.26
+          },
+          "margin": 11.97999999999999
+        },
+        {
+          "id": 22,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 183
+          },
+          "away": {
+            "teamId": 5,
+            "score": 139.04
+          },
+          "margin": 43.96000000000001
+        },
+        {
+          "id": 23,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 116.66
+          },
+          "away": {
+            "teamId": 2,
+            "score": 126.88
+          },
+          "margin": 10.219999999999999
+        },
+        {
+          "id": 24,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 99.92
+          },
+          "away": {
+            "teamId": 3,
+            "score": 103.04
+          },
+          "margin": 3.1200000000000045
+        },
+        {
+          "id": 25,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 82.92
+          },
+          "away": {
+            "teamId": 6,
+            "score": 146.68
+          },
+          "margin": 63.760000000000005
+        },
+        {
+          "id": 26,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 103.5
+          },
+          "away": {
+            "teamId": 3,
+            "score": 108.82
+          },
+          "margin": 5.319999999999993
+        },
+        {
+          "id": 27,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 163.88
+          },
+          "away": {
+            "teamId": 1,
+            "score": 129.1
+          },
+          "margin": 34.78
+        },
+        {
+          "id": 28,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 137.38
+          },
+          "away": {
+            "teamId": 9,
+            "score": 116.54
+          },
+          "margin": 20.83999999999999
+        },
+        {
+          "id": 29,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 107.34
+          },
+          "away": {
+            "teamId": 7,
+            "score": 105.42
+          },
+          "margin": 1.9200000000000017
+        },
+        {
+          "id": 30,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 120.36
+          },
+          "away": {
+            "teamId": 5,
+            "score": 101.44
+          },
+          "margin": 18.92
+        },
+        {
+          "id": 31,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 128.46
+          },
+          "away": {
+            "teamId": 2,
+            "score": 127.28
+          },
+          "margin": 1.1800000000000068
+        },
+        {
+          "id": 32,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 130.36
+          },
+          "away": {
+            "teamId": 6,
+            "score": 92.06
+          },
+          "margin": 38.30000000000001
+        },
+        {
+          "id": 33,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 124.86
+          },
+          "away": {
+            "teamId": 8,
+            "score": 89.04
+          },
+          "margin": 35.81999999999999
+        },
+        {
+          "id": 34,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 117.26
+          },
+          "away": {
+            "teamId": 4,
+            "score": 101.32
+          },
+          "margin": 15.940000000000012
+        },
+        {
+          "id": 35,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 138.78
+          },
+          "away": {
+            "teamId": 10,
+            "score": 133.7
+          },
+          "margin": 5.0800000000000125
+        },
+        {
+          "id": 36,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 129.58
+          },
+          "away": {
+            "teamId": 9,
+            "score": 120.78
+          },
+          "margin": 8.800000000000011
+        },
+        {
+          "id": 37,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 133.32
+          },
+          "away": {
+            "teamId": 7,
+            "score": 129.36
+          },
+          "margin": 3.9599999999999795
+        },
+        {
+          "id": 38,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 116.26
+          },
+          "away": {
+            "teamId": 5,
+            "score": 97.9
+          },
+          "margin": 18.36
+        },
+        {
+          "id": 39,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 107.56
+          },
+          "away": {
+            "teamId": 3,
+            "score": 142.88
+          },
+          "margin": 35.31999999999999
+        },
+        {
+          "id": 40,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 142.46
+          },
+          "away": {
+            "teamId": 1,
+            "score": 153.76
+          },
+          "margin": 11.299999999999983
+        },
+        {
+          "id": 41,
+          "week": 9,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 143.28
+          },
+          "away": {
+            "teamId": 2,
+            "score": 102.72
+          },
+          "margin": 40.56
+        },
+        {
+          "id": 42,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 89.8
+          },
+          "away": {
+            "teamId": 9,
+            "score": 90.3
+          },
+          "margin": 0.5
+        },
+        {
+          "id": 43,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 104.84
+          },
+          "away": {
+            "teamId": 10,
+            "score": 123.1
+          },
+          "margin": 18.25999999999999
+        },
+        {
+          "id": 44,
+          "week": 9,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 131.28
+          },
+          "away": {
+            "teamId": 1,
+            "score": 118.98
+          },
+          "margin": 12.299999999999997
+        },
+        {
+          "id": 45,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 90.12
+          },
+          "away": {
+            "teamId": 4,
+            "score": 107.1
+          },
+          "margin": 16.97999999999999
+        },
+        {
+          "id": 46,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 113.12
+          },
+          "away": {
+            "teamId": 6,
+            "score": 146.92
+          },
+          "margin": 33.79999999999998
+        },
+        {
+          "id": 47,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 206.86
+          },
+          "away": {
+            "teamId": 7,
+            "score": 129.36
+          },
+          "margin": 77.5
+        },
+        {
+          "id": 48,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 101.48
+          },
+          "away": {
+            "teamId": 8,
+            "score": 120.88
+          },
+          "margin": 19.39999999999999
+        },
+        {
+          "id": 49,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 159.16
+          },
+          "away": {
+            "teamId": 9,
+            "score": 81.02
+          },
+          "margin": 78.14
+        },
+        {
+          "id": 50,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 108.92
+          },
+          "away": {
+            "teamId": 4,
+            "score": 109.48
+          },
+          "margin": 0.5600000000000023
+        },
+        {
+          "id": 51,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 115.16
+          },
+          "away": {
+            "teamId": 8,
+            "score": 86.5
+          },
+          "margin": 28.659999999999997
+        },
+        {
+          "id": 52,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 110.18
+          },
+          "away": {
+            "teamId": 1,
+            "score": 139.2
+          },
+          "margin": 29.019999999999982
+        },
+        {
+          "id": 53,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 109.54
+          },
+          "away": {
+            "teamId": 6,
+            "score": 111.8
+          },
+          "margin": 2.259999999999991
+        },
+        {
+          "id": 54,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 141.66
+          },
+          "away": {
+            "teamId": 9,
+            "score": 148.98
+          },
+          "margin": 7.319999999999993
+        },
+        {
+          "id": 55,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 130.94
+          },
+          "away": {
+            "teamId": 2,
+            "score": 96.8
+          },
+          "margin": 34.14
+        },
+        {
+          "id": 56,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 163.1
+          },
+          "away": {
+            "teamId": 4,
+            "score": 104.2
+          },
+          "margin": 58.89999999999999
+        },
+        {
+          "id": 57,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 117.36
+          },
+          "away": {
+            "teamId": 3,
+            "score": 124.04
+          },
+          "margin": 6.680000000000007
+        },
+        {
+          "id": 58,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 157.52
+          },
+          "away": {
+            "teamId": 10,
+            "score": 121.66
+          },
+          "margin": 35.860000000000014
+        },
+        {
+          "id": 59,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 126.88
+          },
+          "away": {
+            "teamId": 5,
+            "score": 85.82
+          },
+          "margin": 41.06
+        },
+        {
+          "id": 60,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 110.58
+          },
+          "away": {
+            "teamId": 2,
+            "score": 163.76
+          },
+          "margin": 53.17999999999999
+        },
+        {
+          "id": 61,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 104.32
+          },
+          "away": {
+            "teamId": 10,
+            "score": 116.06
+          },
+          "margin": 11.740000000000009
+        },
+        {
+          "id": 62,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 124.92
+          },
+          "away": {
+            "teamId": 7,
+            "score": 149.96
+          },
+          "margin": 25.040000000000006
+        },
+        {
+          "id": 63,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 136.16
+          },
+          "away": {
+            "teamId": 4,
+            "score": 183.78
+          },
+          "margin": 47.620000000000005
+        },
+        {
+          "id": 64,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 142.36
+          },
+          "away": {
+            "teamId": 5,
+            "score": 101.9
+          },
+          "margin": 40.46000000000001
+        },
+        {
+          "id": 65,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 151.3
+          },
+          "away": {
+            "teamId": 8,
+            "score": 100.8
+          },
+          "margin": 50.500000000000014
+        },
+        {
+          "id": 66,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 129.32
+          },
+          "away": {
+            "teamId": 5,
+            "score": 85.64
+          },
+          "margin": 43.67999999999999
+        },
+        {
+          "id": 67,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 148.94
+          },
+          "away": {
+            "teamId": 3,
+            "score": 114.04
+          },
+          "margin": 34.89999999999999
+        },
+        {
+          "id": 68,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 130.1
+          },
+          "away": {
+            "teamId": 1,
+            "score": 112.38
+          },
+          "margin": 17.72
+        },
+        {
+          "id": 69,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 108.46
+          },
+          "away": {
+            "teamId": 9,
+            "score": 123.48
+          },
+          "margin": 15.02000000000001
+        },
+        {
+          "id": 70,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 90.14
+          },
+          "away": {
+            "teamId": 7,
+            "score": 132.82
+          },
+          "margin": 42.67999999999999
+        },
+        {
+          "id": 72,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 110.76
+          },
+          "away": {
+            "teamId": 7,
+            "score": 71.74
+          },
+          "margin": 39.02000000000001
+        },
+        {
+          "id": 73,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 162.32
+          },
+          "away": {
+            "teamId": 10,
+            "score": 113.72
+          },
+          "margin": 48.599999999999994
+        },
+        {
+          "id": 75,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 145.86
+          },
+          "away": {
+            "teamId": 9,
+            "score": 98.66
+          },
+          "margin": 47.20000000000002
+        },
+        {
+          "id": 76,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 105.42
+          },
+          "away": {
+            "teamId": 5,
+            "score": 67.4
+          },
+          "margin": 38.019999999999996
+        },
+        {
+          "id": 77,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 128.52
+          },
+          "away": {
+            "teamId": 8,
+            "score": 152.46
+          },
+          "margin": 23.939999999999998
+        },
+        {
+          "id": 78,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 128.02
+          },
+          "away": {
+            "teamId": 1,
+            "score": 182.54
+          },
+          "margin": 54.51999999999998
+        },
+        {
+          "id": 79,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 118.1
+          },
+          "away": {
+            "teamId": 10,
+            "score": 132.58
+          },
+          "margin": 14.480000000000018
+        },
+        {
+          "id": 80,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 71.98
+          },
+          "away": {
+            "teamId": 4,
+            "score": 129.9
+          },
+          "margin": 57.92
+        },
+        {
+          "id": 81,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 87.74
+          },
+          "away": {
+            "teamId": 5,
+            "score": 150.3
+          },
+          "margin": 62.56000000000002
+        },
+        {
+          "id": 82,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 148.58
+          },
+          "away": {
+            "teamId": 8,
+            "score": 140.94
+          },
+          "margin": 7.640000000000015
+        },
+        {
+          "id": 83,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 170.4
+          },
+          "away": {
+            "teamId": 6,
+            "score": 96.18
+          },
+          "margin": 74.22
+        },
+        {
+          "id": 84,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 128.32
+          },
+          "away": {
+            "teamId": 10,
+            "score": 77.24
+          },
+          "margin": 51.08
+        },
+        {
+          "id": 85,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 118.5
+          },
+          "away": {
+            "teamId": 5,
+            "score": 91.9
+          },
+          "margin": 26.599999999999994
+        },
+        {
+          "id": 86,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 70.56
+          },
+          "away": {
+            "teamId": 9,
+            "score": 105.4
+          },
+          "margin": 34.84
+        }
+      ],
+      "records": {
+        "highestSingleTeamScore": 206.86,
+        "biggestBlowout": {
+          "week": 10,
+          "margin": 78.14,
+          "home": {
+            "teamId": 1,
+            "score": 159.16
+          },
+          "away": {
+            "teamId": 9,
+            "score": 81.02
+          }
+        },
+        "closestGame": {
+          "week": 9,
+          "margin": 0.5,
+          "home": {
+            "teamId": 5,
+            "score": 89.8
+          },
+          "away": {
+            "teamId": 9,
+            "score": 90.3
+          }
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "leagueName": "Stumblin Bumblin and Fumblin",
+      "teams": [
+        {
+          "id": 1,
+          "name": "Slim Pickens",
+          "abbrev": "SLIM",
+          "owners": [
+            "Bobbyg309"
+          ],
+          "finalStanding": 1,
+          "playoffSeed": 3,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 2025.8400000000001,
+          "pointsAgainst": 1911.8200000000002
+        },
+        {
+          "id": 2,
+          "name": "Clappin cheeks' to the chip ",
+          "abbrev": "Yea",
+          "owners": [
+            "ESPNFAN5145154210"
+          ],
+          "finalStanding": 5,
+          "playoffSeed": 5,
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1892.6,
+          "pointsAgainst": 1982.9600000000003
+        },
+        {
+          "id": 3,
+          "name": "You're Not Worthy",
+          "abbrev": "YNW",
+          "owners": [
+            "ESPNFAN5697222911"
+          ],
+          "finalStanding": 9,
+          "playoffSeed": 9,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1773.5800000000004,
+          "pointsAgainst": 1871.4199999999998
+        },
+        {
+          "id": 4,
+          "name": "Nuts 2 Butts",
+          "abbrev": "N2B",
+          "owners": [
+            "jrosoler"
+          ],
+          "finalStanding": 2,
+          "playoffSeed": 1,
+          "wins": 10,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 2016.7400000000002,
+          "pointsAgainst": 1726.0799999999997
+        },
+        {
+          "id": 5,
+          "name": "What are You Doing, Step-Burrow",
+          "abbrev": "Brrw",
+          "owners": [
+            "JHorton19"
+          ],
+          "finalStanding": 3,
+          "playoffSeed": 2,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 2052.94,
+          "pointsAgainst": 1826.0599999999995
+        },
+        {
+          "id": 6,
+          "name": "Upstate u heard Hollywood ",
+          "abbrev": "JETS",
+          "owners": [
+            "ESPNFAN98339850"
+          ],
+          "finalStanding": 6,
+          "playoffSeed": 6,
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1695.66,
+          "pointsAgainst": 1741.9600000000003
+        },
+        {
+          "id": 7,
+          "name": "Call me Dad",
+          "abbrev": "PLUg",
+          "owners": [
+            "ESPNFAN4989902394"
+          ],
+          "finalStanding": 8,
+          "playoffSeed": 8,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1715.6399999999999,
+          "pointsAgainst": 1764.1999999999998
+        },
+        {
+          "id": 8,
+          "name": "Alec(go pack go) ",
+          "abbrev": "AR",
+          "owners": [
+            "espnfan7517564915"
+          ],
+          "finalStanding": 4,
+          "playoffSeed": 4,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1820.0600000000004,
+          "pointsAgainst": 1824.7200000000003
+        },
+        {
+          "id": 9,
+          "name": "Next Door Nabers",
+          "abbrev": "JST",
+          "owners": [
+            "ESPNfan9582050862"
+          ],
+          "finalStanding": 10,
+          "playoffSeed": 10,
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1396.6999999999998,
+          "pointsAgainst": 1896.8600000000001
+        },
+        {
+          "id": 10,
+          "name": "Team Degen",
+          "abbrev": "DEG",
+          "owners": [
+            "espnfan3475975028"
+          ],
+          "finalStanding": 7,
+          "playoffSeed": 7,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 2052.52,
+          "pointsAgainst": 1896.2
+        }
+      ],
+      "champion": {
+        "teamId": 1,
+        "name": "Slim Pickens",
+        "owners": [
+          "Bobbyg309"
+        ]
+      },
+      "runnerUp": {
+        "teamId": 4,
+        "name": "Nuts 2 Butts",
+        "owners": [
+          "jrosoler"
+        ]
+      },
+      "matchups": [
+        {
+          "id": 1,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 139.22
+          },
+          "away": {
+            "teamId": 3,
+            "score": 133.48
+          },
+          "margin": 5.740000000000009
+        },
+        {
+          "id": 2,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 113.66
+          },
+          "away": {
+            "teamId": 2,
+            "score": 122.04
+          },
+          "margin": 8.38000000000001
+        },
+        {
+          "id": 3,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 148.32
+          },
+          "away": {
+            "teamId": 1,
+            "score": 153.78
+          },
+          "margin": 5.460000000000008
+        },
+        {
+          "id": 4,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 92.96
+          },
+          "away": {
+            "teamId": 6,
+            "score": 136.96
+          },
+          "margin": 44.000000000000014
+        },
+        {
+          "id": 5,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 120.7
+          },
+          "away": {
+            "teamId": 8,
+            "score": 124.8
+          },
+          "margin": 4.099999999999994
+        },
+        {
+          "id": 6,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 107.46
+          },
+          "away": {
+            "teamId": 6,
+            "score": 122.1
+          },
+          "margin": 14.64
+        },
+        {
+          "id": 7,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 162.76
+          },
+          "away": {
+            "teamId": 5,
+            "score": 136.82
+          },
+          "margin": 25.939999999999998
+        },
+        {
+          "id": 8,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 146.1
+          },
+          "away": {
+            "teamId": 2,
+            "score": 137.34
+          },
+          "margin": 8.759999999999991
+        },
+        {
+          "id": 9,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 90.12
+          },
+          "away": {
+            "teamId": 7,
+            "score": 102.04
+          },
+          "margin": 11.920000000000002
+        },
+        {
+          "id": 10,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 162.64
+          },
+          "away": {
+            "teamId": 10,
+            "score": 140.08
+          },
+          "margin": 22.559999999999974
+        },
+        {
+          "id": 11,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 151.34
+          },
+          "away": {
+            "teamId": 8,
+            "score": 105.48
+          },
+          "margin": 45.86
+        },
+        {
+          "id": 12,
+          "week": 3,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 92.08
+          },
+          "away": {
+            "teamId": 9,
+            "score": 122.08
+          },
+          "margin": 30
+        },
+        {
+          "id": 13,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 157.6
+          },
+          "away": {
+            "teamId": 4,
+            "score": 124.28
+          },
+          "margin": 33.31999999999999
+        },
+        {
+          "id": 14,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 116.74
+          },
+          "away": {
+            "teamId": 7,
+            "score": 113.56
+          },
+          "margin": 3.1799999999999926
+        },
+        {
+          "id": 15,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 175.58
+          },
+          "away": {
+            "teamId": 10,
+            "score": 142.48
+          },
+          "margin": 33.10000000000002
+        },
+        {
+          "id": 16,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 108.32
+          },
+          "away": {
+            "teamId": 4,
+            "score": 123.58
+          },
+          "margin": 15.260000000000005
+        },
+        {
+          "id": 17,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 155.62
+          },
+          "away": {
+            "teamId": 1,
+            "score": 109
+          },
+          "margin": 46.620000000000005
+        },
+        {
+          "id": 18,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 97.84
+          },
+          "away": {
+            "teamId": 8,
+            "score": 135.36
+          },
+          "margin": 37.52000000000001
+        },
+        {
+          "id": 19,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 115.82
+          },
+          "away": {
+            "teamId": 3,
+            "score": 131.1
+          },
+          "margin": 15.280000000000001
+        },
+        {
+          "id": 20,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 120.7
+          },
+          "away": {
+            "teamId": 6,
+            "score": 148.2
+          },
+          "margin": 27.499999999999986
+        },
+        {
+          "id": 21,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 129.78
+          },
+          "away": {
+            "teamId": 10,
+            "score": 98.62
+          },
+          "margin": 31.159999999999997
+        },
+        {
+          "id": 22,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 95.66
+          },
+          "away": {
+            "teamId": 5,
+            "score": 170.52
+          },
+          "margin": 74.86000000000001
+        },
+        {
+          "id": 23,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 187.5
+          },
+          "away": {
+            "teamId": 2,
+            "score": 121.74
+          },
+          "margin": 65.76
+        },
+        {
+          "id": 24,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 139.34
+          },
+          "away": {
+            "teamId": 3,
+            "score": 144.96
+          },
+          "margin": 5.6200000000000045
+        },
+        {
+          "id": 25,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 130.66
+          },
+          "away": {
+            "teamId": 6,
+            "score": 109.44
+          },
+          "margin": 21.22
+        },
+        {
+          "id": 26,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 168.42
+          },
+          "away": {
+            "teamId": 3,
+            "score": 137.64
+          },
+          "margin": 30.78
+        },
+        {
+          "id": 27,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 131.98
+          },
+          "away": {
+            "teamId": 1,
+            "score": 140.2
+          },
+          "margin": 8.219999999999999
+        },
+        {
+          "id": 28,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 108.32
+          },
+          "away": {
+            "teamId": 9,
+            "score": 119.7
+          },
+          "margin": 11.38000000000001
+        },
+        {
+          "id": 29,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 144.16
+          },
+          "away": {
+            "teamId": 7,
+            "score": 71.32
+          },
+          "margin": 72.84
+        },
+        {
+          "id": 30,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 129.02
+          },
+          "away": {
+            "teamId": 5,
+            "score": 157.76
+          },
+          "margin": 28.73999999999998
+        },
+        {
+          "id": 31,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 125.82
+          },
+          "away": {
+            "teamId": 2,
+            "score": 124.54
+          },
+          "margin": 1.279999999999987
+        },
+        {
+          "id": 32,
+          "week": 7,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 82.78
+          },
+          "away": {
+            "teamId": 6,
+            "score": 107.14
+          },
+          "margin": 24.36
+        },
+        {
+          "id": 33,
+          "week": 7,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 118.06
+          },
+          "away": {
+            "teamId": 8,
+            "score": 146.6
+          },
+          "margin": 28.539999999999992
+        },
+        {
+          "id": 34,
+          "week": 7,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 124.74
+          },
+          "away": {
+            "teamId": 4,
+            "score": 154.38
+          },
+          "margin": 29.64
+        },
+        {
+          "id": 35,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 119.88
+          },
+          "away": {
+            "teamId": 10,
+            "score": 117.94
+          },
+          "margin": 1.9399999999999977
+        },
+        {
+          "id": 36,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 120.16
+          },
+          "away": {
+            "teamId": 9,
+            "score": 121.3
+          },
+          "margin": 1.1400000000000006
+        },
+        {
+          "id": 37,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 116.2
+          },
+          "away": {
+            "teamId": 7,
+            "score": 103.52
+          },
+          "margin": 12.680000000000007
+        },
+        {
+          "id": 38,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 161.94
+          },
+          "away": {
+            "teamId": 5,
+            "score": 139.04
+          },
+          "margin": 22.900000000000006
+        },
+        {
+          "id": 39,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 170.44
+          },
+          "away": {
+            "teamId": 3,
+            "score": 138.34
+          },
+          "margin": 32.099999999999994
+        },
+        {
+          "id": 40,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 179.2
+          },
+          "away": {
+            "teamId": 1,
+            "score": 159.72
+          },
+          "margin": 19.47999999999999
+        },
+        {
+          "id": 41,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 113.82
+          },
+          "away": {
+            "teamId": 2,
+            "score": 133.64
+          },
+          "margin": 19.819999999999993
+        },
+        {
+          "id": 42,
+          "week": 9,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 154.7
+          },
+          "away": {
+            "teamId": 9,
+            "score": 138.54
+          },
+          "margin": 16.159999999999997
+        },
+        {
+          "id": 43,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 91.54
+          },
+          "away": {
+            "teamId": 10,
+            "score": 152.46
+          },
+          "margin": 60.92
+        },
+        {
+          "id": 44,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 130.88
+          },
+          "away": {
+            "teamId": 1,
+            "score": 177.7
+          },
+          "margin": 46.81999999999999
+        },
+        {
+          "id": 45,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 123.4
+          },
+          "away": {
+            "teamId": 4,
+            "score": 151.98
+          },
+          "margin": 28.579999999999984
+        },
+        {
+          "id": 46,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 174.48
+          },
+          "away": {
+            "teamId": 6,
+            "score": 110.38
+          },
+          "margin": 64.1
+        },
+        {
+          "id": 47,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 106.9
+          },
+          "away": {
+            "teamId": 7,
+            "score": 109.02
+          },
+          "margin": 2.1199999999999903
+        },
+        {
+          "id": 48,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 123.22
+          },
+          "away": {
+            "teamId": 8,
+            "score": 99.64
+          },
+          "margin": 23.58
+        },
+        {
+          "id": 49,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 140.9
+          },
+          "away": {
+            "teamId": 9,
+            "score": 98.62
+          },
+          "margin": 42.28
+        },
+        {
+          "id": 50,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 140.1
+          },
+          "away": {
+            "teamId": 4,
+            "score": 141.24
+          },
+          "margin": 1.1400000000000148
+        },
+        {
+          "id": 51,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 117.14
+          },
+          "away": {
+            "teamId": 8,
+            "score": 165.94
+          },
+          "margin": 48.8
+        },
+        {
+          "id": 52,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 153.54
+          },
+          "away": {
+            "teamId": 1,
+            "score": 112.48
+          },
+          "margin": 41.05999999999999
+        },
+        {
+          "id": 53,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 96.42
+          },
+          "away": {
+            "teamId": 6,
+            "score": 113.78
+          },
+          "margin": 17.36
+        },
+        {
+          "id": 54,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 133.4
+          },
+          "away": {
+            "teamId": 9,
+            "score": 116.56
+          },
+          "margin": 16.840000000000003
+        },
+        {
+          "id": 55,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 203.9
+          },
+          "away": {
+            "teamId": 2,
+            "score": 144.44
+          },
+          "margin": 59.46000000000001
+        },
+        {
+          "id": 56,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 103.1
+          },
+          "away": {
+            "teamId": 4,
+            "score": 124.7
+          },
+          "margin": 21.60000000000001
+        },
+        {
+          "id": 57,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 42.6
+          },
+          "away": {
+            "teamId": 3,
+            "score": 146.42
+          },
+          "margin": 103.82
+        },
+        {
+          "id": 58,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 132.52
+          },
+          "away": {
+            "teamId": 10,
+            "score": 145.28
+          },
+          "margin": 12.759999999999991
+        },
+        {
+          "id": 59,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 162.32
+          },
+          "away": {
+            "teamId": 5,
+            "score": 130.6
+          },
+          "margin": 31.72
+        },
+        {
+          "id": 60,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 123.72
+          },
+          "away": {
+            "teamId": 2,
+            "score": 130.46
+          },
+          "margin": 6.740000000000009
+        },
+        {
+          "id": 61,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 64.96
+          },
+          "away": {
+            "teamId": 10,
+            "score": 189.78
+          },
+          "margin": 124.82000000000001
+        },
+        {
+          "id": 62,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 165.52
+          },
+          "away": {
+            "teamId": 7,
+            "score": 162.52
+          },
+          "margin": 3
+        },
+        {
+          "id": 63,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 156.26
+          },
+          "away": {
+            "teamId": 4,
+            "score": 143.86
+          },
+          "margin": 12.399999999999977
+        },
+        {
+          "id": 64,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 106.38
+          },
+          "away": {
+            "teamId": 5,
+            "score": 163.64
+          },
+          "margin": 57.25999999999999
+        },
+        {
+          "id": 65,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 109.46
+          },
+          "away": {
+            "teamId": 8,
+            "score": 124.66
+          },
+          "margin": 15.200000000000003
+        },
+        {
+          "id": 66,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 114.06
+          },
+          "away": {
+            "teamId": 5,
+            "score": 175.32
+          },
+          "margin": 61.25999999999999
+        },
+        {
+          "id": 67,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 117.16
+          },
+          "away": {
+            "teamId": 3,
+            "score": 160.92
+          },
+          "margin": 43.75999999999999
+        },
+        {
+          "id": 68,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 114.64
+          },
+          "away": {
+            "teamId": 1,
+            "score": 184.18
+          },
+          "margin": 69.54
+        },
+        {
+          "id": 69,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 170.86
+          },
+          "away": {
+            "teamId": 9,
+            "score": 102.5
+          },
+          "margin": 68.36000000000001
+        },
+        {
+          "id": 70,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 167.5
+          },
+          "away": {
+            "teamId": 7,
+            "score": 127
+          },
+          "margin": 40.5
+        },
+        {
+          "id": 72,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 143.74
+          },
+          "away": {
+            "teamId": 2,
+            "score": 119.74
+          },
+          "margin": 24.000000000000014
+        },
+        {
+          "id": 73,
+          "week": 15,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 174.98
+          },
+          "away": {
+            "teamId": 6,
+            "score": 105.4
+          },
+          "margin": 69.57999999999998
+        },
+        {
+          "id": 75,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 155.4
+          },
+          "away": {
+            "teamId": 7,
+            "score": 226.5
+          },
+          "margin": 71.1
+        },
+        {
+          "id": 76,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 93.84
+          },
+          "away": {
+            "teamId": 9,
+            "score": 100.18
+          },
+          "margin": 6.340000000000003
+        },
+        {
+          "id": 77,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 156.18
+          },
+          "away": {
+            "teamId": 8,
+            "score": 127.68
+          },
+          "margin": 28.5
+        },
+        {
+          "id": 78,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 155.64
+          },
+          "away": {
+            "teamId": 1,
+            "score": 167.86
+          },
+          "margin": 12.220000000000027
+        },
+        {
+          "id": 79,
+          "week": 16,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 103.88
+          },
+          "away": {
+            "teamId": 6,
+            "score": 156.22
+          },
+          "margin": 52.34
+        },
+        {
+          "id": 80,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 144.4
+          },
+          "away": {
+            "teamId": 9,
+            "score": 94.62
+          },
+          "margin": 49.78
+        },
+        {
+          "id": 81,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 172.68
+          },
+          "away": {
+            "teamId": 3,
+            "score": 103
+          },
+          "margin": 69.68
+        },
+        {
+          "id": 82,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 150.94
+          },
+          "away": {
+            "teamId": 1,
+            "score": 159.98
+          },
+          "margin": 9.039999999999992
+        },
+        {
+          "id": 83,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 150.88
+          },
+          "away": {
+            "teamId": 8,
+            "score": 147
+          },
+          "margin": 3.8799999999999955
+        },
+        {
+          "id": 84,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 134.68
+          },
+          "away": {
+            "teamId": 6,
+            "score": 97.46
+          },
+          "margin": 37.22000000000001
+        },
+        {
+          "id": 85,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 165.62
+          },
+          "away": {
+            "teamId": 7,
+            "score": 148.76
+          },
+          "margin": 16.860000000000014
+        },
+        {
+          "id": 86,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 120.84
+          },
+          "away": {
+            "teamId": 9,
+            "score": 88.18
+          },
+          "margin": 32.66
+        }
+      ],
+      "records": {
+        "highestSingleTeamScore": 226.5,
+        "biggestBlowout": {
+          "week": 13,
+          "margin": 124.82000000000001,
+          "home": {
+            "teamId": 9,
+            "score": 64.96
+          },
+          "away": {
+            "teamId": 10,
+            "score": 189.78
+          }
+        },
+        "closestGame": {
+          "week": 8,
+          "margin": 1.1400000000000006,
+          "home": {
+            "teamId": 2,
+            "score": 120.16
+          },
+          "away": {
+            "teamId": 9,
+            "score": 121.3
+          }
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "leagueName": "Stumblin Bumblin and Fumblin",
+      "teams": [
+        {
+          "id": 1,
+          "name": "Cops and Rodgers",
+          "abbrev": "RODG",
+          "owners": [
+            "Bobbyg309"
+          ],
+          "finalStanding": 6,
+          "playoffSeed": 4,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1821.4,
+          "pointsAgainst": 1835.0999999999997
+        },
+        {
+          "id": 2,
+          "name": " The AL Qaeda Crashouts ",
+          "abbrev": "ELLA",
+          "owners": [
+            "ESPNFAN5145154210"
+          ],
+          "finalStanding": 2,
+          "playoffSeed": 2,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1780.4199999999998,
+          "pointsAgainst": 1866.7799999999997
+        },
+        {
+          "id": 3,
+          "name": "Tucks Massage Parlor",
+          "abbrev": "TMP",
+          "owners": [
+            "ESPNFAN5697222911"
+          ],
+          "finalStanding": 5,
+          "playoffSeed": 3,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 2004.3400000000001,
+          "pointsAgainst": 1878.5200000000004
+        },
+        {
+          "id": 4,
+          "name": "Nuts 2 Butts",
+          "abbrev": "N2B",
+          "owners": [
+            "jrosoler"
+          ],
+          "finalStanding": 9,
+          "playoffSeed": 10,
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1595.0000000000002,
+          "pointsAgainst": 1845.32
+        },
+        {
+          "id": 5,
+          "name": "The Nabers Think Im Sellin Dope",
+          "abbrev": "NTSD",
+          "owners": [
+            "JHorton19"
+          ],
+          "finalStanding": 4,
+          "playoffSeed": 5,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1782.76,
+          "pointsAgainst": 1755.3199999999997
+        },
+        {
+          "id": 6,
+          "name": "Yo-mothas-ass",
+          "abbrev": "JETS",
+          "owners": [
+            "ESPNFAN98339850"
+          ],
+          "finalStanding": 7,
+          "playoffSeed": 8,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1956.7000000000003,
+          "pointsAgainst": 1832.72
+        },
+        {
+          "id": 7,
+          "name": "Kill jerry",
+          "abbrev": "PLUg",
+          "owners": [
+            "ESPNFAN4989902394"
+          ],
+          "finalStanding": 8,
+          "playoffSeed": 7,
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1737.6399999999999,
+          "pointsAgainst": 1862.7800000000002
+        },
+        {
+          "id": 8,
+          "name": "I Chase Brown Nabers ",
+          "abbrev": "AR",
+          "owners": [
+            "espnfan7517564915"
+          ],
+          "finalStanding": 10,
+          "playoffSeed": 9,
+          "wins": 4,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1675.8000000000002,
+          "pointsAgainst": 1789.1200000000003
+        },
+        {
+          "id": 9,
+          "name": "Lamar you not entertained?",
+          "abbrev": "SBC",
+          "owners": [
+            "ESPNfan0957173070"
+          ],
+          "finalStanding": 3,
+          "playoffSeed": 6,
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1864.12,
+          "pointsAgainst": 1780.0799999999997
+        },
+        {
+          "id": 10,
+          "name": "Kirk-umcised Penix",
+          "abbrev": "Kirk",
+          "owners": [
+            "espnfan3475975028"
+          ],
+          "finalStanding": 1,
+          "playoffSeed": 1,
+          "wins": 10,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 2058.12,
+          "pointsAgainst": 1830.56
+        }
+      ],
+      "champion": {
+        "teamId": 10,
+        "name": "Kirk-umcised Penix",
+        "owners": [
+          "espnfan3475975028"
+        ]
+      },
+      "runnerUp": {
+        "teamId": 2,
+        "name": " The AL Qaeda Crashouts ",
+        "owners": [
+          "ESPNFAN5145154210"
+        ]
+      },
+      "matchups": [
+        {
+          "id": 1,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 117.78
+          },
+          "away": {
+            "teamId": 3,
+            "score": 108.58
+          },
+          "margin": 9.200000000000003
+        },
+        {
+          "id": 2,
+          "week": 1,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 107.42
+          },
+          "away": {
+            "teamId": 2,
+            "score": 142.12
+          },
+          "margin": 34.7
+        },
+        {
+          "id": 3,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 149.72
+          },
+          "away": {
+            "teamId": 1,
+            "score": 120.56
+          },
+          "margin": 29.159999999999997
+        },
+        {
+          "id": 4,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 134.26
+          },
+          "away": {
+            "teamId": 6,
+            "score": 109.28
+          },
+          "margin": 24.97999999999999
+        },
+        {
+          "id": 5,
+          "week": 1,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 101.82
+          },
+          "away": {
+            "teamId": 8,
+            "score": 90.04
+          },
+          "margin": 11.779999999999987
+        },
+        {
+          "id": 6,
+          "week": 2,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 161.34
+          },
+          "away": {
+            "teamId": 6,
+            "score": 123.28
+          },
+          "margin": 38.06
+        },
+        {
+          "id": 7,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 125.92
+          },
+          "away": {
+            "teamId": 5,
+            "score": 155.9
+          },
+          "margin": 29.980000000000004
+        },
+        {
+          "id": 8,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 101.6
+          },
+          "away": {
+            "teamId": 2,
+            "score": 124.8
+          },
+          "margin": 23.200000000000003
+        },
+        {
+          "id": 9,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 113.6
+          },
+          "away": {
+            "teamId": 7,
+            "score": 150.64
+          },
+          "margin": 37.03999999999999
+        },
+        {
+          "id": 10,
+          "week": 2,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 105.84
+          },
+          "away": {
+            "teamId": 10,
+            "score": 165.88
+          },
+          "margin": 60.03999999999999
+        },
+        {
+          "id": 11,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 114.62
+          },
+          "away": {
+            "teamId": 8,
+            "score": 100.42
+          },
+          "margin": 14.200000000000003
+        },
+        {
+          "id": 12,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 160.64
+          },
+          "away": {
+            "teamId": 9,
+            "score": 138.52
+          },
+          "margin": 22.119999999999976
+        },
+        {
+          "id": 13,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 139.82
+          },
+          "away": {
+            "teamId": 4,
+            "score": 93.38
+          },
+          "margin": 46.44
+        },
+        {
+          "id": 14,
+          "week": 3,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 128.92
+          },
+          "away": {
+            "teamId": 7,
+            "score": 93.14
+          },
+          "margin": 35.77999999999999
+        },
+        {
+          "id": 15,
+          "week": 3,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 125.72
+          },
+          "away": {
+            "teamId": 10,
+            "score": 160.26
+          },
+          "margin": 34.53999999999999
+        },
+        {
+          "id": 16,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 143.18
+          },
+          "away": {
+            "teamId": 4,
+            "score": 90.02
+          },
+          "margin": 53.16000000000001
+        },
+        {
+          "id": 17,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 160.88
+          },
+          "away": {
+            "teamId": 1,
+            "score": 132.56
+          },
+          "margin": 28.319999999999993
+        },
+        {
+          "id": 18,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 164.6
+          },
+          "away": {
+            "teamId": 8,
+            "score": 160.14
+          },
+          "margin": 4.460000000000008
+        },
+        {
+          "id": 19,
+          "week": 4,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 117.76
+          },
+          "away": {
+            "teamId": 3,
+            "score": 128.9
+          },
+          "margin": 11.14
+        },
+        {
+          "id": 20,
+          "week": 4,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 179.38
+          },
+          "away": {
+            "teamId": 6,
+            "score": 146.54
+          },
+          "margin": 32.84
+        },
+        {
+          "id": 21,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 124.78
+          },
+          "away": {
+            "teamId": 10,
+            "score": 162.42
+          },
+          "margin": 37.639999999999986
+        },
+        {
+          "id": 22,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 113.24
+          },
+          "away": {
+            "teamId": 5,
+            "score": 135.76
+          },
+          "margin": 22.519999999999996
+        },
+        {
+          "id": 23,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 110.82
+          },
+          "away": {
+            "teamId": 2,
+            "score": 115.16
+          },
+          "margin": 4.340000000000003
+        },
+        {
+          "id": 24,
+          "week": 5,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 147.22
+          },
+          "away": {
+            "teamId": 3,
+            "score": 141.7
+          },
+          "margin": 5.52000000000001
+        },
+        {
+          "id": 25,
+          "week": 5,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 124.68
+          },
+          "away": {
+            "teamId": 6,
+            "score": 142.12
+          },
+          "margin": 17.439999999999998
+        },
+        {
+          "id": 26,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 137.14
+          },
+          "away": {
+            "teamId": 3,
+            "score": 148.42
+          },
+          "margin": 11.280000000000001
+        },
+        {
+          "id": 27,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 116.12
+          },
+          "away": {
+            "teamId": 1,
+            "score": 120.9
+          },
+          "margin": 4.780000000000001
+        },
+        {
+          "id": 28,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 163.86
+          },
+          "away": {
+            "teamId": 9,
+            "score": 134.7
+          },
+          "margin": 29.160000000000025
+        },
+        {
+          "id": 29,
+          "week": 6,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 101.82
+          },
+          "away": {
+            "teamId": 7,
+            "score": 108.26
+          },
+          "margin": 6.440000000000012
+        },
+        {
+          "id": 30,
+          "week": 6,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 146.28
+          },
+          "away": {
+            "teamId": 5,
+            "score": 104.34
+          },
+          "margin": 41.94
+        },
+        {
+          "id": 31,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 1,
+            "score": 120.48
+          },
+          "away": {
+            "teamId": 2,
+            "score": 104.94
+          },
+          "margin": 15.540000000000006
+        },
+        {
+          "id": 32,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 9,
+            "score": 129.06
+          },
+          "away": {
+            "teamId": 6,
+            "score": 126.64
+          },
+          "margin": 2.4200000000000017
+        },
+        {
+          "id": 33,
+          "week": 7,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 120.46
+          },
+          "away": {
+            "teamId": 8,
+            "score": 127.76
+          },
+          "margin": 7.300000000000011
+        },
+        {
+          "id": 34,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 133.12
+          },
+          "away": {
+            "teamId": 4,
+            "score": 103.58
+          },
+          "margin": 29.540000000000006
+        },
+        {
+          "id": 35,
+          "week": 7,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 199.74
+          },
+          "away": {
+            "teamId": 10,
+            "score": 166.54
+          },
+          "margin": 33.20000000000002
+        },
+        {
+          "id": 36,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 96.88
+          },
+          "away": {
+            "teamId": 9,
+            "score": 168.02
+          },
+          "margin": 71.14000000000001
+        },
+        {
+          "id": 37,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 131.6
+          },
+          "away": {
+            "teamId": 7,
+            "score": 113.92
+          },
+          "margin": 17.679999999999993
+        },
+        {
+          "id": 38,
+          "week": 8,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 145.28
+          },
+          "away": {
+            "teamId": 5,
+            "score": 78.78
+          },
+          "margin": 66.5
+        },
+        {
+          "id": 39,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 156.54
+          },
+          "away": {
+            "teamId": 3,
+            "score": 204.16
+          },
+          "margin": 47.620000000000005
+        },
+        {
+          "id": 40,
+          "week": 8,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 134.56
+          },
+          "away": {
+            "teamId": 1,
+            "score": 146.22
+          },
+          "margin": 11.659999999999997
+        },
+        {
+          "id": 41,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 113.8
+          },
+          "away": {
+            "teamId": 2,
+            "score": 152.2
+          },
+          "margin": 38.39999999999999
+        },
+        {
+          "id": 42,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 133.04
+          },
+          "away": {
+            "teamId": 9,
+            "score": 149.56
+          },
+          "margin": 16.52000000000001
+        },
+        {
+          "id": 43,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 6,
+            "score": 133.52
+          },
+          "away": {
+            "teamId": 10,
+            "score": 152.5
+          },
+          "margin": 18.97999999999999
+        },
+        {
+          "id": 44,
+          "week": 9,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 89.88
+          },
+          "away": {
+            "teamId": 1,
+            "score": 164.92
+          },
+          "margin": 75.03999999999999
+        },
+        {
+          "id": 45,
+          "week": 9,
+          "winner": "HOME",
+          "home": {
+            "teamId": 8,
+            "score": 131.72
+          },
+          "away": {
+            "teamId": 4,
+            "score": 116.34
+          },
+          "margin": 15.379999999999995
+        },
+        {
+          "id": 46,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 5,
+            "score": 149.78
+          },
+          "away": {
+            "teamId": 6,
+            "score": 141.24
+          },
+          "margin": 8.539999999999992
+        },
+        {
+          "id": 47,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 185.92
+          },
+          "away": {
+            "teamId": 7,
+            "score": 106.42
+          },
+          "margin": 79.49999999999999
+        },
+        {
+          "id": 48,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 123.4
+          },
+          "away": {
+            "teamId": 8,
+            "score": 102.6
+          },
+          "margin": 20.80000000000001
+        },
+        {
+          "id": 49,
+          "week": 10,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 139.24
+          },
+          "away": {
+            "teamId": 9,
+            "score": 159.84
+          },
+          "margin": 20.599999999999994
+        },
+        {
+          "id": 50,
+          "week": 10,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 116.8
+          },
+          "away": {
+            "teamId": 4,
+            "score": 110.6
+          },
+          "margin": 6.200000000000003
+        },
+        {
+          "id": 51,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 132.2
+          },
+          "away": {
+            "teamId": 8,
+            "score": 87.9
+          },
+          "margin": 44.29999999999998
+        },
+        {
+          "id": 52,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 111.6
+          },
+          "away": {
+            "teamId": 1,
+            "score": 147.58
+          },
+          "margin": 35.98000000000002
+        },
+        {
+          "id": 53,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 4,
+            "score": 131.64
+          },
+          "away": {
+            "teamId": 6,
+            "score": 129.86
+          },
+          "margin": 1.7799999999999727
+        },
+        {
+          "id": 54,
+          "week": 11,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 132.52
+          },
+          "away": {
+            "teamId": 9,
+            "score": 126.02
+          },
+          "margin": 6.500000000000014
+        },
+        {
+          "id": 55,
+          "week": 11,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 123.94
+          },
+          "away": {
+            "teamId": 2,
+            "score": 125.14
+          },
+          "margin": 1.2000000000000028
+        },
+        {
+          "id": 56,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 98.02
+          },
+          "away": {
+            "teamId": 4,
+            "score": 161.86
+          },
+          "margin": 63.84000000000002
+        },
+        {
+          "id": 57,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 95.92
+          },
+          "away": {
+            "teamId": 3,
+            "score": 114.96
+          },
+          "margin": 19.039999999999992
+        },
+        {
+          "id": 58,
+          "week": 12,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 118.18
+          },
+          "away": {
+            "teamId": 10,
+            "score": 162.38
+          },
+          "margin": 44.19999999999999
+        },
+        {
+          "id": 59,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 145.36
+          },
+          "away": {
+            "teamId": 5,
+            "score": 123.22
+          },
+          "margin": 22.140000000000015
+        },
+        {
+          "id": 60,
+          "week": 12,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 203.36
+          },
+          "away": {
+            "teamId": 2,
+            "score": 113.34
+          },
+          "margin": 90.02000000000001
+        },
+        {
+          "id": 61,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 9,
+            "score": 125.74
+          },
+          "away": {
+            "teamId": 10,
+            "score": 129.54
+          },
+          "margin": 3.799999999999997
+        },
+        {
+          "id": 62,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 111.92
+          },
+          "away": {
+            "teamId": 7,
+            "score": 130
+          },
+          "margin": 18.08
+        },
+        {
+          "id": 63,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 136.84
+          },
+          "away": {
+            "teamId": 4,
+            "score": 113.68
+          },
+          "margin": 23.159999999999997
+        },
+        {
+          "id": 64,
+          "week": 13,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 103.3
+          },
+          "away": {
+            "teamId": 5,
+            "score": 146.92
+          },
+          "margin": 43.61999999999999
+        },
+        {
+          "id": 65,
+          "week": 13,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 141.66
+          },
+          "away": {
+            "teamId": 8,
+            "score": 103.94
+          },
+          "margin": 37.72
+        },
+        {
+          "id": 66,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 2,
+            "score": 103.36
+          },
+          "away": {
+            "teamId": 5,
+            "score": 145.84
+          },
+          "margin": 42.480000000000004
+        },
+        {
+          "id": 67,
+          "week": 14,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 171.66
+          },
+          "away": {
+            "teamId": 3,
+            "score": 124.6
+          },
+          "margin": 47.06
+        },
+        {
+          "id": 68,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 117.68
+          },
+          "away": {
+            "teamId": 1,
+            "score": 131.24
+          },
+          "margin": 13.560000000000002
+        },
+        {
+          "id": 69,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 4,
+            "score": 97.06
+          },
+          "away": {
+            "teamId": 9,
+            "score": 132.46
+          },
+          "margin": 35.400000000000006
+        },
+        {
+          "id": 70,
+          "week": 14,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 10,
+            "score": 122.7
+          },
+          "away": {
+            "teamId": 7,
+            "score": 130.04
+          },
+          "margin": 7.339999999999989
+        },
+        {
+          "id": 72,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 1,
+            "score": 130.72
+          },
+          "away": {
+            "teamId": 5,
+            "score": 145.44
+          },
+          "margin": 14.719999999999999
+        },
+        {
+          "id": 73,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 3,
+            "score": 153
+          },
+          "away": {
+            "teamId": 9,
+            "score": 161.4
+          },
+          "margin": 8.400000000000006
+        },
+        {
+          "id": 75,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 124.06
+          },
+          "away": {
+            "teamId": 6,
+            "score": 127.74
+          },
+          "margin": 3.6799999999999926
+        },
+        {
+          "id": 76,
+          "week": 15,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 103.78
+          },
+          "away": {
+            "teamId": 4,
+            "score": 160.72
+          },
+          "margin": 56.94
+        },
+        {
+          "id": 77,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 132.1
+          },
+          "away": {
+            "teamId": 5,
+            "score": 95.32
+          },
+          "margin": 36.78
+        },
+        {
+          "id": 78,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 2,
+            "score": 147.46
+          },
+          "away": {
+            "teamId": 9,
+            "score": 100.84
+          },
+          "margin": 46.620000000000005
+        },
+        {
+          "id": 79,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 144.5
+          },
+          "away": {
+            "teamId": 1,
+            "score": 123.4
+          },
+          "margin": 21.099999999999994
+        },
+        {
+          "id": 80,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 6,
+            "score": 166.38
+          },
+          "away": {
+            "teamId": 4,
+            "score": 132.86
+          },
+          "margin": 33.51999999999998
+        },
+        {
+          "id": 81,
+          "week": 16,
+          "winner": "HOME",
+          "home": {
+            "teamId": 7,
+            "score": 144.76
+          },
+          "away": {
+            "teamId": 8,
+            "score": 102.88
+          },
+          "margin": 41.879999999999995
+        },
+        {
+          "id": 82,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 10,
+            "score": 157.32
+          },
+          "away": {
+            "teamId": 2,
+            "score": 142.82
+          },
+          "margin": 14.5
+        },
+        {
+          "id": 83,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 5,
+            "score": 75.06
+          },
+          "away": {
+            "teamId": 9,
+            "score": 114.46
+          },
+          "margin": 39.39999999999999
+        },
+        {
+          "id": 84,
+          "week": 17,
+          "winner": "HOME",
+          "home": {
+            "teamId": 3,
+            "score": 161.2
+          },
+          "away": {
+            "teamId": 1,
+            "score": 88.08
+          },
+          "margin": 73.11999999999999
+        },
+        {
+          "id": 85,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 7,
+            "score": 98.18
+          },
+          "away": {
+            "teamId": 6,
+            "score": 119.44
+          },
+          "margin": 21.25999999999999
+        },
+        {
+          "id": 86,
+          "week": 17,
+          "winner": "AWAY",
+          "home": {
+            "teamId": 8,
+            "score": 116.88
+          },
+          "away": {
+            "teamId": 4,
+            "score": 123.18
+          },
+          "margin": 6.300000000000011
+        }
+      ],
+      "records": {
+        "highestSingleTeamScore": 204.16,
+        "biggestBlowout": {
+          "week": 12,
+          "margin": 90.02000000000001,
+          "home": {
+            "teamId": 6,
+            "score": 203.36
+          },
+          "away": {
+            "teamId": 2,
+            "score": 113.34
+          }
+        },
+        "closestGame": {
+          "week": 11,
+          "margin": 1.2000000000000028,
+          "home": {
+            "teamId": 10,
+            "score": 123.94
+          },
+          "away": {
+            "teamId": 2,
+            "score": 125.14
+          }
+        }
+      }
+    }
+  ],
+  "allTime": [
+    {
+      "owner": "Bobbyg309",
+      "seasons": 4,
+      "wins": 34,
+      "losses": 22,
+      "ties": 0,
+      "pointsFor": 7472.12,
+      "pointsAgainst": 7181.82,
+      "championships": 3,
+      "runnerUps": 0
+    },
+    {
+      "owner": "espnfan3475975028",
+      "seasons": 4,
+      "wins": 25,
+      "losses": 31,
+      "ties": 0,
+      "pointsFor": 7331.04,
+      "pointsAgainst": 7302.32,
+      "championships": 1,
+      "runnerUps": 0
+    },
+    {
+      "owner": "ESPNFAN5697222911",
+      "seasons": 4,
+      "wins": 35,
+      "losses": 21,
+      "ties": 0,
+      "pointsFor": 7210.2,
+      "pointsAgainst": 6840.38,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "ESPNFAN98339850",
+      "seasons": 4,
+      "wins": 31,
+      "losses": 25,
+      "ties": 0,
+      "pointsFor": 7281.88,
+      "pointsAgainst": 6916.34,
+      "championships": 0,
+      "runnerUps": 1
+    },
+    {
+      "owner": "ESPNFAN4989902394",
+      "seasons": 4,
+      "wins": 29,
+      "losses": 27,
+      "ties": 0,
+      "pointsFor": 7032.62,
+      "pointsAgainst": 6883.3,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "JHorton19",
+      "seasons": 4,
+      "wins": 24,
+      "losses": 32,
+      "ties": 0,
+      "pointsFor": 6757.56,
+      "pointsAgainst": 6986.32,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "jrosoler",
+      "seasons": 4,
+      "wins": 22,
+      "losses": 34,
+      "ties": 0,
+      "pointsFor": 6747.12,
+      "pointsAgainst": 6998.36,
+      "championships": 0,
+      "runnerUps": 1
+    },
+    {
+      "owner": "ESPNFAN5145154210",
+      "seasons": 2,
+      "wins": 15,
+      "losses": 13,
+      "ties": 0,
+      "pointsFor": 3673.02,
+      "pointsAgainst": 3849.74,
+      "championships": 0,
+      "runnerUps": 1
+    },
+    {
+      "owner": "ESPNFAN5964584044",
+      "seasons": 2,
+      "wins": 15,
+      "losses": 13,
+      "ties": 0,
+      "pointsFor": 3321.74,
+      "pointsAgainst": 3322.42,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "ESPNFAN3753567837",
+      "seasons": 2,
+      "wins": 14,
+      "losses": 14,
+      "ties": 0,
+      "pointsFor": 3551.16,
+      "pointsAgainst": 3490.52,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "espnfan7517564915",
+      "seasons": 2,
+      "wins": 12,
+      "losses": 16,
+      "ties": 0,
+      "pointsFor": 3495.86,
+      "pointsAgainst": 3613.84,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "ESPNFAN2932377394",
+      "seasons": 1,
+      "wins": 8,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1609.46,
+      "pointsAgainst": 1678.84,
+      "championships": 0,
+      "runnerUps": 1
+    },
+    {
+      "owner": "ESPNfan0957173070",
+      "seasons": 1,
+      "wins": 7,
+      "losses": 7,
+      "ties": 0,
+      "pointsFor": 1864.12,
+      "pointsAgainst": 1780.08,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "Schyler4057",
+      "seasons": 1,
+      "wins": 6,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 1585.08,
+      "pointsAgainst": 1588.54,
+      "championships": 0,
+      "runnerUps": 0
+    },
+    {
+      "owner": "ESPNfan9582050862",
+      "seasons": 1,
+      "wins": 3,
+      "losses": 11,
+      "ties": 0,
+      "pointsFor": 1396.7,
+      "pointsAgainst": 1896.86,
+      "championships": 0,
+      "runnerUps": 0
+    }
+  ]
+}

@@ -1,93 +1,274 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#05080e">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#05080e"
+  >
+
   <title>SBF Network</title>
-  <meta name="description" content="The official fantasy football media home for Stumblin' Bumblin' & Fumblin'.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <meta
+    name="description"
+    content="The official fantasy football media home for Stumblin' Bumblin' & Fumblin'."
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 </head>
+
 <body>
+
   <header class="site-header">
-    <a class="brand" href="#home" data-route="home">
-      <span class="brand-mark">SBF</span>
+
+    <a
+      class="brand"
+      href="#home"
+      data-route="home"
+    >
+      <span class="brand-mark">
+        SBF
+      </span>
+
       <span class="brand-copy">
-        <small>Fantasy Football</small>
-        <strong>Network</strong>
+        <small>
+          Fantasy Football
+        </small>
+
+        <strong>
+          Network
+        </strong>
       </span>
     </a>
 
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#home" data-route="home" class="active">Home</a>
-      <a href="#matchups" data-route="matchups">Matchups</a>
-      <a href="#standings" data-route="standings">Standings</a>
-      <a href="#teams" data-route="teams">Teams</a>
-      <a href="#recaps" data-route="recaps">Recaps</a>
+    <nav
+      class="desktop-nav"
+      aria-label="Main navigation"
+    >
+      <a
+        href="#home"
+        data-route="home"
+        class="active"
+      >
+        Home
+      </a>
+
+      <a
+        href="#matchups"
+        data-route="matchups"
+      >
+        Matchups
+      </a>
+
+      <a
+        href="#standings"
+        data-route="standings"
+      >
+        Standings
+      </a>
+
+      <a
+        href="#teams"
+        data-route="teams"
+      >
+        Teams
+      </a>
+
+      <a
+        href="#recaps"
+        data-route="recaps"
+      >
+        Recaps
+      </a>
+
+      <a
+        href="#nfl"
+        data-route="nfl"
+      >
+        NFL
+      </a>
+
+      <a
+        href="#history"
+        data-route="history"
+      >
+        History
+      </a>
     </nav>
+
   </header>
 
   <div class="ticker">
-    <strong id="ticker-status">CONNECTING</strong>
+
+    <strong id="ticker-status">
+      CONNECTING
+    </strong>
+
     <div>
-      <span>POWER RANKINGS</span>
-      <span>CHAMPIONSHIP ODDS</span>
-      <span>FRAUD WATCH</span>
-      <span>WEEKLY AWARDS</span>
+      <a
+        href="#home"
+        data-home-section="Power Rankings"
+      >
+        POWER RANKINGS
+      </a>
+
+      <a
+        href="#home"
+        data-home-section="Championship Odds"
+      >
+        CHAMPIONSHIP ODDS
+      </a>
+
+      <a
+        href="#home"
+        data-home-section="Fraud Watch"
+      >
+        FRAUD WATCH
+      </a>
+
+      <a
+        href="#home"
+        data-home-section="Weekly Awards"
+      >
+        WEEKLY AWARDS
+      </a>
+
+      <a
+        href="#history"
+        data-route="history"
+      >
+        🏆 HISTORY
+      </a>
     </div>
+
   </div>
 
   <main id="app">
-    <section id="home" class="page active"></section>
-    <section id="matchups" class="page"></section>
-    <section id="standings" class="page"></section>
-    <section id="teams" class="page"></section>
-    <section id="recaps" class="page"></section>
-    <section id="nfl" class="page"></section>
+
+    <section
+      id="home"
+      class="page active"
+    ></section>
+
+    <section
+      id="matchups"
+      class="page"
+    ></section>
+
+    <section
+      id="standings"
+      class="page"
+    ></section>
+
+    <section
+      id="teams"
+      class="page"
+    ></section>
+
+    <section
+      id="recaps"
+      class="page"
+    ></section>
+
+    <section
+      id="nfl"
+      class="page"
+    ></section>
+
+    <section
+      id="history"
+      class="page"
+    ></section>
+
   </main>
 
-  <nav class="desktop-nav" aria-label="Main navigation">
-  <a href="#home" data-route="home" class="active">Home</a>
-  <a href="#matchups" data-route="matchups">Matchups</a>
-  <a href="#standings" data-route="standings">Standings</a>
-  <a href="#teams" data-route="teams">Teams</a>
-  <a href="#recaps" data-route="recaps">Recaps</a>
-  <a href="#nfl" data-route="nfl">NFL</a>
-</nav><nav class="mobile-nav" aria-label="Mobile navigation">
-  <a href="#home" data-route="home" class="active">
-    <span>⌂</span>
-    <small>Home</small>
-  </a>
+  <nav
+    class="mobile-nav"
+    aria-label="Mobile navigation"
+  >
 
-  <a href="#matchups" data-route="matchups">
-    <span>▣</span>
-    <small>Matchups</small>
-  </a>
+    <a
+      href="#home"
+      data-route="home"
+      class="active"
+    >
+      <span>⌂</span>
+      <small>Home</small>
+    </a>
 
-  <a href="#standings" data-route="standings">
-    <span>▤</span>
-    <small>Standings</small>
-  </a>
+    <a
+      href="#matchups"
+      data-route="matchups"
+    >
+      <span>▣</span>
+      <small>Matchups</small>
+    </a>
 
-  <a href="#teams" data-route="teams">
-    <span>♟</span>
-    <small>Teams</small>
-  </a>
+    <a
+      href="#standings"
+      data-route="standings"
+    >
+      <span>▤</span>
+      <small>Standings</small>
+    </a>
 
-  <a href="#recaps" data-route="recaps">
-    <span>▰</span>
-    <small>Recaps</small>
-  </a>
+    <a
+      href="#teams"
+      data-route="teams"
+    >
+      <span>♟</span>
+      <small>Teams</small>
+    </a>
 
-  <a href="#nfl" data-route="nfl">
-    <span>🏈</span>
-    <small>NFL</small>
-  </a>
-</nav>
+    <a
+      href="#recaps"
+      data-route="recaps"
+    >
+      <span>▰</span>
+      <small>Recaps</small>
+    </a>
 
-  <script type="module" src="app.js"></script>
+    <a
+      href="#nfl"
+      data-route="nfl"
+    >
+      <span>🏈</span>
+      <small>NFL</small>
+    </a>
+
+  </nav>
+
+  <script
+    type="module"
+    src="app.js"
+  ></script>
+
 </body>
+
 </html>
