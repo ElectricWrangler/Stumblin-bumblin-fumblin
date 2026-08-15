@@ -1,18 +1,18 @@
 {
   "week": "Preseason 2",
-  "updatedAt": "2026-08-15T22:00:47.725Z",
+  "updatedAt": "2026-08-15T22:54:22.704Z",
   "games": [
     {
       "id": "401873283",
       "status": "live",
-      "detail": "3:52 - 3rd",
+      "detail": "2:55 - 4th",
       "network": "NFL Net",
       "startTime": "2026-08-15T20:00Z",
       "away": {
         "name": "Los Angeles Rams",
         "abbr": "LAR",
         "record": "0-0",
-        "score": 6,
+        "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "home": {
@@ -27,14 +27,14 @@
     {
       "id": "401873281",
       "status": "live",
-      "detail": "10:26 - 3rd",
+      "detail": "3:00 - 4th",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-15T20:00Z",
       "away": {
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "record": "0-0",
-        "score": 6,
+        "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
       },
       "home": {
