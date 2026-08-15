@@ -1,48 +1,26 @@
 {
   "week": "Preseason 2",
-  "updatedAt": "2026-08-15T22:54:22.704Z",
+  "updatedAt": "2026-08-15T23:39:37.028Z",
   "games": [
     {
-      "id": "401873283",
+      "id": "401873284",
       "status": "live",
-      "detail": "2:55 - 4th",
-      "network": "NFL Net",
-      "startTime": "2026-08-15T20:00Z",
-      "away": {
-        "name": "Los Angeles Rams",
-        "abbr": "LAR",
-        "record": "0-0",
-        "score": 20,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
-      },
-      "home": {
-        "name": "Kansas City Chiefs",
-        "abbr": "KC",
-        "record": "0-0",
-        "score": 9,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873281",
-      "status": "live",
-      "detail": "3:00 - 4th",
+      "detail": "1:35 - 1st",
       "network": "ESPN Unlmtd",
-      "startTime": "2026-08-15T20:00Z",
+      "startTime": "2026-08-15T23:00Z",
       "away": {
-        "name": "Jacksonville Jaguars",
-        "abbr": "JAX",
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
         "record": "0-0",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "home": {
-        "name": "New Orleans Saints",
-        "abbr": "NO",
+        "name": "Baltimore Ravens",
+        "abbr": "BAL",
         "record": "0-0",
-        "score": 20,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "note": ""
     },
@@ -113,24 +91,46 @@
       "note": ""
     },
     {
-      "id": "401873284",
-      "status": "scheduled",
-      "detail": "8/15 - 7:00 PM EDT",
-      "network": "ESPN Unlmtd",
-      "startTime": "2026-08-15T23:00Z",
+      "id": "401873283",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-15T20:00Z",
       "away": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "0-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+        "name": "Los Angeles Rams",
+        "abbr": "LAR",
+        "record": "1-0",
+        "score": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "home": {
-        "name": "Baltimore Ravens",
-        "abbr": "BAL",
-        "record": "0-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
+        "name": "Kansas City Chiefs",
+        "abbr": "KC",
+        "record": "0-1",
+        "score": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873281",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN Unlmtd",
+      "startTime": "2026-08-15T20:00Z",
+      "away": {
+        "name": "Jacksonville Jaguars",
+        "abbr": "JAX",
+        "record": "1-0",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
+      },
+      "home": {
+        "name": "New Orleans Saints",
+        "abbr": "NO",
+        "record": "0-1",
+        "score": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
       },
       "note": ""
     },
