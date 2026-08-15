@@ -1,11 +1,11 @@
 {
   "week": "Preseason 2",
-  "updatedAt": "2026-08-15T21:40:27.620Z",
+  "updatedAt": "2026-08-15T22:00:47.725Z",
   "games": [
     {
       "id": "401873283",
       "status": "live",
-      "detail": "Halftime",
+      "detail": "3:52 - 3rd",
       "network": "NFL Net",
       "startTime": "2026-08-15T20:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Kansas City Chiefs",
         "abbr": "KC",
         "record": "0-0",
-        "score": 6,
+        "score": 9,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
       },
       "note": ""
@@ -27,7 +27,7 @@
     {
       "id": "401873281",
       "status": "live",
-      "detail": "End of 2nd",
+      "detail": "10:26 - 3rd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-15T20:00Z",
       "away": {
