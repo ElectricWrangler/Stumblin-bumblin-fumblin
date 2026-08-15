@@ -1,11 +1,11 @@
 {
   "week": "Preseason 2",
-  "updatedAt": "2026-08-15T04:51:20.197Z",
+  "updatedAt": "2026-08-15T17:43:12.101Z",
   "games": [
     {
       "id": "401873282",
-      "status": "scheduled",
-      "detail": "8/15 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "13:47 - 2nd",
       "network": "WIVB",
       "startTime": "2026-08-15T17:00Z",
       "away": {
@@ -19,22 +19,22 @@
         "name": "Buffalo Bills",
         "abbr": "BUF",
         "record": "0-0",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
       },
       "note": ""
     },
     {
       "id": "401874393",
-      "status": "scheduled",
-      "detail": "8/15 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "14:53 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-15T17:00Z",
       "away": {
         "name": "Cleveland Browns",
         "abbr": "CLE",
         "record": "0-0",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
       },
       "home": {
@@ -48,22 +48,22 @@
     },
     {
       "id": "401873280",
-      "status": "scheduled",
-      "detail": "8/15 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "13:32 - 2nd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-15T17:00Z",
       "away": {
         "name": "Minnesota Vikings",
         "abbr": "MIN",
         "record": "0-0",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
       },
       "home": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "0-0",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "note": ""
