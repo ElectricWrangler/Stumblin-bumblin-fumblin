@@ -1,161 +1,7 @@
 {
   "week": "Preseason 2",
-  "updatedAt": "2026-08-16T03:16:25.047Z",
+  "updatedAt": "2026-08-16T05:02:36.222Z",
   "games": [
-    {
-      "id": "401873282",
-      "status": "final",
-      "detail": "Final",
-      "network": "WIVB",
-      "startTime": "2026-08-15T17:00Z",
-      "away": {
-        "name": "Carolina Panthers",
-        "abbr": "CAR",
-        "record": "1-1",
-        "score": 14,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
-      },
-      "home": {
-        "name": "Buffalo Bills",
-        "abbr": "BUF",
-        "record": "1-0",
-        "score": 29,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401874393",
-      "status": "final",
-      "detail": "Final",
-      "network": "NFL Net",
-      "startTime": "2026-08-15T17:00Z",
-      "away": {
-        "name": "Cleveland Browns",
-        "abbr": "CLE",
-        "record": "0-1",
-        "score": 10,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
-      },
-      "home": {
-        "name": "Chicago Bears",
-        "abbr": "CHI",
-        "record": "1-0",
-        "score": 34,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873280",
-      "status": "final",
-      "detail": "Final",
-      "network": "ESPN Unlmtd",
-      "startTime": "2026-08-15T17:00Z",
-      "away": {
-        "name": "Minnesota Vikings",
-        "abbr": "MIN",
-        "record": "1-0",
-        "score": 13,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
-      },
-      "home": {
-        "name": "New York Giants",
-        "abbr": "NYG",
-        "record": "0-1",
-        "score": 10,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873283",
-      "status": "final",
-      "detail": "Final",
-      "network": "NFL Net",
-      "startTime": "2026-08-15T20:00Z",
-      "away": {
-        "name": "Los Angeles Rams",
-        "abbr": "LAR",
-        "record": "1-0",
-        "score": 20,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
-      },
-      "home": {
-        "name": "Kansas City Chiefs",
-        "abbr": "KC",
-        "record": "0-1",
-        "score": 12,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873281",
-      "status": "final",
-      "detail": "Final",
-      "network": "ESPN Unlmtd",
-      "startTime": "2026-08-15T20:00Z",
-      "away": {
-        "name": "Jacksonville Jaguars",
-        "abbr": "JAX",
-        "record": "1-0",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
-      },
-      "home": {
-        "name": "New Orleans Saints",
-        "abbr": "NO",
-        "record": "0-1",
-        "score": 20,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873284",
-      "status": "final",
-      "detail": "Final",
-      "network": "ESPN Unlmtd",
-      "startTime": "2026-08-15T23:00Z",
-      "away": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "0-1",
-        "score": 7,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
-      },
-      "home": {
-        "name": "Baltimore Ravens",
-        "abbr": "BAL",
-        "record": "1-0",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873279",
-      "status": "final",
-      "detail": "Final",
-      "network": "NFL Net",
-      "startTime": "2026-08-16T00:00Z",
-      "away": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "1-0",
-        "score": 17,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-      },
-      "home": {
-        "name": "Seattle Seahawks",
-        "abbr": "SEA",
-        "record": "0-1",
-        "score": 7,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
-      },
-      "note": ""
-    },
     {
       "id": "401873272",
       "status": "final",
@@ -351,6 +197,160 @@
         "record": "1-0",
         "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873282",
+      "status": "final",
+      "detail": "Final",
+      "network": "WIVB",
+      "startTime": "2026-08-15T17:00Z",
+      "away": {
+        "name": "Carolina Panthers",
+        "abbr": "CAR",
+        "record": "1-1",
+        "score": 14,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
+      },
+      "home": {
+        "name": "Buffalo Bills",
+        "abbr": "BUF",
+        "record": "1-0",
+        "score": 29,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401874393",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-15T17:00Z",
+      "away": {
+        "name": "Cleveland Browns",
+        "abbr": "CLE",
+        "record": "0-1",
+        "score": 10,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
+      },
+      "home": {
+        "name": "Chicago Bears",
+        "abbr": "CHI",
+        "record": "1-0",
+        "score": 34,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873280",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN Unlmtd",
+      "startTime": "2026-08-15T17:00Z",
+      "away": {
+        "name": "Minnesota Vikings",
+        "abbr": "MIN",
+        "record": "1-0",
+        "score": 13,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
+      },
+      "home": {
+        "name": "New York Giants",
+        "abbr": "NYG",
+        "record": "0-1",
+        "score": 10,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873283",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-15T20:00Z",
+      "away": {
+        "name": "Los Angeles Rams",
+        "abbr": "LAR",
+        "record": "1-0",
+        "score": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
+      },
+      "home": {
+        "name": "Kansas City Chiefs",
+        "abbr": "KC",
+        "record": "0-1",
+        "score": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873281",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN Unlmtd",
+      "startTime": "2026-08-15T20:00Z",
+      "away": {
+        "name": "Jacksonville Jaguars",
+        "abbr": "JAX",
+        "record": "1-0",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
+      },
+      "home": {
+        "name": "New Orleans Saints",
+        "abbr": "NO",
+        "record": "0-1",
+        "score": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873284",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN Unlmtd",
+      "startTime": "2026-08-15T23:00Z",
+      "away": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "0-1",
+        "score": 7,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+      },
+      "home": {
+        "name": "Baltimore Ravens",
+        "abbr": "BAL",
+        "record": "1-0",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873279",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-16T00:00Z",
+      "away": {
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
+        "record": "1-0",
+        "score": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+      },
+      "home": {
+        "name": "Seattle Seahawks",
+        "abbr": "SEA",
+        "record": "0-1",
+        "score": 7,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
       },
       "note": ""
     }
