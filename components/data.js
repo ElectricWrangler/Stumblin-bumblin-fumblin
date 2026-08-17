@@ -5,7 +5,9 @@ export async function getJSON(url) {
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error(`Request failed: ${response.status}`);
+    throw new Error(
+      `Request failed: ${response.status}`
+    );
   }
 
   return response.json();
@@ -29,109 +31,223 @@ export function formatLeagueStatus(status) {
     complete: "Season Complete"
   };
 
-  return statuses[status] || status || "Preseason";
+  return (
+    statuses[status] ||
+    status ||
+    "Preseason"
+  );
 }
 
-export function calculatePower(team, maxPoints) {
+export function calculatePower(
+  team,
+  maxPoints
+) {
   const base =
-    team.wins === 0 && team.losses === 0
+    team.wins === 0 &&
+    team.losses === 0
       ? 50
       : 20;
 
-  const winScore = team.wins * 20;
+  const winScore =
+    team.wins * 20;
 
-  const pointScore = maxPoints
-    ? (team.pointsFor / maxPoints) * 35
-    : 0;
+  const pointScore =
+    maxPoints
+      ? (
+          team.pointsFor /
+          maxPoints
+        ) * 35
+      : 0;
 
-  const score = base + winScore + pointScore;
+  const score =
+    base +
+    winScore +
+    pointScore;
 
   return Math.max(
     1,
-    Math.min(99, Math.round(score))
+    Math.min(
+      99,
+      Math.round(score)
+    )
+  );
+}
+
+/*
+  Sleeper's NFL state tracks the NFL
+  calendar, including preseason.
+
+  During NFL preseason, we always keep
+  the fantasy league on Week 1.
+
+  Once the NFL regular season begins,
+  we follow Sleeper's regular-season
+  leg/week normally.
+*/
+function getFantasyWeek(state) {
+  const seasonType =
+    state?.season_type || "pre";
+
+  if (seasonType === "pre") {
+    return 1;
+  }
+
+  const week = Number(
+    state?.leg ||
+    state?.week ||
+    1
+  );
+
+  return Math.max(
+    1,
+    week
   );
 }
 
 export async function loadLeagueData() {
-  const [league, users, rosters, state] =
-    await Promise.all([
-      getJSON(`${API}/league/${LEAGUE_ID}`),
-      getJSON(`${API}/league/${LEAGUE_ID}/users`),
-      getJSON(`${API}/league/${LEAGUE_ID}/rosters`),
-      getJSON(`${API}/state/nfl`)
-    ]);
+  const [
+    league,
+    users,
+    rosters,
+    state
+  ] = await Promise.all([
+    getJSON(
+      `${API}/league/${LEAGUE_ID}`
+    ),
 
-  const usersById = Object.fromEntries(
-    users.map(user => [user.user_id, user])
-  );
+    getJSON(
+      `${API}/league/${LEAGUE_ID}/users`
+    ),
 
-  const teams = rosters
-    .map(roster => {
-      const user =
-        usersById[roster.owner_id] || {};
+    getJSON(
+      `${API}/league/${LEAGUE_ID}/rosters`
+    ),
 
-      const settings =
-        roster.settings || {};
+    getJSON(
+      `${API}/state/nfl`
+    )
+  ]);
 
-      return {
-        rosterId: roster.roster_id,
-
-        ownerId: roster.owner_id,
-
-        owner:
-          user.display_name ||
-          `Owner ${roster.roster_id}`,
-
-        team:
-          user.metadata?.team_name ||
-          user.display_name ||
-          `Team ${roster.roster_id}`,
-
-        avatar: user.avatar
-          ? `https://sleepercdn.com/avatars/thumbs/${user.avatar}`
-          : "https://sleepercdn.com/images/v2/icons/player_default.webp",
-
-        wins: settings.wins || 0,
-
-        losses: settings.losses || 0,
-
-        ties: settings.ties || 0,
-
-        pointsFor:
-          (settings.fpts || 0) +
-          ((settings.fpts_decimal || 0) / 100),
-
-        pointsAgainst:
-          (settings.fpts_against || 0) +
-          ((settings.fpts_against_decimal || 0) / 100),
-
-        players: roster.players || [],
-
-        starters: roster.starters || [],
-
-        reserve: roster.reserve || [],
-
-        taxi: roster.taxi || []
-      };
-    })
-    .sort((a, b) =>
-      b.wins - a.wins ||
-      a.losses - b.losses ||
-      b.pointsFor - a.pointsFor
+  const usersById =
+    Object.fromEntries(
+      users.map(user => [
+        user.user_id,
+        user
+      ])
     );
 
-  const currentWeek = Number(
-    state.leg ||
+  const teams =
+    rosters
+      .map(roster => {
+        const user =
+          usersById[
+            roster.owner_id
+          ] || {};
+
+        const settings =
+          roster.settings || {};
+
+        return {
+          rosterId:
+            roster.roster_id,
+
+          ownerId:
+            roster.owner_id,
+
+          owner:
+            user.display_name ||
+            `Owner ${roster.roster_id}`,
+
+          team:
+            user.metadata?.team_name ||
+            user.display_name ||
+            `Team ${roster.roster_id}`,
+
+          avatar:
+            user.avatar
+              ? `https://sleepercdn.com/avatars/thumbs/${user.avatar}`
+              : "https://sleepercdn.com/images/v2/icons/player_default.webp",
+
+          wins:
+            settings.wins || 0,
+
+          losses:
+            settings.losses || 0,
+
+          ties:
+            settings.ties || 0,
+
+          pointsFor:
+            (
+              settings.fpts || 0
+            ) +
+            (
+              (
+                settings.fpts_decimal ||
+                0
+              ) / 100
+            ),
+
+          pointsAgainst:
+            (
+              settings.fpts_against ||
+              0
+            ) +
+            (
+              (
+                settings.fpts_against_decimal ||
+                0
+              ) / 100
+            ),
+
+          players:
+            roster.players || [],
+
+          starters:
+            roster.starters || [],
+
+          reserve:
+            roster.reserve || [],
+
+          taxi:
+            roster.taxi || []
+        };
+      })
+      .sort(
+        (a, b) =>
+          b.wins - a.wins ||
+          a.losses - b.losses ||
+          b.pointsFor - a.pointsFor
+      );
+
+  /*
+    FANTASY WEEK:
+    Preseason = Week 1.
+    Regular season = Sleeper leg/week.
+  */
+  const currentWeek =
+    getFantasyWeek(state);
+
+  /*
+    NFL WEEK:
+    Leave this tied directly to
+    Sleeper's NFL calendar so the
+    NFL ScoreCenter can still display
+    the correct preseason week.
+  */
+  const nflWeek = Number(
     state.week ||
+    state.leg ||
     1
   );
 
-  const teamByRoster = Object.fromEntries(
-    teams.map(team => [
-      team.rosterId,
-      team
-    ])
-  );
+  const teamByRoster =
+    Object.fromEntries(
+      teams.map(team => [
+        team.rosterId,
+        team
+      ])
+    );
 
   return {
     league,
@@ -142,9 +258,15 @@ export async function loadLeagueData() {
 
     currentWeek,
 
-    nflWeek: Number(state.week || currentWeek),
+    nflWeek,
 
-    status: league.status || "pre_draft",
+    nflSeasonType:
+      state.season_type ||
+      "pre",
+
+    status:
+      league.status ||
+      "pre_draft",
 
     statusLabel:
       formatLeagueStatus(
@@ -152,10 +274,12 @@ export async function loadLeagueData() {
       ),
 
     season:
-      league.season || "2026",
+      league.season ||
+      "2026",
 
     playoffWeekStart:
-      league.settings?.playoff_week_start ||
+      league.settings
+        ?.playoff_week_start ||
       null,
 
     totalTeams:
@@ -168,33 +292,47 @@ export async function loadWeekMatchups(
   week,
   leagueData
 ) {
-  const raw = await getJSON(
-    `${API}/league/${LEAGUE_ID}/matchups/${week}`
-  );
+  const raw =
+    await getJSON(
+      `${API}/league/${LEAGUE_ID}/matchups/${week}`
+    );
 
   const grouped = {};
 
   raw.forEach(entry => {
-    if (entry.matchup_id == null) {
+    if (
+      entry.matchup_id == null
+    ) {
       return;
     }
 
-    grouped[entry.matchup_id] ||= [];
+    grouped[
+      entry.matchup_id
+    ] ||= [];
 
     const team =
       leagueData.teamByRoster[
         entry.roster_id
       ] || {
-        rosterId: entry.roster_id,
-        owner: "Unknown Owner",
-        team: `Team ${entry.roster_id}`
+        rosterId:
+          entry.roster_id,
+
+        owner:
+          "Unknown Owner",
+
+        team:
+          `Team ${entry.roster_id}`
       };
 
-    grouped[entry.matchup_id].push({
+    grouped[
+      entry.matchup_id
+    ].push({
       ...team,
 
       score:
-        Number(entry.points || 0),
+        Number(
+          entry.points || 0
+        ),
 
       players:
         entry.players || [],
@@ -207,15 +345,25 @@ export async function loadWeekMatchups(
     });
   });
 
-  return Object.entries(grouped)
-    .map(([matchupId, teams]) => ({
-      matchupId,
+  return Object
+    .entries(grouped)
+    .map(
+      (
+        [
+          matchupId,
+          teams
+        ]
+      ) => ({
+        matchupId,
 
-      teams: teams.sort(
-        (a, b) =>
-          b.score - a.score
-      )
-    }))
+        teams:
+          teams.sort(
+            (a, b) =>
+              b.score -
+              a.score
+          )
+      })
+    )
     .sort(
       (a, b) =>
         Number(a.matchupId) -
@@ -233,13 +381,21 @@ export async function loadTransactions(
       );
 
     return transactions
-      .filter(transaction =>
-        transaction.status === "complete"
+      .filter(
+        transaction =>
+          transaction.status ===
+          "complete"
       )
       .sort(
         (a, b) =>
-          (b.status_updated || 0) -
-          (a.status_updated || 0)
+          (
+            b.status_updated ||
+            0
+          ) -
+          (
+            a.status_updated ||
+            0
+          )
       );
   } catch (error) {
     console.warn(
@@ -296,6 +452,7 @@ export async function loadPlayoffBracket() {
       getJSON(
         `${API}/league/${LEAGUE_ID}/winners_bracket`
       ),
+
       getJSON(
         `${API}/league/${LEAGUE_ID}/losers_bracket`
       )
@@ -316,7 +473,9 @@ export async function loadPlayoffBracket() {
       losersBracket: []
     };
   }
-}let playerCache = null;
+}
+
+let playerCache = null;
 
 export async function loadNFLPlayers() {
   if (playerCache) {
@@ -324,9 +483,10 @@ export async function loadNFLPlayers() {
   }
 
   try {
-    playerCache = await getJSON(
-      `${API}/players/nfl`
-    );
+    playerCache =
+      await getJSON(
+        `${API}/players/nfl`
+      );
 
     return playerCache;
   } catch (error) {
@@ -343,15 +503,21 @@ export function getPlayerName(
   playerId,
   players
 ) {
-  const player = players?.[playerId];
+  const player =
+    players?.[playerId];
 
   if (!player) {
-    return playerId || "Unknown Player";
+    return (
+      playerId ||
+      "Unknown Player"
+    );
   }
 
   return (
     player.full_name ||
-    `${player.first_name || ""} ${player.last_name || ""}`.trim() ||
+    `${player.first_name || ""} ${
+      player.last_name || ""
+    }`.trim() ||
     playerId
   );
 }

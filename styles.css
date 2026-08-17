@@ -2988,4 +2988,391 @@ main {
   .history-record-number {
     font-size:28px;
   }
+}/* =========================================================
+   SBF RECAPS / 2026 DRAFT EDITION
+   ========================================================= */
+
+.draft-special-section,
+.recap-reader-section,
+.recap-archive-section {
+  margin-top:32px;
+}
+
+.draft-special-section .section-heading,
+.recap-reader-section .section-heading,
+.recap-archive-section .section-heading {
+  margin-bottom:14px;
+}
+
+.draft-special-section .section-heading h2,
+.recap-reader-section .section-heading h2,
+.recap-archive-section .section-heading h2 {
+  margin:5px 0 0;
+  font:30px/1.05 "Archivo Black";
+  letter-spacing:-.025em;
+}
+
+
+/* ===== Draft Special Feature Card ===== */
+
+.draft-special-card {
+  position:relative;
+  overflow:hidden;
+  padding:28px;
+  border:1px solid rgba(255,176,0,.28);
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(255,106,42,.28),
+      transparent 20rem
+    ),
+    radial-gradient(
+      circle at 18% 0,
+      rgba(255,176,0,.15),
+      transparent 18rem
+    ),
+    linear-gradient(
+      135deg,
+      #16263b,
+      #0b121e
+    );
+  box-shadow:var(--shadow);
+}
+
+.draft-special-card::after {
+  content:"";
+  position:absolute;
+  right:-80px;
+  bottom:-100px;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  border:55px solid rgba(255,176,0,.035);
+  pointer-events:none;
+}
+
+.draft-special-card > * {
+  position:relative;
+  z-index:1;
+}
+
+.draft-special-badge {
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:7px 10px;
+  margin-bottom:14px;
+  background:var(--yellow);
+  color:#111;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.draft-special-card h2 {
+  max-width:850px;
+  margin:0;
+  font:clamp(28px,4vw,46px)/1 "Archivo Black";
+  letter-spacing:-.04em;
+}
+
+.draft-special-card p {
+  max-width:760px;
+  margin:16px 0 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.draft-special-card button {
+  margin-top:20px;
+  min-height:46px;
+  padding:11px 16px;
+  border:1px solid var(--yellow);
+  border-radius:5px;
+  background:var(--yellow);
+  color:#111;
+  font-weight:900;
+}
+
+.draft-special-card button:hover {
+  filter:brightness(1.06);
+}
+
+
+/* ===== Featured Reader ===== */
+
+.recap-featured-reader {
+  padding:28px;
+  background:
+    linear-gradient(
+      145deg,
+      #1b4f82,
+      #122b48
+    );
+  border-color:rgba(117,176,233,.3);
+}
+
+.recap-featured-reader > .eyebrow {
+  margin-bottom:10px;
+}
+
+.recap-featured-reader .draft-edition > h2 {
+  margin:4px 0 18px;
+  font:clamp(30px,4vw,46px)/1.02 "Archivo Black";
+  letter-spacing:-.035em;
+}
+
+.recap-featured-reader .draft-edition > p {
+  color:#dce8f4;
+  line-height:1.65;
+}
+
+.recap-featured-reader .draft-edition h3 {
+  margin:30px 0 10px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.12);
+  font:24px/1.1 "Archivo Black";
+}
+
+.recap-featured-reader .draft-edition h3:first-of-type {
+  margin-top:24px;
+}
+
+.recap-featured-reader .draft-edition strong {
+  color:#fff;
+}
+
+
+/* ===== Draft Grade Table ===== */
+
+.recap-featured-reader .draft-edition table {
+  width:100%;
+  display:table;
+  margin:16px 0 8px;
+  border-collapse:collapse;
+  overflow:hidden;
+  background:rgba(5,8,14,.3);
+}
+
+.recap-featured-reader .draft-edition th {
+  padding:12px 10px;
+  background:rgba(255,176,0,.12);
+  color:var(--yellow);
+  border:1px solid rgba(255,255,255,.12);
+  text-align:left;
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.recap-featured-reader .draft-edition td {
+  padding:12px 10px;
+  border:1px solid rgba(255,255,255,.1);
+  color:#eef5fb;
+}
+
+.recap-featured-reader .draft-edition tbody tr:first-child td {
+  background:rgba(255,176,0,.08);
+}
+
+
+/* ===== Archive Cards ===== */
+
+.recap-archive-section .archive-grid {
+  margin-top:0;
+}
+
+.draft-archive-card {
+  position:relative;
+  overflow:hidden;
+  border-color:rgba(255,176,0,.3);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,176,0,.08),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      var(--surface-2),
+      var(--surface)
+    );
+}
+
+.draft-archive-card::before {
+  content:"DRAFT";
+  position:absolute;
+  right:14px;
+  top:14px;
+  color:rgba(255,176,0,.22);
+  font:28px "Archivo Black";
+  letter-spacing:.06em;
+}
+
+.draft-archive-card h3 {
+  position:relative;
+  z-index:1;
+}
+
+
+/* ===== Mobile ===== */
+
+@media(max-width:700px) {
+
+  .draft-special-section,
+  .recap-reader-section,
+  .recap-archive-section {
+    margin-top:26px;
+  }
+
+  .draft-special-card {
+    margin:0 -12px;
+    padding:22px 16px;
+    border-left:0;
+    border-right:0;
+  }
+
+  .draft-special-card h2 {
+    font-size:30px;
+  }
+
+  .draft-special-card p {
+    font-size:13px;
+  }
+
+  .draft-special-card button {
+    width:100%;
+  }
+
+  .recap-featured-reader {
+    padding:18px;
+  }
+
+  .recap-featured-reader .draft-edition > h2 {
+    font-size:30px;
+  }
+
+  .recap-featured-reader .draft-edition h3 {
+    font-size:21px;
+  }
+
+  .recap-featured-reader .draft-edition table {
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .recap-featured-reader .draft-edition th,
+  .recap-featured-reader .draft-edition td {
+    min-width:95px;
+    white-space:nowrap;
+  }
+
+  .draft-archive-card::before {
+    font-size:22px;
+  }
+}
+
+@media(max-width:430px) {
+
+  .draft-special-card h2 {
+    font-size:28px;
+  }
+
+  .recap-featured-reader {
+    margin:0 -4px;
+  }
+
+  .recap-featured-reader .draft-edition > p {
+    font-size:14px;
+  }
+}/* ===== Draft Recap Reader Behavior ===== */
+
+.recap-reader-section {
+  display:none;
+  margin-top:32px;
+}
+
+.recap-reader-section.active {
+  display:block;
+}
+
+.recap-reader-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:10px;
+}
+
+.recap-close-button {
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:5px;
+  padding:8px 11px;
+  background:rgba(5,8,14,.35);
+  color:var(--text);
+  font-size:11px;
+  font-weight:800;
+}
+
+.recap-close-button:hover {
+  border-color:var(--yellow);
+  color:var(--yellow);
+}
+
+.draft-special-stats {
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+}
+
+.draft-special-stats > div {
+  min-width:90px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(5,8,14,.3);
+}
+
+.draft-special-stats strong {
+  display:block;
+  color:var(--yellow);
+  font:22px/1 "Archivo Black";
+}
+
+.draft-special-stats span {
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+@media(max-width:600px) {
+
+  .draft-special-stats {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+  }
+
+  .draft-special-stats > div {
+    min-width:0;
+    padding:9px 7px;
+  }
+
+  .draft-special-stats strong {
+    font-size:19px;
+  }
+
+  .recap-reader-top {
+    align-items:flex-start;
+  }
+
+  .recap-close-button {
+    flex-shrink:0;
+  }
 }
