@@ -1,5 +1,8 @@
 import { escapeHTML } from "./data.js";
 
+const RECAP_API =
+  "https://sbf-recap-api.bobbyg9296.workers.dev";
+
 async function fetchJSON(path) {
   const response = await fetch(
     `${path}?ts=${Date.now()}`
@@ -10,6 +13,58 @@ async function fetchJSON(path) {
   }
 
   return response.json();
+}
+
+async function saveRecapToGitHub(
+  file,
+  recap,
+  pin
+) {
+  const response = await fetch(
+    RECAP_API,
+    {
+      method: "POST",
+
+      headers: {
+        "Content-Type":
+          "application/json"
+      },
+
+      body: JSON.stringify({
+        pin,
+
+        file:
+          `recaps/${file}`,
+
+        recap
+      })
+    }
+  );
+
+  let result = null;
+
+  try {
+    result =
+      await response.json();
+  } catch {
+    result = {
+      ok: false,
+      error:
+        "The save server returned an invalid response."
+    };
+  }
+
+  if (
+    !response.ok ||
+    !result.ok
+  ) {
+    throw new Error(
+      result.error ||
+      "The recap could not be saved."
+    );
+  }
+
+  return result;
 }
 
 function recapLabel(recap) {
@@ -155,11 +210,15 @@ function renderArchiveCard(
   `;
 }
 
-function renderReader(recap) {
+function renderReader(
+  recap,
+  file
+) {
   return `
     <article
       class="panel article recap-featured-reader"
       id="recap-reader"
+      data-recap-file="${escapeHTML(file)}"
     >
 
       <div class="recap-reader-top">
@@ -170,20 +229,553 @@ function renderReader(recap) {
           )}
         </p>
 
+        <div class="recap-reader-actions">
+
+          <button
+            type="button"
+            id="edit-recap-button"
+            class="recap-edit-button"
+          >
+            ✏️ Edit Recap
+          </button>
+
+          <button
+            type="button"
+            id="close-recap-reader"
+            class="recap-close-button"
+          >
+            Close ×
+          </button>
+
+        </div>
+
+      </div>
+
+      <div id="recap-article-content">
+        ${recap.html}
+      </div>
+
+    </article>
+  `;
+}
+
+function renderEditor(
+  recap,
+  file
+) {
+  return `
+    <article
+      class="panel recap-editor"
+      id="recap-editor"
+      data-recap-file="${escapeHTML(file)}"
+    >
+
+      <div class="recap-editor-header">
+
+        <div>
+
+          <p class="eyebrow">
+            Commissioner Editor
+          </p>
+
+          <h2>
+            Edit Recap
+          </h2>
+
+        </div>
+
         <button
           type="button"
-          id="close-recap-reader"
+          id="cancel-recap-edit"
           class="recap-close-button"
         >
-          Close ×
+          Cancel ×
         </button>
 
       </div>
 
-      ${recap.html}
+
+      <div class="recap-editor-field">
+
+        <label for="recap-headline-input">
+          Headline
+        </label>
+
+        <input
+          id="recap-headline-input"
+          type="text"
+          value="${escapeHTML(
+            recap.headline || ""
+          )}"
+        >
+
+      </div>
+
+
+      <div class="recap-editor-field">
+
+        <label for="recap-html-input">
+          Article
+        </label>
+
+        <p class="recap-editor-help">
+          Edit wording, headings,
+          grades, awards or any other
+          part of the recap.
+        </p>
+
+        <textarea
+          id="recap-html-input"
+          spellcheck="true"
+        >${escapeHTML(
+          recap.html || ""
+        )}</textarea>
+
+      </div>
+
+
+      <div class="recap-editor-field recap-pin-field">
+
+        <label for="recap-pin-input">
+          Commissioner PIN
+        </label>
+
+        <p class="recap-editor-help">
+          Required only when publishing
+          changes to the live website.
+        </p>
+
+        <input
+          id="recap-pin-input"
+          type="password"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          maxlength="4"
+          autocomplete="off"
+          placeholder="••••"
+        >
+
+      </div>
+
+
+      <div class="recap-editor-actions">
+
+        <button
+          type="button"
+          id="preview-recap-button"
+          class="secondary"
+        >
+          👁 Preview
+        </button>
+
+        <button
+          type="button"
+          id="save-recap-button"
+          class="primary"
+        >
+          💾 Save Changes
+        </button>
+
+      </div>
+
+
+      <div
+        id="recap-save-status"
+        class="recap-save-status"
+      ></div>
+
+
+      <section
+        id="recap-edit-preview"
+        class="recap-edit-preview"
+      >
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Preview
+          </p>
+
+          <h2>
+            Recap Preview
+          </h2>
+
+        </div>
+
+        <article
+          class="panel article recap-featured-reader"
+        >
+
+          <div
+            id="recap-preview-content"
+          ></div>
+
+        </article>
+
+      </section>
 
     </article>
   `;
+}
+
+function attachOpenedRecapEvents(
+  readerSection,
+  recap,
+  file
+) {
+  const closeButton =
+    document.getElementById(
+      "close-recap-reader"
+    );
+
+  const editButton =
+    document.getElementById(
+      "edit-recap-button"
+    );
+
+  if (closeButton) {
+    closeButton.addEventListener(
+      "click",
+      event => {
+
+        event.stopPropagation();
+
+        readerSection.classList.remove(
+          "active"
+        );
+
+        readerSection.innerHTML = "";
+
+        document
+          .querySelector(
+            ".draft-special-section"
+          )
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+      }
+    );
+  }
+
+  if (editButton) {
+    editButton.addEventListener(
+      "click",
+      event => {
+
+        event.stopPropagation();
+
+        readerSection.innerHTML =
+          renderEditor(
+            recap,
+            file
+          );
+
+        attachEditorEvents(
+          readerSection,
+          recap,
+          file
+        );
+
+        readerSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+    );
+  }
+}
+
+function attachEditorEvents(
+  readerSection,
+  originalRecap,
+  file
+) {
+  const headlineInput =
+    document.getElementById(
+      "recap-headline-input"
+    );
+
+  const htmlInput =
+    document.getElementById(
+      "recap-html-input"
+    );
+
+  const pinInput =
+    document.getElementById(
+      "recap-pin-input"
+    );
+
+  const previewButton =
+    document.getElementById(
+      "preview-recap-button"
+    );
+
+  const saveButton =
+    document.getElementById(
+      "save-recap-button"
+    );
+
+  const cancelButton =
+    document.getElementById(
+      "cancel-recap-edit"
+    );
+
+  const previewSection =
+    document.getElementById(
+      "recap-edit-preview"
+    );
+
+  const previewContent =
+    document.getElementById(
+      "recap-preview-content"
+    );
+
+  const saveStatus =
+    document.getElementById(
+      "recap-save-status"
+    );
+
+
+  function buildEditedRecap() {
+    return {
+      ...originalRecap,
+
+      headline:
+        headlineInput?.value.trim() ||
+        originalRecap.headline ||
+        "",
+
+      html:
+        htmlInput?.value ||
+        originalRecap.html ||
+        ""
+    };
+  }
+
+
+  if (pinInput) {
+    pinInput.addEventListener(
+      "input",
+      () => {
+
+        pinInput.value =
+          pinInput.value
+            .replace(/\D/g, "")
+            .slice(0, 4);
+
+      }
+    );
+  }
+
+
+  if (previewButton) {
+    previewButton.addEventListener(
+      "click",
+      event => {
+
+        event.preventDefault();
+
+        const editedRecap =
+          buildEditedRecap();
+
+        if (
+          previewContent &&
+          previewSection
+        ) {
+
+          previewContent.innerHTML = `
+            <p class="eyebrow">
+              ${escapeHTML(
+                recapLabel(
+                  editedRecap
+                )
+              )}
+            </p>
+
+            <h2>
+              ${escapeHTML(
+                editedRecap.headline
+              )}
+            </h2>
+
+            ${editedRecap.html}
+          `;
+
+          previewSection.classList.add(
+            "active"
+          );
+
+          previewSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
+
+      }
+    );
+  }
+
+
+  if (cancelButton) {
+    cancelButton.addEventListener(
+      "click",
+      event => {
+
+        event.preventDefault();
+
+        readerSection.innerHTML =
+          renderReader(
+            originalRecap,
+            file
+          );
+
+        attachOpenedRecapEvents(
+          readerSection,
+          originalRecap,
+          file
+        );
+
+      }
+    );
+  }
+
+
+  if (saveButton) {
+    saveButton.addEventListener(
+      "click",
+      async event => {
+
+        event.preventDefault();
+
+        const pin =
+          pinInput?.value || "";
+
+        if (!/^\d{4}$/.test(pin)) {
+
+          if (saveStatus) {
+            saveStatus.innerHTML = `
+              <strong>
+                Enter your 4-digit PIN.
+              </strong>
+
+              <span>
+                The recap has not been
+                changed.
+              </span>
+            `;
+          }
+
+          pinInput?.focus();
+
+          return;
+        }
+
+        const editedRecap =
+          buildEditedRecap();
+
+        saveButton.disabled = true;
+
+        saveButton.textContent =
+          "Saving...";
+
+        if (saveStatus) {
+          saveStatus.innerHTML = `
+            <strong>
+              Publishing recap...
+            </strong>
+
+            <span>
+              Sending the update securely
+              to GitHub.
+            </span>
+          `;
+        }
+
+        try {
+
+          const result =
+            await saveRecapToGitHub(
+              file,
+              editedRecap,
+              pin
+            );
+
+          if (pinInput) {
+            pinInput.value = "";
+          }
+
+          if (saveStatus) {
+            saveStatus.innerHTML = `
+              <strong>
+                ✅ Recap saved.
+              </strong>
+
+              <span>
+                GitHub accepted the update.
+                The live site should refresh
+                after GitHub Pages deploys.
+              </span>
+            `;
+          }
+
+          console.log(
+            "Recap saved:",
+            result
+          );
+
+          setTimeout(() => {
+
+            readerSection.innerHTML =
+              renderReader(
+                editedRecap,
+                file
+              );
+
+            attachOpenedRecapEvents(
+              readerSection,
+              editedRecap,
+              file
+            );
+
+          }, 1500);
+
+        } catch (error) {
+
+          console.error(
+            "Recap save failed:",
+            error
+          );
+
+          if (saveStatus) {
+            saveStatus.innerHTML = `
+              <strong>
+                ❌ Save failed.
+              </strong>
+
+              <span>
+                ${escapeHTML(
+                  error.message
+                )}
+              </span>
+            `;
+          }
+
+        } finally {
+
+          saveButton.disabled = false;
+
+          saveButton.textContent =
+            "💾 Save Changes";
+
+        }
+
+      }
+    );
+  }
 }
 
 function attachReaderEvents(
@@ -201,9 +793,12 @@ function attachReaderEvents(
 
           try {
 
+            const file =
+              card.dataset.file;
+
             const recap =
               await fetchJSON(
-                `recaps/${card.dataset.file}`
+                `recaps/${file}`
               );
 
             const readerSection =
@@ -216,45 +811,20 @@ function attachReaderEvents(
             }
 
             readerSection.innerHTML =
-              renderReader(recap);
+              renderReader(
+                recap,
+                file
+              );
 
             readerSection.classList.add(
               "active"
             );
 
-            const closeButton =
-              document.getElementById(
-                "close-recap-reader"
-              );
-
-            if (closeButton) {
-
-              closeButton.addEventListener(
-                "click",
-                event => {
-
-                  event.stopPropagation();
-
-                  readerSection.classList.remove(
-                    "active"
-                  );
-
-                  readerSection.innerHTML =
-                    "";
-
-                  document
-                    .querySelector(
-                      ".draft-special-section"
-                    )
-                    ?.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start"
-                    });
-
-                }
-              );
-
-            }
+            attachOpenedRecapEvents(
+              readerSection,
+              recap,
+              file
+            );
 
             readerSection.scrollIntoView({
               behavior: "smooth",
@@ -304,9 +874,6 @@ export async function renderRecaps() {
   let draft = null;
   let archiveItems = [];
 
-  /*
-    Draft Special
-  */
   try {
 
     draft =
@@ -323,9 +890,6 @@ export async function renderRecaps() {
 
   }
 
-  /*
-    Latest weekly recap
-  */
   try {
 
     latest =
@@ -342,9 +906,6 @@ export async function renderRecaps() {
 
   }
 
-  /*
-    Weekly recap archive
-  */
   try {
 
     const index =
@@ -368,16 +929,11 @@ export async function renderRecaps() {
     }
 
   } catch (error) {
-
     /*
       No index yet is okay.
     */
-
   }
 
-  /*
-    Fallback until index.json exists.
-  */
   if (
     archiveItems.length === 0 &&
     latest
