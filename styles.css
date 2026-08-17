@@ -3375,4 +3375,254 @@ main {
   .recap-close-button {
     flex-shrink:0;
   }
+}/* =========================================================
+   COMMISSIONER RECAP EDITOR - FINAL RESPONSIVE FIX
+   ========================================================= */
+
+/* Make sure Edit + Close buttons always show */
+.recap-reader-actions {
+  display:flex !important;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.recap-edit-button,
+.recap-close-button {
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  visibility:visible !important;
+  opacity:1 !important;
+  min-height:40px;
+  padding:9px 13px;
+  border-radius:6px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.recap-edit-button {
+  border:1px solid var(--yellow);
+  background:var(--yellow);
+  color:#111;
+}
+
+.recap-edit-button:hover {
+  filter:brightness(1.06);
+}
+
+
+/* ===== Editor Layout ===== */
+
+.recap-editor {
+  width:100%;
+  max-width:none;
+  padding:28px;
+}
+
+.recap-editor-header {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:28px;
+}
+
+.recap-editor-header h2 {
+  margin:6px 0 0;
+  font-size:36px;
+}
+
+.recap-editor-field {
+  display:block;
+  width:100%;
+  margin-top:24px;
+}
+
+.recap-editor-field label {
+  display:block;
+  margin-bottom:8px;
+  font-size:15px;
+  font-weight:800;
+}
+
+.recap-editor-help {
+  margin:0 0 12px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+.recap-editor-field input,
+.recap-editor-field textarea {
+  display:block;
+  width:100%;
+  max-width:none;
+  box-sizing:border-box;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:7px;
+  padding:13px 14px;
+  background:#fff;
+  color:#111;
+  font-family:inherit;
+}
+
+#recap-headline-input {
+  min-height:48px;
+  font-size:16px;
+}
+
+#recap-html-input {
+  min-height:420px;
+  resize:vertical;
+  font-family:monospace;
+  font-size:14px;
+  line-height:1.5;
+}
+
+#recap-pin-input {
+  width:180px;
+  min-height:48px;
+  font-size:22px;
+  letter-spacing:.3em;
+  text-align:center;
+}
+
+.recap-editor-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:24px;
+}
+
+.recap-editor-actions button {
+  min-height:46px;
+  padding:11px 18px;
+  border-radius:6px;
+  font-weight:900;
+}
+
+.recap-editor-actions .primary {
+  border:1px solid var(--yellow);
+  background:var(--yellow);
+  color:#111;
+}
+
+.recap-editor-actions .secondary {
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(5,8,14,.35);
+  color:var(--text);
+}
+
+
+/* =========================================================
+   MOBILE EDITOR
+   ========================================================= */
+
+@media(max-width:700px) {
+
+  .recap-editor {
+    width:auto;
+    margin-left:-14px;
+    margin-right:-14px;
+    padding:22px 16px 32px;
+    border-left:0;
+    border-right:0;
+  }
+
+  .recap-editor-header {
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .recap-editor-header h2 {
+    font-size:34px;
+  }
+
+  .recap-editor-header .recap-close-button {
+    align-self:flex-start;
+  }
+
+  .recap-editor-field {
+    margin-top:22px;
+  }
+
+  .recap-editor-field label {
+    font-size:20px;
+  }
+
+  .recap-editor-help {
+    font-size:15px;
+  }
+
+  #recap-headline-input {
+    width:100%;
+    min-height:54px;
+    font-size:16px;
+  }
+
+  #recap-html-input {
+    width:100%;
+    min-height:440px;
+    padding:14px;
+    font-size:15px;
+    line-height:1.5;
+  }
+
+  #recap-pin-input {
+    width:100%;
+    min-height:54px;
+    font-size:24px;
+    letter-spacing:.35em;
+  }
+
+  .recap-editor-actions {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .recap-editor-actions button {
+    width:100%;
+    min-height:54px;
+    font-size:16px;
+  }
+
+  .recap-reader-top {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+  }
+
+  .recap-reader-actions {
+    width:100%;
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+  }
+
+  .recap-edit-button,
+  .recap-close-button {
+    width:100%;
+    min-height:46px;
+  }
+}
+
+
+/* Extra room for smaller phones */
+@media(max-width:430px) {
+
+  .recap-editor {
+    padding:20px 14px 30px;
+  }
+
+  #recap-html-input {
+    min-height:500px;
+  }
+
+  .recap-reader-actions {
+    grid-template-columns:1fr;
+  }
 }
