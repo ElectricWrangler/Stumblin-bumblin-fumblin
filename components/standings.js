@@ -10,17 +10,28 @@ async function loadPowerRankings() {
     );
 
     if (!response.ok) {
-      throw new Error("Power rankings unavailable");
+      throw new Error(
+        "Power rankings unavailable"
+      );
     }
 
-    const result = await response.json();
+    const result =
+      await response.json();
 
-    if (!Array.isArray(result?.teams)) {
-      throw new Error("Invalid power rankings");
+    if (
+      !Array.isArray(
+        result?.teams
+      )
+    ) {
+      throw new Error(
+        "Invalid power rankings"
+      );
     }
 
     return result;
+
   } catch (error) {
+
     console.warn(
       "Using fallback power rankings:",
       error
@@ -30,20 +41,26 @@ async function loadPowerRankings() {
   }
 }
 
-export async function renderStandings(data) {
+export async function renderStandings(
+  data
+) {
   const container =
-    document.getElementById("standings");
+    document.getElementById(
+      "standings"
+    );
 
   if (!container) {
     return;
   }
 
-  const maxPoints = Math.max(
-    ...data.teams.map(
-      team => team.pointsFor
-    ),
-    1
-  );
+  const maxPoints =
+    Math.max(
+      ...data.teams.map(
+        team =>
+          team.pointsFor
+      ),
+      1
+    );
 
   const rankingData =
     await loadPowerRankings();
@@ -53,44 +70,145 @@ export async function renderStandings(data) {
       ? Object.fromEntries(
           rankingData.teams.map(
             team => [
-              Number(team.roster_id),
+              Number(
+                team.roster_id
+              ),
               team
             ]
           )
         )
       : {};
 
+
+  /*
+    =====================================================
+    NORMAL POWER RANKING ORDER
+    =====================================================
+  */
+
   let ranked;
 
   if (rankingData) {
-    ranked = [...data.teams]
-      .sort((a, b) => {
-        const rankA =
-          rankingByRoster[
-            Number(a.rosterId)
-          ]?.rank ?? 999;
 
-        const rankB =
-          rankingByRoster[
-            Number(b.rosterId)
-          ]?.rank ?? 999;
+    ranked =
+      [...data.teams]
+        .sort(
+          (a, b) => {
 
-        return rankA - rankB;
-      });
+            const rankA =
+              rankingByRoster[
+                Number(
+                  a.rosterId
+                )
+              ]?.rank ?? 999;
+
+            const rankB =
+              rankingByRoster[
+                Number(
+                  b.rosterId
+                )
+              ]?.rank ?? 999;
+
+            return (
+              rankA -
+              rankB
+            );
+          }
+        );
+
   } else {
-    ranked = [...data.teams]
-      .sort(
-        (a, b) =>
-          calculatePower(
-            b,
-            maxPoints
-          ) -
-          calculatePower(
-            a,
-            maxPoints
-          )
-      );
+
+    ranked =
+      [...data.teams]
+        .sort(
+          (a, b) =>
+            calculatePower(
+              b,
+              maxPoints
+            )
+            -
+            calculatePower(
+              a,
+              maxPoints
+            )
+        );
   }
+
+
+  /*
+    =====================================================
+    PRESEASON COMMISSIONER OVERRIDE
+    =====================================================
+
+    Muth Juice is temporarily placed
+    at #3.
+
+    As soon as actual fantasy scoring
+    begins, this automatically turns off.
+    =====================================================
+  */
+
+  const weekOneHasStarted =
+    data.teams.some(
+      team =>
+        Number(
+          team.pointsFor
+        ) > 0
+    );
+
+  const preseasonOverrideActive =
+    !weekOneHasStarted &&
+    (
+      !rankingData ||
+      rankingData.mode ===
+        "preseason"
+    );
+
+  if (
+    preseasonOverrideActive
+  ) {
+
+    const muthIndex =
+      ranked.findIndex(
+        team =>
+          Number(
+            team.rosterId
+          ) === 1
+          ||
+          String(
+            team.team || ""
+          )
+            .toLowerCase()
+            .includes(
+              "muth juice"
+            )
+      );
+
+    if (
+      muthIndex !== -1
+    ) {
+
+      const [
+        muthJuice
+      ] = ranked.splice(
+        muthIndex,
+        1
+      );
+
+      ranked.splice(
+        2,
+        0,
+        muthJuice
+      );
+    }
+  }
+
+
+  /*
+    =====================================================
+    OFFICIAL STANDINGS
+    =====================================================
+  */
 
   const standings =
     data.teams
@@ -123,8 +241,12 @@ export async function renderStandings(data) {
               ${team.wins}-${team.losses}
 
               <span class="points">
-                ${team.pointsFor.toFixed(1)}
+
+                ${team.pointsFor.toFixed(
+                  1
+                )}
                 PF
+
               </span>
 
             </div>
@@ -134,6 +256,13 @@ export async function renderStandings(data) {
       )
       .join("");
 
+
+  /*
+    =====================================================
+    POWER RANKINGS
+    =====================================================
+  */
+
   const power =
     ranked
       .map(
@@ -141,22 +270,41 @@ export async function renderStandings(data) {
 
           const official =
             rankingByRoster[
-              Number(team.rosterId)
+              Number(
+                team.rosterId
+              )
             ];
 
           const score =
-            official?.power_score ??
+            official
+              ?.power_score
+            ??
             calculatePower(
               team,
               maxPoints
             );
 
+          /*
+            When the preseason override
+            is active, use the actual
+            displayed order as the rank.
+
+            Otherwise use the official
+            generated rank.
+          */
+
           const rank =
-            official?.rank ??
-            index + 1;
+            preseasonOverrideActive
+              ? index + 1
+              : (
+                  official?.rank
+                  ??
+                  index + 1
+                );
 
           const reason =
-            official?.reason || "";
+            official?.reason
+            || "";
 
           return `
             <div class="power-row">
@@ -168,20 +316,26 @@ export async function renderStandings(data) {
               <div>
 
                 <span class="team-title">
+
                   ${escapeHTML(
                     team.team
                   )}
+
                 </span>
 
                 <span class="owner-title">
 
-                  Power score ${score}
+                  Power score
+                  ${score}
 
                   ${
                     reason
-                      ? ` • ${escapeHTML(
+                      ? `
+                        •
+                        ${escapeHTML(
                           reason
-                        )}`
+                        )}
+                      `
                       : ""
                   }
 
@@ -192,13 +346,19 @@ export async function renderStandings(data) {
               <div class="power-bar">
 
                 <span
-                  style="width:${Math.max(
-                    1,
-                    Math.min(
-                      99,
-                      Number(score) || 1
-                    )
-                  )}%"
+                  style="
+                    width:
+                    ${Math.max(
+                      1,
+                      Math.min(
+                        99,
+                        Number(
+                          score
+                        )
+                        || 1
+                      )
+                    )}%
+                  "
                 ></span>
 
               </div>
@@ -209,15 +369,52 @@ export async function renderStandings(data) {
       )
       .join("");
 
-  const rankingMode =
+
+  /*
+    =====================================================
+    RANKING LABEL
+    =====================================================
+  */
+
+  let rankingMode;
+
+  if (
+    preseasonOverrideActive
+  ) {
+
+    rankingMode =
+      "Preseason roster-based rankings";
+
+  } else if (
     rankingData?.mode ===
     "preseason"
-      ? "Preseason roster-based rankings"
-      : rankingData
-        ? `Week ${rankingData.week} rankings`
-        : "Fallback power formula";
+  ) {
+
+    rankingMode =
+      "Preseason roster-based rankings";
+
+  } else if (
+    rankingData
+  ) {
+
+    rankingMode =
+      `Week ${rankingData.week} rankings`;
+
+  } else {
+
+    rankingMode =
+      "Fallback power formula";
+  }
+
+
+  /*
+    =====================================================
+    PAGE
+    =====================================================
+  */
 
   container.innerHTML = `
+
     <header class="page-hero">
 
       <p class="eyebrow">
@@ -235,7 +432,9 @@ export async function renderStandings(data) {
 
     </header>
 
+
     <section class="content-grid">
+
 
       <article class="panel">
 
@@ -275,9 +474,11 @@ export async function renderStandings(data) {
             </h2>
 
             <p class="owner-title">
+
               ${escapeHTML(
                 rankingMode
               )}
+
             </p>
 
           </div>
@@ -287,6 +488,7 @@ export async function renderStandings(data) {
         ${power}
 
       </article>
+
 
     </section>
   `;

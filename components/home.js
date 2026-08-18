@@ -73,7 +73,9 @@ async function loadPowerRankings() {
     }
 
     return result;
+
   } catch (error) {
+
     console.warn(
       "Using fallback championship odds:",
       error
@@ -87,7 +89,7 @@ function fallbackOdds(
   teams
 ) {
   return teams
-    .slice(0, 6)
+    .slice(0, 10)
     .map(
       (team, index) => `
         <div class="odds-row">
@@ -122,64 +124,205 @@ function officialOdds(
       )
     );
 
-  return rankingData.teams
-    .slice()
-    .sort(
-      (a, b) =>
-        Number(a.rank || 999) -
-        Number(b.rank || 999)
-    )
+  /*
+    =====================================================
+    NORMAL GENERATED ODDS ORDER
+    =====================================================
+  */
+
+  let orderedTeams =
+    rankingData.teams
+      .slice()
+      .sort(
+        (a, b) =>
+          Number(
+            a.rank || 999
+          )
+          -
+          Number(
+            b.rank || 999
+          )
+      );
+
+
+  /*
+    =====================================================
+    PRESEASON COMMISSIONER OVERRIDE
+    =====================================================
+
+    Muth Juice is temporarily placed
+    at #3 in Championship Odds.
+
+    Once actual Week 1 fantasy scoring
+    begins, this automatically turns off.
+    =====================================================
+  */
+
+  const weekOneHasStarted =
+    data.teams.some(
+      team =>
+        Number(
+          team.pointsFor
+        ) > 0
+    );
+
+  const preseasonOverrideActive =
+    !weekOneHasStarted &&
+    rankingData?.mode ===
+      "preseason";
+
+  if (
+    preseasonOverrideActive
+  ) {
+
+    const muthIndex =
+      orderedTeams.findIndex(
+        team =>
+          Number(
+            team.roster_id
+          ) === 1
+          ||
+          String(
+            team.team || ""
+          )
+            .toLowerCase()
+            .includes(
+              "muth juice"
+            )
+      );
+
+    if (
+      muthIndex !== -1
+    ) {
+
+      const [
+        muthJuice
+      ] = orderedTeams.splice(
+        muthIndex,
+        1
+      );
+
+      orderedTeams.splice(
+        2,
+        0,
+        muthJuice
+      );
+    }
+  }
+
+
+  /*
+    =====================================================
+    DISPLAY ODDS
+    =====================================================
+  */
+
+  return orderedTeams
     .slice(0, 10)
-    .map(team => {
+    .map(
+      (
+        team,
+        index
+      ) => {
 
-      const sleeperTeam =
-        teamByRoster[
-          Number(team.roster_id)
-        ];
+        const sleeperTeam =
+          teamByRoster[
+            Number(
+              team.roster_id
+            )
+          ];
 
-      const teamName =
-        sleeperTeam?.team ||
-        team.team ||
-        `Team ${team.roster_id}`;
+        const teamName =
+          sleeperTeam?.team
+          ||
+          team.team
+          ||
+          `Team ${team.roster_id}`;
 
-      const reason =
-        team.reason || "";
+        const reason =
+          team.reason || "";
 
-      return `
-        <div class="odds-row">
+        /*
+          During the preseason override,
+          Muth Juice inherits the odds
+          value for the #3 position.
 
-          <div>
+          Everyone below shifts down one
+          odds slot.
+
+          Once Week 1 starts, all teams
+          return to their official
+          generated odds.
+        */
+
+        let displayedOdds =
+          team.championship_odds
+          || "—";
+
+        if (
+          preseasonOverrideActive
+        ) {
+
+          const originalBoard =
+            rankingData.teams
+              .slice()
+              .sort(
+                (a, b) =>
+                  Number(
+                    a.rank || 999
+                  )
+                  -
+                  Number(
+                    b.rank || 999
+                  )
+              );
+
+          const oddsForPosition =
+            originalBoard[
+              index
+            ]?.championship_odds;
+
+          if (oddsForPosition) {
+            displayedOdds =
+              oddsForPosition;
+          }
+        }
+
+        return `
+          <div class="odds-row">
+
+            <div>
+
+              <strong>
+                ${escapeHTML(
+                  teamName
+                )}
+              </strong>
+
+              ${
+                reason
+                  ? `
+                    <span class="owner-title">
+                      ${escapeHTML(
+                        reason
+                      )}
+                    </span>
+                  `
+                  : ""
+              }
+
+            </div>
 
             <strong>
               ${escapeHTML(
-                teamName
+                displayedOdds
               )}
             </strong>
 
-            ${
-              reason
-                ? `
-                  <span class="owner-title">
-                    ${escapeHTML(
-                      reason
-                    )}
-                  </span>
-                `
-                : ""
-            }
-
           </div>
-
-          <strong>
-            ${escapeHTML(
-              team.championship_odds ||
-              "—"
-            )}
-          </strong>
-
-        </div>
-      `;
-    })
+        `;
+      }
+    )
     .join("");
 }
 
@@ -217,12 +360,14 @@ export async function renderHome(
   };
 
   try {
+
     const response =
       await fetch(
         `recaps/latest.json?ts=${Date.now()}`
       );
 
     if (response.ok) {
+
       const recap =
         await response.json();
 
@@ -240,23 +385,76 @@ export async function renderHome(
             .querySelector(
               "h2,h3"
             )
-            ?.textContent ||
-          recap.headline ||
+            ?.textContent
+          ||
+          recap.headline
+          ||
           `Week ${recap.week} Recap`,
 
         copy:
           `Week ${recap.week} has been published automatically.`
       };
     }
+
   } catch {}
 
-  const oddsLabel =
+
+  /*
+    =====================================================
+    ODDS BOARD LABEL
+    =====================================================
+  */
+
+  const weekOneHasStarted =
+    data.teams.some(
+      team =>
+        Number(
+          team.pointsFor
+        ) > 0
+    );
+
+  const preseasonOverrideActive =
+    rankingData?.mode ===
+      "preseason"
+    &&
+    !weekOneHasStarted;
+
+  let oddsLabel;
+
+  if (
+    preseasonOverrideActive
+  ) {
+
+    oddsLabel =
+      "Preseason board";
+
+  } else if (
     rankingData?.mode ===
     "preseason"
-      ? "Preseason board"
-      : rankingData
-        ? `Week ${rankingData.week} board`
-        : "Fallback board";
+  ) {
+
+    oddsLabel =
+      "Preseason board";
+
+  } else if (
+    rankingData
+  ) {
+
+    oddsLabel =
+      `Week ${rankingData.week} board`;
+
+  } else {
+
+    oddsLabel =
+      "Fallback board";
+  }
+
+
+  /*
+    =====================================================
+    PAGE
+    =====================================================
+  */
 
   container.innerHTML = `
 
