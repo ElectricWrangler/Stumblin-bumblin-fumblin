@@ -79,7 +79,6 @@ export async function renderStandings(
         )
       : {};
 
-
   /*
     =====================================================
     NORMAL POWER RANKING ORDER
@@ -134,14 +133,13 @@ export async function renderStandings(
         );
   }
 
-
   /*
     =====================================================
     PRESEASON COMMISSIONER OVERRIDE
     =====================================================
 
     Muth Juice is temporarily placed
-    at #3.
+    at #3 with a power score of 88.
 
     As soon as actual fantasy scoring
     begins, this automatically turns off.
@@ -203,7 +201,6 @@ export async function renderStandings(
     }
   }
 
-
   /*
     =====================================================
     OFFICIAL STANDINGS
@@ -256,7 +253,6 @@ export async function renderStandings(
       )
       .join("");
 
-
   /*
     =====================================================
     POWER RANKINGS
@@ -275,7 +271,29 @@ export async function renderStandings(
               )
             ];
 
-          const score =
+          const isMuthJuice =
+            Number(
+              team.rosterId
+            ) === 1
+            ||
+            String(
+              team.team || ""
+            )
+              .toLowerCase()
+              .includes(
+                "muth juice"
+              );
+
+          /*
+            Normal score comes from the
+            automated power rankings.
+
+            During the preseason override,
+            Muth Juice temporarily displays
+            an 88 power score.
+          */
+
+          const normalScore =
             official
               ?.power_score
             ??
@@ -284,13 +302,18 @@ export async function renderStandings(
               maxPoints
             );
 
-          /*
-            When the preseason override
-            is active, use the actual
-            displayed order as the rank.
+          const score =
+            preseasonOverrideActive &&
+            isMuthJuice
+              ? 88
+              : normalScore;
 
-            Otherwise use the official
-            generated rank.
+          /*
+            During the preseason override,
+            use the displayed order.
+
+            After Week 1 begins, return to
+            the generated official ranks.
           */
 
           const rank =
@@ -369,7 +392,6 @@ export async function renderStandings(
       )
       .join("");
 
-
   /*
     =====================================================
     RANKING LABEL
@@ -405,7 +427,6 @@ export async function renderStandings(
     rankingMode =
       "Fallback power formula";
   }
-
 
   /*
     =====================================================
