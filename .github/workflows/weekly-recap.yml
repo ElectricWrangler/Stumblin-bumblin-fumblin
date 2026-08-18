@@ -30,136 +30,1532 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generate recap from Sleeper
+      - name: Generate recap and power rankings from Sleeper
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           REQUESTED_WEEK: ${{ inputs.week }}
           LEAGUE_ID: "1371503267833475072"
           OPENAI_MODEL: "gpt-5.6"
+
         run: |
           python - <<'PY'
+          import html
           import json
+          import math
           import os
           import pathlib
+          import re
           import urllib.error
           import urllib.request
           from datetime import datetime, timezone
 
           LEAGUE_ID = os.environ["LEAGUE_ID"]
           OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-          MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.6-luna")
+          MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.6")
           requested_week = os.environ.get("REQUESTED_WEEK", "").strip()
+
           SLEEPER = "https://api.sleeper.app/v1"
 
+          generated_at = datetime.now(
+              timezone.utc
+          ).isoformat()
+
+
+          # =========================================================
+          # BASIC API HELPERS
+          # =========================================================
+
           def get_json(url):
-              request = urllib.request.Request(url, headers={"User-Agent": "SBF-Network/1.0"})
-              with urllib.request.urlopen(request, timeout=30) as response:
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "User-Agent":
+                          "SBF-Network/1.0"
+                  }
+              )
+
+              with urllib.request.urlopen(
+                  request,
+                  timeout=45
+              ) as response:
                   return json.load(response)
 
-          def post_json(url, payload, headers):
-              data = json.dumps(payload).encode("utf-8")
-              request = urllib.request.Request(url, data=data, headers=headers, method="POST")
+
+          def post_json(
+              url,
+              payload,
+              headers
+          ):
+              data = json.dumps(
+                  payload
+              ).encode("utf-8")
+
+              request = urllib.request.Request(
+                  url,
+                  data=data,
+                  headers=headers,
+                  method="POST"
+              )
+
               try:
-                  with urllib.request.urlopen(request, timeout=120) as response:
+                  with urllib.request.urlopen(
+                      request,
+                      timeout=180
+                  ) as response:
                       return json.load(response)
+
               except urllib.error.HTTPError as error:
-                  detail = error.read().decode("utf-8", errors="replace")
-                  raise RuntimeError(f"OpenAI API returned {error.code}: {detail}") from error
+                  detail = error.read().decode(
+                      "utf-8",
+                      errors="replace"
+                  )
 
-          league = get_json(f"{SLEEPER}/league/{LEAGUE_ID}")
-          users = get_json(f"{SLEEPER}/league/{LEAGUE_ID}/users")
-          rosters = get_json(f"{SLEEPER}/league/{LEAGUE_ID}/rosters")
-          state = get_json(f"{SLEEPER}/state/nfl")
+                  raise RuntimeError(
+                      f"OpenAI API returned "
+                      f"{error.code}: {detail}"
+                  ) from error
 
-          users_by_id = {user["user_id"]: user for user in users}
+
+          def get_output_text(response):
+              text = (
+                  response.get(
+                      "output_text",
+                      ""
+                  )
+                  or ""
+              ).strip()
+
+              if text:
+                  return text
+
+              text_parts = []
+
+              for output in response.get(
+                  "output",
+                  []
+              ):
+                  for content in output.get(
+                      "content",
+                      []
+                  ):
+                      if (
+                          content.get("type")
+                          == "output_text"
+                      ):
+                          text_parts.append(
+                              content.get(
+                                  "text",
+                                  ""
+                              )
+                          )
+
+              return "\n".join(
+                  text_parts
+              ).strip()
+
+
+          def clean_json_response(text):
+              text = text.strip()
+
+              if text.startswith("```"):
+                  text = re.sub(
+                      r"^```(?:json)?\s*",
+                      "",
+                      text,
+                      flags=re.IGNORECASE
+                  )
+
+                  text = re.sub(
+                      r"\s*```$",
+                      "",
+                      text
+                  )
+
+              return text.strip()
+
+
+          # =========================================================
+          # LOAD LEAGUE DATA
+          # =========================================================
+
+          league = get_json(
+              f"{SLEEPER}/league/"
+              f"{LEAGUE_ID}"
+          )
+
+          users = get_json(
+              f"{SLEEPER}/league/"
+              f"{LEAGUE_ID}/users"
+          )
+
+          rosters = get_json(
+              f"{SLEEPER}/league/"
+              f"{LEAGUE_ID}/rosters"
+          )
+
+          state = get_json(
+              f"{SLEEPER}/state/nfl"
+          )
+
+          users_by_id = {
+              user["user_id"]: user
+              for user in users
+          }
+
+
+          # =========================================================
+          # NFL PLAYER DATABASE
+          # =========================================================
+
+          nfl_players = {}
+
+          try:
+              nfl_players = get_json(
+                  f"{SLEEPER}/players/nfl"
+              )
+
+          except Exception as error:
+              print(
+                  "NFL player database "
+                  f"unavailable: {error}"
+              )
+
+
+          # =========================================================
+          # DRAFT DATA
+          # =========================================================
+
+          draft_picks = []
+          draft_pick_by_player = {}
+
+          try:
+              drafts = get_json(
+                  f"{SLEEPER}/league/"
+                  f"{LEAGUE_ID}/drafts"
+              )
+
+              season = str(
+                  league.get("season")
+                  or ""
+              )
+
+              season_drafts = [
+                  draft
+                  for draft in drafts
+                  if str(
+                      draft.get("season")
+                      or ""
+                  ) == season
+              ]
+
+              completed = [
+                  draft
+                  for draft in season_drafts
+                  if draft.get("status")
+                  == "complete"
+              ]
+
+              candidates = (
+                  completed
+                  or season_drafts
+                  or drafts
+              )
+
+              if candidates:
+                  chosen_draft = max(
+                      candidates,
+                      key=lambda draft:
+                          int(
+                              draft.get(
+                                  "created",
+                                  0
+                              )
+                              or 0
+                          )
+                  )
+
+                  draft_id = (
+                      chosen_draft.get(
+                          "draft_id"
+                      )
+                  )
+
+                  if draft_id:
+                      draft_picks = get_json(
+                          f"{SLEEPER}/draft/"
+                          f"{draft_id}/picks"
+                      )
+
+                      for pick in draft_picks:
+                          player_id = (
+                              pick.get(
+                                  "player_id"
+                              )
+                          )
+
+                          if player_id:
+                              draft_pick_by_player[
+                                  player_id
+                              ] = pick
+
+          except Exception as error:
+              print(
+                  "Draft data unavailable: "
+                  f"{error}"
+              )
+
+
+          # =========================================================
+          # TEAM / ROSTER DATA
+          # =========================================================
+
           roster_info = {}
 
-          for roster in rosters:
-              roster_id = roster["roster_id"]
-              owner = users_by_id.get(roster.get("owner_id"), {})
-              settings = roster.get("settings") or {}
-              metadata = owner.get("metadata") or {}
-              roster_info[roster_id] = {
-                  "roster_id": roster_id,
-                  "owner": owner.get("display_name") or f"Owner {roster_id}",
-                  "team": metadata.get("team_name") or owner.get("display_name") or f"Team {roster_id}",
-                  "wins": settings.get("wins", 0),
-                  "losses": settings.get("losses", 0),
-                  "ties": settings.get("ties", 0),
-                  "points_for": settings.get("fpts", 0) + settings.get("fpts_decimal", 0) / 100,
-                  "points_against": settings.get("fpts_against", 0) + settings.get("fpts_against_decimal", 0) / 100,
+
+          def player_name(
+              player_id
+          ):
+              player = nfl_players.get(
+                  player_id,
+                  {}
+              )
+
+              full_name = (
+                  player.get("full_name")
+              )
+
+              if full_name:
+                  return full_name
+
+              first = (
+                  player.get(
+                      "first_name",
+                      ""
+                  )
+                  or ""
+              )
+
+              last = (
+                  player.get(
+                      "last_name",
+                      ""
+                  )
+                  or ""
+              )
+
+              combined = (
+                  f"{first} {last}"
+              ).strip()
+
+              if combined:
+                  return combined
+
+              draft_pick = (
+                  draft_pick_by_player.get(
+                      player_id,
+                      {}
+                  )
+              )
+
+              metadata = (
+                  draft_pick.get(
+                      "metadata"
+                  )
+                  or {}
+              )
+
+              first = (
+                  metadata.get(
+                      "first_name",
+                      ""
+                  )
+                  or ""
+              )
+
+              last = (
+                  metadata.get(
+                      "last_name",
+                      ""
+                  )
+                  or ""
+              )
+
+              combined = (
+                  f"{first} {last}"
+              ).strip()
+
+              return (
+                  combined
+                  or player_id
+                  or "Unknown Player"
+              )
+
+
+          def player_summary(
+              player_id
+          ):
+              player = nfl_players.get(
+                  player_id,
+                  {}
+              )
+
+              draft_pick = (
+                  draft_pick_by_player.get(
+                      player_id
+                  )
+              )
+
+              metadata = (
+                  (
+                      draft_pick.get(
+                          "metadata"
+                      )
+                      or {}
+                  )
+                  if draft_pick
+                  else {}
+              )
+
+              position = (
+                  player.get("position")
+                  or metadata.get(
+                      "position"
+                  )
+                  or ""
+              )
+
+              nfl_team = (
+                  player.get("team")
+                  or metadata.get("team")
+                  or ""
+              )
+
+              pick_number = None
+              round_number = None
+
+              if draft_pick:
+                  pick_number = (
+                      draft_pick.get(
+                          "pick_no"
+                      )
+                  )
+
+                  round_number = (
+                      draft_pick.get(
+                          "round"
+                      )
+                  )
+
+              return {
+                  "player_id":
+                      player_id,
+
+                  "name":
+                      player_name(
+                          player_id
+                      ),
+
+                  "position":
+                      position,
+
+                  "nfl_team":
+                      nfl_team,
+
+                  "status":
+                      player.get(
+                          "status"
+                      ),
+
+                  "injury_status":
+                      player.get(
+                          "injury_status"
+                      ),
+
+                  "draft_pick":
+                      pick_number,
+
+                  "draft_round":
+                      round_number,
               }
 
+
+          for roster in rosters:
+              roster_id = (
+                  roster["roster_id"]
+              )
+
+              owner = users_by_id.get(
+                  roster.get(
+                      "owner_id"
+                  ),
+                  {}
+              )
+
+              settings = (
+                  roster.get(
+                      "settings"
+                  )
+                  or {}
+              )
+
+              metadata = (
+                  owner.get(
+                      "metadata"
+                  )
+                  or {}
+              )
+
+              player_ids = (
+                  roster.get(
+                      "players"
+                  )
+                  or []
+              )
+
+              starter_ids = set(
+                  roster.get(
+                      "starters"
+                  )
+                  or []
+              )
+
+              player_list = []
+
+              for player_id in player_ids:
+                  summary = (
+                      player_summary(
+                          player_id
+                      )
+                  )
+
+                  summary[
+                      "starter"
+                  ] = (
+                      player_id
+                      in starter_ids
+                  )
+
+                  player_list.append(
+                      summary
+                  )
+
+              roster_info[
+                  roster_id
+              ] = {
+                  "roster_id":
+                      roster_id,
+
+                  "owner":
+                      owner.get(
+                          "display_name"
+                      )
+                      or
+                      f"Owner {roster_id}",
+
+                  "team":
+                      metadata.get(
+                          "team_name"
+                      )
+                      or
+                      owner.get(
+                          "display_name"
+                      )
+                      or
+                      f"Team {roster_id}",
+
+                  "wins":
+                      settings.get(
+                          "wins",
+                          0
+                      ),
+
+                  "losses":
+                      settings.get(
+                          "losses",
+                          0
+                      ),
+
+                  "ties":
+                      settings.get(
+                          "ties",
+                          0
+                      ),
+
+                  "points_for":
+                      settings.get(
+                          "fpts",
+                          0
+                      )
+                      +
+                      settings.get(
+                          "fpts_decimal",
+                          0
+                      )
+                      / 100,
+
+                  "points_against":
+                      settings.get(
+                          "fpts_against",
+                          0
+                      )
+                      +
+                      settings.get(
+                          "fpts_against_decimal",
+                          0
+                      )
+                      / 100,
+
+                  "players":
+                      player_list,
+              }
+
+
+          # =========================================================
+          # DETERMINE WEEK
+          # =========================================================
+
           def get_matchups(week):
-              return get_json(f"{SLEEPER}/league/{LEAGUE_ID}/matchups/{week}")
+              return get_json(
+                  f"{SLEEPER}/league/"
+                  f"{LEAGUE_ID}/"
+                  f"matchups/{week}"
+              )
+
 
           if requested_week:
-              week = int(requested_week)
-              matchups = get_matchups(week)
+              week = int(
+                  requested_week
+              )
+
+              matchups = get_matchups(
+                  week
+              )
+
           else:
-              candidate = int(state.get("leg") or state.get("week") or 1)
-              matchups = get_matchups(candidate)
-              has_scores = any(float(row.get("points") or 0) > 0 for row in matchups)
-              if not has_scores and candidate > 1:
+              candidate = int(
+                  state.get("leg")
+                  or
+                  state.get("week")
+                  or 1
+              )
+
+              matchups = get_matchups(
+                  candidate
+              )
+
+              has_candidate_scores = any(
+                  float(
+                      row.get(
+                          "points"
+                      )
+                      or 0
+                  ) > 0
+                  for row in matchups
+              )
+
+              if (
+                  not has_candidate_scores
+                  and candidate > 1
+              ):
                   candidate -= 1
-                  matchups = get_matchups(candidate)
+
+                  matchups = get_matchups(
+                      candidate
+                  )
+
               week = candidate
 
+
+          has_scores = any(
+              float(
+                  row.get(
+                      "points"
+                  )
+                  or 0
+              ) > 0
+              for row in matchups
+          )
+
+
+          # =========================================================
+          # WEEKLY MATCHUPS
+          # =========================================================
+
           grouped = {}
+
+          week_points_by_roster = {}
+
           for row in matchups:
-              matchup_id = row.get("matchup_id")
+              roster_id = (
+                  row["roster_id"]
+              )
+
+              week_points = round(
+                  float(
+                      row.get(
+                          "points"
+                      )
+                      or 0
+                  ),
+                  2
+              )
+
+              week_points_by_roster[
+                  roster_id
+              ] = week_points
+
+              matchup_id = (
+                  row.get(
+                      "matchup_id"
+                  )
+              )
+
               if matchup_id is None:
                   continue
-              grouped.setdefault(str(matchup_id), []).append({
-                  **roster_info.get(row["roster_id"], {
-                      "roster_id": row["roster_id"],
-                      "team": f"Team {row['roster_id']}",
-                      "owner": "Unknown"
-                  }),
-                  "week_points": round(float(row.get("points") or 0), 2),
+
+              grouped.setdefault(
+                  str(matchup_id),
+                  []
+              ).append({
+                  **roster_info.get(
+                      roster_id,
+                      {
+                          "roster_id":
+                              roster_id,
+
+                          "team":
+                              f"Team "
+                              f"{roster_id}",
+
+                          "owner":
+                              "Unknown"
+                      }
+                  ),
+
+                  "week_points":
+                      week_points,
               })
 
-          games = []
-          for matchup_id, teams in grouped.items():
-              teams = sorted(teams, key=lambda team: team["week_points"], reverse=True)
-              games.append({"matchup_id": matchup_id, "teams": teams})
 
-          games.sort(key=lambda game: max([team["week_points"] for team in game["teams"]] or [0]), reverse=True)
+          games = []
+
+          for (
+              matchup_id,
+              teams
+          ) in grouped.items():
+
+              teams = sorted(
+                  teams,
+                  key=lambda team:
+                      team[
+                          "week_points"
+                      ],
+                  reverse=True
+              )
+
+              games.append({
+                  "matchup_id":
+                      matchup_id,
+
+                  "teams":
+                      teams
+              })
+
+
+          games.sort(
+              key=lambda game:
+                  max(
+                      [
+                          team[
+                              "week_points"
+                          ]
+                          for team
+                          in game[
+                              "teams"
+                          ]
+                      ]
+                      or [0]
+                  ),
+              reverse=True
+          )
+
+
+          # =========================================================
+          # STANDINGS
+          # =========================================================
 
           standings = sorted(
               roster_info.values(),
-              key=lambda team: (-team["wins"], team["losses"], -team["points_for"])
+              key=lambda team: (
+                  -team["wins"],
+                  team["losses"],
+                  -team["points_for"]
+              )
           )
 
+
+          # =========================================================
+          # TRANSACTIONS
+          # =========================================================
+
           transactions = []
+
           try:
-              raw_transactions = get_json(f"{SLEEPER}/league/{LEAGUE_ID}/transactions/{week}")
-              for transaction in raw_transactions[:25]:
+              raw_transactions = (
+                  get_json(
+                      f"{SLEEPER}/league/"
+                      f"{LEAGUE_ID}/"
+                      f"transactions/{week}"
+                  )
+              )
+
+              for transaction in (
+                  raw_transactions[:25]
+              ):
                   transactions.append({
-                      "type": transaction.get("type"),
-                      "status": transaction.get("status"),
-                      "roster_ids": transaction.get("roster_ids", []),
-                      "adds": transaction.get("adds") or {},
-                      "drops": transaction.get("drops") or {},
-                      "waiver_bid": (transaction.get("settings") or {}).get("waiver_bid"),
+                      "type":
+                          transaction.get(
+                              "type"
+                          ),
+
+                      "status":
+                          transaction.get(
+                              "status"
+                          ),
+
+                      "roster_ids":
+                          transaction.get(
+                              "roster_ids",
+                              []
+                          ),
+
+                      "adds":
+                          transaction.get(
+                              "adds"
+                          )
+                          or {},
+
+                      "drops":
+                          transaction.get(
+                              "drops"
+                          )
+                          or {},
+
+                      "waiver_bid":
+                          (
+                              transaction.get(
+                                  "settings"
+                              )
+                              or {}
+                          ).get(
+                              "waiver_bid"
+                          ),
                   })
+
           except Exception as error:
-              print(f"Transactions unavailable: {error}")
+              print(
+                  "Transactions "
+                  "unavailable: "
+                  f"{error}"
+              )
+
+
+          # =========================================================
+          # POWER RANKING MODE
+          # =========================================================
+
+          all_zero_record = all(
+              (
+                  team["wins"] == 0
+                  and
+                  team["losses"] == 0
+                  and
+                  team["ties"] == 0
+              )
+              for team in roster_info.values()
+          )
+
+          ranking_mode = (
+              "preseason"
+              if (
+                  all_zero_record
+                  and
+                  not has_scores
+              )
+              else
+              "in-season"
+          )
+
+
+          # =========================================================
+          # BUILD POWER-RANKING INPUT
+          # =========================================================
+
+          ranking_teams = []
+
+          for team in roster_info.values():
+              ranking_teams.append({
+                  "roster_id":
+                      team[
+                          "roster_id"
+                      ],
+
+                  "team":
+                      team[
+                          "team"
+                      ],
+
+                  "owner":
+                      team[
+                          "owner"
+                      ],
+
+                  "wins":
+                      team[
+                          "wins"
+                      ],
+
+                  "losses":
+                      team[
+                          "losses"
+                      ],
+
+                  "ties":
+                      team[
+                          "ties"
+                      ],
+
+                  "points_for":
+                      round(
+                          team[
+                              "points_for"
+                          ],
+                          2
+                      ),
+
+                  "points_against":
+                      round(
+                          team[
+                              "points_against"
+                          ],
+                          2
+                      ),
+
+                  "current_week_points":
+                      week_points_by_roster.get(
+                          team[
+                              "roster_id"
+                          ],
+                          0
+                      ),
+
+                  "players":
+                      team[
+                          "players"
+                      ],
+              })
+
+
+          ranking_input = {
+              "league":
+                  league.get(
+                      "name"
+                  ),
+
+              "season":
+                  league.get(
+                      "season"
+                  ),
+
+              "week":
+                  week,
+
+              "mode":
+                  ranking_mode,
+
+              "teams":
+                  ranking_teams,
+          }
+
+
+          # =========================================================
+          # GENERATE STRUCTURED POWER RANKINGS
+          # =========================================================
+
+          ranking_prompt = f"""
+          You are the SBF Network fantasy-football power-ranking analyst.
+
+          Rank every team in this private fantasy league.
+
+          MODE: {ranking_mode}
+
+          Rules:
+
+          - Return ONLY valid JSON.
+          - Include every roster_id exactly once.
+          - Do not add teams.
+          - Do not omit teams.
+          - power_score must be an integer from 1 through 99.
+          - Higher power_score means a stronger current championship outlook.
+          - Give each team a short reason of no more than 30 words.
+          - Do not invent injuries, transactions, stats, or news that are not present in the supplied data.
+
+          PRESEASON METHOD:
+          - Current roster strength is the primary factor.
+          - Use player names, positions, roster construction and draft capital supplied in the data.
+          - Reward elite starters, positional balance, depth and upside.
+          - Do not use wins or points because games have not been played.
+
+          IN-SEASON METHOD:
+          - Blend current roster strength with actual results.
+          - Wins, losses, total points and recent scoring should matter.
+          - Early in the season roster strength may still matter heavily.
+          - As more games are played, actual performance should matter increasingly more.
+          - A strong roster should not automatically rank first if its actual results are poor.
+
+          Required JSON format:
+
+          {{
+            "teams": [
+              {{
+                "roster_id": 1,
+                "power_score": 90,
+                "reason": "Short explanation."
+              }}
+            ]
+          }}
+
+          LEAGUE DATA:
+
+          {json.dumps(ranking_input, indent=2)}
+          """
+
+
+          ranking_response = post_json(
+              "https://api.openai.com/v1/responses",
+              {
+                  "model":
+                      MODEL,
+
+                  "input":
+                      ranking_prompt,
+
+                  "reasoning": {
+                      "effort":
+                          "low"
+                  },
+
+                  "max_output_tokens":
+                      3500,
+              },
+              {
+                  "Authorization":
+                      f"Bearer "
+                      f"{OPENAI_API_KEY}",
+
+                  "Content-Type":
+                      "application/json",
+              }
+          )
+
+
+          ranking_text = (
+              get_output_text(
+                  ranking_response
+              )
+          )
+
+          if not ranking_text:
+              raise RuntimeError(
+                  "OpenAI returned "
+                  "no ranking data."
+              )
+
+
+          ranking_text = (
+              clean_json_response(
+                  ranking_text
+              )
+          )
+
+
+          try:
+              ranking_result = (
+                  json.loads(
+                      ranking_text
+                  )
+              )
+
+          except json.JSONDecodeError as error:
+              raise RuntimeError(
+                  "Power ranking response "
+                  "was not valid JSON:\n"
+                  f"{ranking_text}"
+              ) from error
+
+
+          raw_rankings = (
+              ranking_result.get(
+                  "teams"
+              )
+              or []
+          )
+
+
+          # =========================================================
+          # VALIDATE AI RANKINGS
+          # =========================================================
+
+          ranking_by_roster = {}
+
+          valid_roster_ids = set(
+              roster_info.keys()
+          )
+
+
+          for item in raw_rankings:
+              try:
+                  roster_id = int(
+                      item.get(
+                          "roster_id"
+                      )
+                  )
+
+              except Exception:
+                  continue
+
+              if (
+                  roster_id
+                  not in valid_roster_ids
+              ):
+                  continue
+
+              if (
+                  roster_id
+                  in ranking_by_roster
+              ):
+                  continue
+
+              try:
+                  power_score = int(
+                      round(
+                          float(
+                              item.get(
+                                  "power_score",
+                                  50
+                              )
+                          )
+                      )
+                  )
+
+              except Exception:
+                  power_score = 50
+
+              power_score = max(
+                  1,
+                  min(
+                      99,
+                      power_score
+                  )
+              )
+
+              reason = str(
+                  item.get(
+                      "reason",
+                      ""
+                  )
+                  or ""
+              ).strip()
+
+              ranking_by_roster[
+                  roster_id
+              ] = {
+                  "power_score":
+                      power_score,
+
+                  "reason":
+                      reason,
+              }
+
+
+          # =========================================================
+          # FALLBACK FOR ANY MISSING TEAM
+          # =========================================================
+
+          max_points_for = max(
+              [
+                  team[
+                      "points_for"
+                  ]
+                  for team
+                  in roster_info.values()
+              ]
+              or [0]
+          )
+
+
+          for (
+              roster_id,
+              team
+          ) in roster_info.items():
+
+              if (
+                  roster_id
+                  in ranking_by_roster
+              ):
+                  continue
+
+              if (
+                  ranking_mode
+                  == "in-season"
+              ):
+                  point_factor = (
+                      (
+                          team[
+                              "points_for"
+                          ]
+                          /
+                          max_points_for
+                      )
+                      * 25
+                      if max_points_for
+                      else 0
+                  )
+
+                  fallback_score = (
+                      45
+                      +
+                      team[
+                          "wins"
+                      ]
+                      * 6
+                      +
+                      point_factor
+                  )
+
+              else:
+                  fallback_score = 50
+
+              ranking_by_roster[
+                  roster_id
+              ] = {
+                  "power_score":
+                      max(
+                          1,
+                          min(
+                              99,
+                              round(
+                                  fallback_score
+                              )
+                          )
+                      ),
+
+                  "reason":
+                      (
+                          "Fallback score "
+                          "used because no "
+                          "valid AI ranking "
+                          "was returned."
+                      ),
+              }
+
+
+          # =========================================================
+          # SORT POWER RANKINGS
+          # =========================================================
+
+          ranked_teams = sorted(
+              roster_info.values(),
+              key=lambda team: (
+                  -ranking_by_roster[
+                      team[
+                          "roster_id"
+                      ]
+                  ][
+                      "power_score"
+                  ],
+
+                  -team[
+                      "wins"
+                  ],
+
+                  -team[
+                      "points_for"
+                  ],
+
+                  team[
+                      "roster_id"
+                  ]
+              )
+          )
+
+
+          # =========================================================
+          # CALCULATE CHAMPIONSHIP ODDS FROM POWER SCORES
+          # =========================================================
+
+          scores = [
+              ranking_by_roster[
+                  team[
+                      "roster_id"
+                  ]
+              ][
+                  "power_score"
+              ]
+              for team
+              in ranked_teams
+          ]
+
+          max_score = max(
+              scores
+              or [50]
+          )
+
+          temperature = 18.0
+
+          weights = [
+              math.exp(
+                  (
+                      score
+                      -
+                      max_score
+                  )
+                  /
+                  temperature
+              )
+              for score in scores
+          ]
+
+          weight_total = (
+              sum(weights)
+              or 1
+          )
+
+
+          def american_odds(
+              probability
+          ):
+              probability = max(
+                  0.01,
+                  min(
+                      0.99,
+                      probability
+                  )
+              )
+
+              if probability >= 0.5:
+                  raw = (
+                      -100
+                      *
+                      probability
+                      /
+                      (
+                          1
+                          -
+                          probability
+                      )
+                  )
+
+              else:
+                  raw = (
+                      100
+                      *
+                      (
+                          1
+                          -
+                          probability
+                      )
+                      /
+                      probability
+                  )
+
+              rounded = int(
+                  round(
+                      raw / 25
+                  )
+                  * 25
+              )
+
+              if rounded > 0:
+                  return (
+                      f"+{rounded}"
+                  )
+
+              return str(
+                  rounded
+              )
+
+
+          final_rankings = []
+
+          for index, team in enumerate(
+              ranked_teams
+          ):
+              roster_id = (
+                  team[
+                      "roster_id"
+                  ]
+              )
+
+              probability = (
+                  weights[index]
+                  /
+                  weight_total
+              )
+
+              # Small entertainment-style
+              # bookmaker margin.
+              market_probability = min(
+                  0.49,
+                  probability * 1.05
+              )
+
+              final_rankings.append({
+                  "rank":
+                      index + 1,
+
+                  "roster_id":
+                      roster_id,
+
+                  "team":
+                      team[
+                          "team"
+                      ],
+
+                  "owner":
+                      team[
+                          "owner"
+                      ],
+
+                  "power_score":
+                      ranking_by_roster[
+                          roster_id
+                      ][
+                          "power_score"
+                      ],
+
+                  "championship_odds":
+                      american_odds(
+                          market_probability
+                      ),
+
+                  "implied_probability":
+                      round(
+                          market_probability
+                          * 100,
+                          1
+                      ),
+
+                  "reason":
+                      ranking_by_roster[
+                          roster_id
+                      ][
+                          "reason"
+                      ],
+              })
+
+
+          # =========================================================
+          # SAVE POWER RANKINGS FILE
+          # =========================================================
+
+          ranking_record = {
+              "league":
+                  league.get(
+                      "name"
+                  ),
+
+              "season":
+                  league.get(
+                      "season"
+                  ),
+
+              "week":
+                  week,
+
+              "mode":
+                  ranking_mode,
+
+              "generated_at":
+                  generated_at,
+
+              "teams":
+                  final_rankings,
+          }
+
+
+          data_dir = pathlib.Path(
+              "data"
+          )
+
+          data_dir.mkdir(
+              exist_ok=True
+          )
+
+          power_path = (
+              data_dir
+              /
+              "power-rankings.json"
+          )
+
+          power_path.write_text(
+              json.dumps(
+                  ranking_record,
+                  indent=2
+              ),
+              encoding="utf-8"
+          )
+
+          print(
+              "Generated "
+              f"{power_path}"
+          )
+
+
+          # =========================================================
+          # BUILD WEEKLY RECAP DATA
+          # =========================================================
 
           league_data = {
-              "league": league.get("name"),
-              "season": league.get("season"),
-              "week": week,
-              "generated_at": datetime.now(timezone.utc).isoformat(),
-              "standings": standings,
-              "matchups": games,
-              "transactions": transactions,
+              "league":
+                  league.get(
+                      "name"
+                  ),
+
+              "season":
+                  league.get(
+                      "season"
+                  ),
+
+              "week":
+                  week,
+
+              "generated_at":
+                  generated_at,
+
+              "standings":
+                  standings,
+
+              "matchups":
+                  games,
+
+              "transactions":
+                  transactions,
+
+              "power_rankings":
+                  final_rankings,
           }
+
+
+          # =========================================================
+          # WEEKLY RECAP
+          # =========================================================
 
           prompt = f"""
           You are the lead writer for SBF Network, covering a private fantasy-football league called {league_data['league']}.
 
           Write a polished Week {week} recap using ONLY the supplied data.
+
           Never invent player performances, injuries, trades, quotes, draft picks, or events not present in the data.
 
           Tone:
@@ -180,66 +1576,198 @@ jobs:
           9. Vegas-style championship odds marked as entertainment only
           10. A closing commissioner-style message
 
-          Return clean HTML only. Use h2, h3, p, ul, li, strong and table.
+          IMPORTANT:
+          The supplied power_rankings array is the official SBF Network ranking and championship-odds board for this edition.
+
+          Use those rankings, power scores and championship odds exactly.
+
+          Do not independently rerank teams.
+
+          Do not invent different championship odds.
+
+          Return clean HTML only.
+
+          Use h2, h3, p, ul, li, strong and table.
+
           Do not return markdown fences, a full HTML document, scripts, styles, links, or unsupported factual claims.
 
           LEAGUE DATA:
+
           {json.dumps(league_data, indent=2)}
           """
+
 
           response = post_json(
               "https://api.openai.com/v1/responses",
               {
-                  "model": MODEL,
-                  "input": prompt,
-                  "reasoning": {"effort": "low"},
-                  "max_output_tokens": 6000,
+                  "model":
+                      MODEL,
+
+                  "input":
+                      prompt,
+
+                  "reasoning": {
+                      "effort":
+                          "low"
+                  },
+
+                  "max_output_tokens":
+                      6000,
               },
               {
-                  "Authorization": f"Bearer {OPENAI_API_KEY}",
-                  "Content-Type": "application/json",
+                  "Authorization":
+                      f"Bearer "
+                      f"{OPENAI_API_KEY}",
+
+                  "Content-Type":
+                      "application/json",
               }
           )
 
-          recap_html = response.get("output_text", "").strip()
-          if not recap_html:
-              text_parts = []
-              for output in response.get("output", []):
-                  for content in output.get("content", []):
-                      if content.get("type") == "output_text":
-                          text_parts.append(content.get("text", ""))
-              recap_html = "\n".join(text_parts).strip()
+
+          recap_html = (
+              get_output_text(
+                  response
+              )
+          )
+
 
           if not recap_html:
-              raise RuntimeError("OpenAI returned no recap text.")
+              raise RuntimeError(
+                  "OpenAI returned "
+                  "no recap text."
+              )
 
-          recap_dir = pathlib.Path("recaps")
-          recap_dir.mkdir(exist_ok=True)
+
+          # =========================================================
+          # SAVE RECAP
+          # =========================================================
+
+          recap_dir = pathlib.Path(
+              "recaps"
+          )
+
+          recap_dir.mkdir(
+              exist_ok=True
+          )
+
+
+          # Try to use the first h2 as
+          # the archive-card headline.
+          headline = (
+              f"Week {week} Recap"
+          )
+
+          headline_match = re.search(
+              r"<h2[^>]*>(.*?)</h2>",
+              recap_html,
+              flags=(
+                  re.IGNORECASE
+                  |
+                  re.DOTALL
+              )
+          )
+
+          if headline_match:
+              extracted = re.sub(
+                  r"<[^>]+>",
+                  "",
+                  headline_match.group(
+                      1
+                  )
+              )
+
+              extracted = html.unescape(
+                  extracted
+              ).strip()
+
+              if extracted:
+                  headline = extracted
+
 
           record = {
-              "week": week,
-              "season": league.get("season"),
-              "league": league.get("name"),
-              "generated_at": league_data["generated_at"],
-              "headline": f"Week {week} Recap",
-              "html": recap_html,
+              "week":
+                  week,
+
+              "season":
+                  league.get(
+                      "season"
+                  ),
+
+              "league":
+                  league.get(
+                      "name"
+                  ),
+
+              "generated_at":
+                  generated_at,
+
+              "headline":
+                  headline,
+
+              "html":
+                  recap_html,
           }
 
-          week_path = recap_dir / f"week-{week}.json"
-          week_path.write_text(json.dumps(record, indent=2), encoding="utf-8")
-          (recap_dir / "latest.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
 
-          print(f"Generated {week_path}")
+          week_path = (
+              recap_dir
+              /
+              f"week-{week}.json"
+          )
+
+          week_path.write_text(
+              json.dumps(
+                  record,
+                  indent=2
+              ),
+              encoding="utf-8"
+          )
+
+
+          (
+              recap_dir
+              /
+              "latest.json"
+          ).write_text(
+              json.dumps(
+                  record,
+                  indent=2
+              ),
+              encoding="utf-8"
+          )
+
+
+          print(
+              f"Generated {week_path}"
+          )
+
+          print(
+              "Official Power Rankings:"
+          )
+
+          for team in final_rankings:
+              print(
+                  f"#{team['rank']} "
+                  f"{team['team']} "
+                  f"({team['power_score']}) "
+                  f"{team['championship_odds']}"
+              )
+
           PY
 
-      - name: Commit generated recap
+
+      - name: Commit generated recap and rankings
         run: |
           git config user.name "SBF Network Bot"
           git config user.email "actions@users.noreply.github.com"
+
           git add recaps/
+          git add data/power-rankings.json
+
           if git diff --cached --quiet; then
-            echo "No recap changes to commit."
+            echo "No recap or ranking changes to commit."
           else
-            git commit -m "Publish automated weekly recap"
+            git commit -m "Publish automated weekly recap and power rankings"
             git push
           fi
