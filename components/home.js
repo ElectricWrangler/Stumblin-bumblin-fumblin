@@ -129,7 +129,7 @@ function officialOdds(
         Number(a.rank || 999) -
         Number(b.rank || 999)
     )
-    .slice(0, 6)
+    .slice(0, 10)
     .map(team => {
 
       const sleeperTeam =
