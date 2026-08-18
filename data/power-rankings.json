@@ -1,0 +1,109 @@
+{
+  "league": "Stumblin Bumblin & Fumblin",
+  "season": "2026",
+  "week": 1,
+  "mode": "preseason",
+  "generated_at": "2026-08-18T19:54:59.527734+00:00",
+  "teams": [
+    {
+      "rank": 1,
+      "roster_id": 4,
+      "team": "Kirkumcised Penix",
+      "owner": "stickyyye",
+      "power_score": 92,
+      "championship_odds": "+450",
+      "implied_probability": 18.3,
+      "reason": "CeeDee Lamb, James Cook, Derrick Henry and Jayden Daniels headline an elite, balanced starting lineup with strong quarterback, running back and tight end depth."
+    },
+    {
+      "rank": 2,
+      "roster_id": 6,
+      "team": "alexvandeusen",
+      "owner": "alexvandeusen",
+      "power_score": 90,
+      "championship_odds": "+500",
+      "implied_probability": 16.3,
+      "reason": "Christian McCaffrey, De'Von Achane, Breece Hall, Nico Collins and Brock Bowers create exceptional upside, supported by outstanding quarterback and tight end depth."
+    },
+    {
+      "rank": 3,
+      "roster_id": 10,
+      "team": "arupert12",
+      "owner": "arupert12",
+      "power_score": 87,
+      "championship_odds": "+625",
+      "implied_probability": 13.8,
+      "reason": "Justin Jefferson, Jonathan Taylor, Jalen Hurts, Tee Higgins and Chris Olave provide premium talent and excellent balance across every major starting position."
+    },
+    {
+      "rank": 4,
+      "roster_id": 2,
+      "team": "OguguaAnunoby",
+      "owner": "OguguaAnunoby",
+      "power_score": 84,
+      "championship_odds": "+750",
+      "implied_probability": 11.7,
+      "reason": "Jahmyr Gibbs leads a deep backfield alongside Josh Jacobs and Kenneth Walker, while Drake London anchors a talented receiving group."
+    },
+    {
+      "rank": 5,
+      "roster_id": 8,
+      "team": "Al-Qaeda Crashouts ",
+      "owner": "oehler56",
+      "power_score": 81,
+      "championship_odds": "+900",
+      "implied_probability": 9.9,
+      "reason": "Amon-Ra St. Brown, A.J. Brown and Trey McBride form an elite receiving core, complemented by Kyren Williams and Bucky Irving."
+    },
+    {
+      "rank": 6,
+      "roster_id": 9,
+      "team": "4Anthony2",
+      "owner": "4Anthony2",
+      "power_score": 79,
+      "championship_odds": "+1025",
+      "implied_probability": 8.9,
+      "reason": "Josh Allen, Bijan Robinson and Omarion Hampton offer a powerful foundation, though the starting receiving group carries more uncertainty than the top contenders."
+    },
+    {
+      "rank": 7,
+      "roster_id": 7,
+      "team": "shmeems",
+      "owner": "shmeems",
+      "power_score": 77,
+      "championship_odds": "+1150",
+      "implied_probability": 7.9,
+      "reason": "Lamar Jackson, Puka Nacua, Rashee Rice and Sam LaPorta supply elite upside, but the running back group relies heavily on younger, less-established options."
+    },
+    {
+      "rank": 8,
+      "roster_id": 1,
+      "team": "Muth Juice",
+      "owner": "brizzzyy",
+      "power_score": 75,
+      "championship_odds": "+1300",
+      "implied_probability": 7.1,
+      "reason": "Ja'Marr Chase leads a strong receiving corps with Ladd McConkey and George Pickens, while Chase Brown provides the backfield anchor."
+    },
+    {
+      "rank": 9,
+      "roster_id": 5,
+      "team": "Chef Boyardee",
+      "owner": "Valk474",
+      "power_score": 72,
+      "championship_odds": "+1575",
+      "implied_probability": 6.0,
+      "reason": "Saquon Barkley, Malik Nabers and Garrett Wilson provide star power, but Trevor Lawrence and an inexperienced supporting backfield lower the overall floor."
+    },
+    {
+      "rank": 10,
+      "roster_id": 3,
+      "team": "Secret service chat",
+      "owner": "Towny7062",
+      "power_score": 69,
+      "championship_odds": "+1875",
+      "implied_probability": 5.1,
+      "reason": "Jaxon Smith-Njigba and Ashton Jeanty bring major upside, but the roster has fewer proven premium starters and thinner receiving depth than league leaders."
+    }
+  ]
+}
