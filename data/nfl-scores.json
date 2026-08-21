@@ -1,18 +1,18 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-21T07:56:10.457Z",
+  "updatedAt": "2026-08-21T23:50:43.861Z",
   "games": [
     {
       "id": "401873288",
-      "status": "scheduled",
-      "detail": "8/21 - 7:00 PM EDT",
+      "status": "live",
+      "detail": "9:23 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-21T23:00Z",
       "away": {
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "0-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "home": {
@@ -26,8 +26,8 @@
     },
     {
       "id": "401873287",
-      "status": "scheduled",
-      "detail": "8/21 - 7:30 PM EDT",
+      "status": "live",
+      "detail": "10:27 - 1st",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-21T23:30Z",
       "away": {
