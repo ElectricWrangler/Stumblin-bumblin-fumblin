@@ -177,7 +177,7 @@ async function start() {
         leagueData
       ),
       renderRecaps(),
-      renderNFL(),
+      renderNFL(leagueData),
       renderHistory()
     ]);
   } catch (error) {
