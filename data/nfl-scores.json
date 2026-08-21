@@ -1,48 +1,48 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-20T05:06:13.423Z",
+  "updatedAt": "2026-08-21T03:30:24.885Z",
   "games": [
     {
-      "id": "401873286",
-      "status": "scheduled",
-      "detail": "8/20 - 8:00 PM EDT",
-      "network": "ESPN",
-      "startTime": "2026-08-21T00:00Z",
-      "away": {
-        "name": "Las Vegas Raiders",
-        "abbr": "LV",
-        "record": "0-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
-      },
-      "home": {
-        "name": "Houston Texans",
-        "abbr": "HOU",
-        "record": "0-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
-      },
-      "note": ""
-    },
-    {
       "id": "401873285",
-      "status": "scheduled",
-      "detail": "8/20 - 10:00 PM EDT",
+      "status": "live",
+      "detail": "1:02 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-21T02:00Z",
       "away": {
         "name": "San Francisco 49ers",
         "abbr": "SF",
         "record": "0-1",
-        "score": 0,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
       },
       "home": {
         "name": "Los Angeles Chargers",
         "abbr": "LAC",
         "record": "1-0",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873286",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN",
+      "startTime": "2026-08-21T00:00Z",
+      "away": {
+        "name": "Las Vegas Raiders",
+        "abbr": "LV",
+        "record": "1-1",
+        "score": 22,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+      },
+      "home": {
+        "name": "Houston Texans",
+        "abbr": "HOU",
+        "record": "0-2",
+        "score": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "note": ""
     },
