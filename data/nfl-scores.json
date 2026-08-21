@@ -1,48 +1,26 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-21T03:30:24.885Z",
+  "updatedAt": "2026-08-21T05:17:26.850Z",
   "games": [
     {
       "id": "401873285",
-      "status": "live",
-      "detail": "1:02 - 2nd",
+      "status": "final",
+      "detail": "Final",
       "network": "NFL Net",
       "startTime": "2026-08-21T02:00Z",
       "away": {
         "name": "San Francisco 49ers",
         "abbr": "SF",
-        "record": "0-1",
-        "score": 17,
+        "record": "1-1",
+        "score": 41,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
       },
       "home": {
         "name": "Los Angeles Chargers",
         "abbr": "LAC",
-        "record": "1-0",
-        "score": 3,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873286",
-      "status": "final",
-      "detail": "Final",
-      "network": "ESPN",
-      "startTime": "2026-08-21T00:00Z",
-      "away": {
-        "name": "Las Vegas Raiders",
-        "abbr": "LV",
         "record": "1-1",
-        "score": 22,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
-      },
-      "home": {
-        "name": "Houston Texans",
-        "abbr": "HOU",
-        "record": "0-2",
-        "score": 20,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
+        "score": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
       },
       "note": ""
     },
@@ -109,6 +87,28 @@
         "record": "1-0",
         "score": 0,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873286",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN",
+      "startTime": "2026-08-21T00:00Z",
+      "away": {
+        "name": "Las Vegas Raiders",
+        "abbr": "LV",
+        "record": "1-1",
+        "score": 22,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+      },
+      "home": {
+        "name": "Houston Texans",
+        "abbr": "HOU",
+        "record": "0-2",
+        "score": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "note": ""
     },
