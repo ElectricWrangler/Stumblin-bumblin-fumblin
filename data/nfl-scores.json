@@ -1,11 +1,11 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-22T20:51:31.468Z",
+  "updatedAt": "2026-08-22T21:43:29.512Z",
   "games": [
     {
       "id": "401873290",
       "status": "live",
-      "detail": "10:25 - 2nd",
+      "detail": "Halftime",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-22T20:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Los Angeles Rams",
         "abbr": "LAR",
         "record": "1-0",
-        "score": 3,
+        "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "note": ""
@@ -27,21 +27,21 @@
     {
       "id": "401873292",
       "status": "live",
-      "detail": "14:49 - 2nd",
+      "detail": "Halftime",
       "network": "NFL Net",
       "startTime": "2026-08-22T20:00Z",
       "away": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "0-1",
-        "score": 7,
+        "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "home": {
         "name": "Miami Dolphins",
         "abbr": "MIA",
         "record": "0-1",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
       },
       "note": ""
