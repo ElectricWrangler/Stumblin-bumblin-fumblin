@@ -1,18 +1,18 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-22T19:11:14.262Z",
+  "updatedAt": "2026-08-22T19:51:32.480Z",
   "games": [
     {
       "id": "401873294",
       "status": "live",
-      "detail": "1:48 - 2nd",
+      "detail": "8:37 - 3rd",
       "network": "NFL Net",
       "startTime": "2026-08-22T17:00Z",
       "away": {
         "name": "Buffalo Bills",
         "abbr": "BUF",
         "record": "1-0",
-        "score": 7,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
       },
       "home": {
@@ -27,14 +27,14 @@
     {
       "id": "401873295",
       "status": "live",
-      "detail": "5:01 - 3rd",
+      "detail": "5:26 - 4th",
       "network": "CBS4",
       "startTime": "2026-08-22T17:00Z",
       "away": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "0-1",
-        "score": 31,
+        "score": 34,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "home": {
@@ -49,14 +49,14 @@
     {
       "id": "401873291",
       "status": "live",
-      "detail": "1:41 - 3rd",
+      "detail": "2:26 - 4th",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-22T17:00Z",
       "away": {
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "1-0",
-        "score": 10,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "home": {
