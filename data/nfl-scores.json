@@ -1,25 +1,25 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-22T04:56:45.165Z",
+  "updatedAt": "2026-08-22T16:58:05.209Z",
   "games": [
     {
       "id": "401873601",
-      "status": "scheduled",
-      "detail": "8/22 - 12:00 PM EDT",
+      "status": "live",
+      "detail": "5:48 - 2nd",
       "network": "Lions TV Network",
       "startTime": "2026-08-22T16:00Z",
       "away": {
         "name": "Washington Commanders",
         "abbr": "WSH",
         "record": "1-0",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
       },
       "home": {
         "name": "Detroit Lions",
         "abbr": "DET",
         "record": "0-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
       },
       "note": ""
