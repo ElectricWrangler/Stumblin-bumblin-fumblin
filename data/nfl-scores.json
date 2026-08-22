@@ -1,24 +1,46 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-21T23:50:43.861Z",
+  "updatedAt": "2026-08-22T03:07:30.702Z",
   "games": [
     {
-      "id": "401873288",
+      "id": "401873613",
       "status": "live",
-      "detail": "9:23 - 2nd",
+      "detail": "8:23 - 3rd",
+      "network": "NFL Net",
+      "startTime": "2026-08-22T01:00Z",
+      "away": {
+        "name": "Green Bay Packers",
+        "abbr": "GB",
+        "record": "0-1",
+        "score": 23,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
+      },
+      "home": {
+        "name": "Denver Broncos",
+        "abbr": "DEN",
+        "record": "1-0",
+        "score": 10,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873288",
+      "status": "final",
+      "detail": "Final",
       "network": "NFL Net",
       "startTime": "2026-08-21T23:00Z",
       "away": {
         "name": "New York Jets",
         "abbr": "NYJ",
-        "record": "0-1",
-        "score": 7,
+        "record": "1-1",
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "home": {
         "name": "Pittsburgh Steelers",
         "abbr": "PIT",
-        "record": "1-0",
+        "record": "1-1",
         "score": 0,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png"
       },
@@ -26,45 +48,23 @@
     },
     {
       "id": "401873287",
-      "status": "live",
-      "detail": "10:27 - 1st",
+      "status": "final",
+      "detail": "Final",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-21T23:30Z",
       "away": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
-        "record": "1-1",
-        "score": 0,
+        "record": "2-1",
+        "score": 34,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "home": {
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
-        "record": "1-0",
-        "score": 0,
+        "record": "1-1",
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873613",
-      "status": "scheduled",
-      "detail": "8/21 - 9:00 PM EDT",
-      "network": "NFL Net",
-      "startTime": "2026-08-22T01:00Z",
-      "away": {
-        "name": "Green Bay Packers",
-        "abbr": "GB",
-        "record": "0-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
-      },
-      "home": {
-        "name": "Denver Broncos",
-        "abbr": "DEN",
-        "record": "1-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "note": ""
     },
