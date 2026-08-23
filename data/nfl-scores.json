@@ -1,18 +1,18 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-22T23:41:08.782Z",
+  "updatedAt": "2026-08-23T00:01:11.605Z",
   "games": [
     {
       "id": "401873289",
       "status": "live",
-      "detail": "1:30 - 1st",
+      "detail": "10:02 - 2nd",
       "network": "Bengals Preseason TV Network",
       "startTime": "2026-08-22T23:00Z",
       "away": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "1-0",
-        "score": 3,
+        "score": 6,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
@@ -27,22 +27,44 @@
     {
       "id": "401873293",
       "status": "live",
-      "detail": "1:53 - 1st",
+      "detail": "10:59 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-22T23:00Z",
       "away": {
         "name": "Philadelphia Eagles",
         "abbr": "PHI",
         "record": "0-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "home": {
         "name": "New England Patriots",
         "abbr": "NE",
         "record": "0-0-1",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873296",
+      "status": "live",
+      "detail": "7:01 - 1st",
+      "network": "ESPN Unlmtd",
+      "startTime": "2026-08-22T23:30Z",
+      "away": {
+        "name": "Kansas City Chiefs",
+        "abbr": "KC",
+        "record": "0-1",
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+      },
+      "home": {
+        "name": "Tampa Bay Buccaneers",
+        "abbr": "TB",
+        "record": "1-0",
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "note": ""
     },
@@ -175,28 +197,6 @@
         "record": "0-2",
         "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873296",
-      "status": "live",
-      "detail": "12:53 - 1st",
-      "network": "ESPN Unlmtd",
-      "startTime": "2026-08-22T23:30Z",
-      "away": {
-        "name": "Kansas City Chiefs",
-        "abbr": "KC",
-        "record": "0-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
-      },
-      "home": {
-        "name": "Tampa Bay Buccaneers",
-        "abbr": "TB",
-        "record": "1-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "note": ""
     },
