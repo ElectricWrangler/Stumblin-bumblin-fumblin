@@ -1,29 +1,7 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-23T05:05:21.909Z",
+  "updatedAt": "2026-08-23T06:01:56.584Z",
   "games": [
-    {
-      "id": "401874101",
-      "status": "final",
-      "detail": "Final",
-      "network": "NFL Net",
-      "startTime": "2026-08-23T02:00Z",
-      "away": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "2-0",
-        "score": 34,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-      },
-      "home": {
-        "name": "Arizona Cardinals",
-        "abbr": "ARI",
-        "record": "1-2",
-        "score": 13,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
-      },
-      "note": ""
-    },
     {
       "id": "401873297",
       "status": "scheduled",
@@ -351,6 +329,28 @@
         "record": "2-0",
         "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401874101",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-23T02:00Z",
+      "away": {
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
+        "record": "2-0",
+        "score": 34,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+      },
+      "home": {
+        "name": "Arizona Cardinals",
+        "abbr": "ARI",
+        "record": "1-2",
+        "score": 13,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
       },
       "note": ""
     }
