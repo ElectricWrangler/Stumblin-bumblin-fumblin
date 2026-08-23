@@ -1,70 +1,26 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-23T00:01:11.605Z",
+  "updatedAt": "2026-08-23T03:32:01.106Z",
   "games": [
     {
-      "id": "401873289",
+      "id": "401874101",
       "status": "live",
-      "detail": "10:02 - 2nd",
-      "network": "Bengals Preseason TV Network",
-      "startTime": "2026-08-22T23:00Z",
-      "away": {
-        "name": "Chicago Bears",
-        "abbr": "CHI",
-        "record": "1-0",
-        "score": 6,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
-      },
-      "home": {
-        "name": "Cincinnati Bengals",
-        "abbr": "CIN",
-        "record": "1-0",
-        "score": 3,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873293",
-      "status": "live",
-      "detail": "10:59 - 2nd",
+      "detail": "Halftime",
       "network": "NFL Net",
-      "startTime": "2026-08-22T23:00Z",
+      "startTime": "2026-08-23T02:00Z",
       "away": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "0-1",
-        "score": 7,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
-      },
-      "home": {
-        "name": "New England Patriots",
-        "abbr": "NE",
-        "record": "0-0-1",
-        "score": 3,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873296",
-      "status": "live",
-      "detail": "7:01 - 1st",
-      "network": "ESPN Unlmtd",
-      "startTime": "2026-08-22T23:30Z",
-      "away": {
-        "name": "Kansas City Chiefs",
-        "abbr": "KC",
-        "record": "0-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
-      },
-      "home": {
-        "name": "Tampa Bay Buccaneers",
-        "abbr": "TB",
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
         "record": "1-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+      },
+      "home": {
+        "name": "Arizona Cardinals",
+        "abbr": "ARI",
+        "record": "1-1",
+        "score": 6,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
       },
       "note": ""
     },
@@ -201,24 +157,68 @@
       "note": ""
     },
     {
-      "id": "401874101",
-      "status": "scheduled",
-      "detail": "8/22 - 10:00 PM EDT",
-      "network": "NFL Net",
-      "startTime": "2026-08-23T02:00Z",
+      "id": "401873289",
+      "status": "final",
+      "detail": "Final",
+      "network": "Bengals Preseason TV Network",
+      "startTime": "2026-08-22T23:00Z",
       "away": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "1-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+        "name": "Chicago Bears",
+        "abbr": "CHI",
+        "record": "1-1",
+        "score": 9,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
-        "name": "Arizona Cardinals",
-        "abbr": "ARI",
-        "record": "1-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+        "name": "Cincinnati Bengals",
+        "abbr": "CIN",
+        "record": "2-0",
+        "score": 27,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873293",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-22T23:00Z",
+      "away": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "0-2",
+        "score": 21,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+      },
+      "home": {
+        "name": "New England Patriots",
+        "abbr": "NE",
+        "record": "1-0-1",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873296",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN Unlmtd",
+      "startTime": "2026-08-22T23:30Z",
+      "away": {
+        "name": "Kansas City Chiefs",
+        "abbr": "KC",
+        "record": "0-2",
+        "score": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+      },
+      "home": {
+        "name": "Tampa Bay Buccaneers",
+        "abbr": "TB",
+        "record": "2-0",
+        "score": 16,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "note": ""
     },
