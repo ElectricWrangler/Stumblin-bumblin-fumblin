@@ -1,25 +1,25 @@
 {
   "week": "Preseason 3",
-  "updatedAt": "2026-08-23T06:01:56.584Z",
+  "updatedAt": "2026-08-24T03:35:52.121Z",
   "games": [
     {
       "id": "401873297",
-      "status": "scheduled",
-      "detail": "8/23 - 8:00 PM EDT",
+      "status": "final",
+      "detail": "Final",
       "network": "FOX",
       "startTime": "2026-08-24T00:00Z",
       "away": {
         "name": "Seattle Seahawks",
         "abbr": "SEA",
-        "record": "0-1",
-        "score": 0,
+        "record": "0-2",
+        "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
       },
       "home": {
         "name": "Tennessee Titans",
         "abbr": "TEN",
-        "record": "1-0",
-        "score": 0,
+        "record": "2-0",
+        "score": 19,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "note": ""
