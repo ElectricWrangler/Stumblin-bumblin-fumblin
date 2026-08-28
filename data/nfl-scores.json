@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-28T23:31:16.388Z",
+  "updatedAt": "2026-08-28T23:46:13.994Z",
   "games": [
     {
       "id": "401873302",
       "status": "live",
-      "detail": "0:59 - 2nd",
+      "detail": "Halftime",
       "network": "NFL Net",
       "startTime": "2026-08-28T22:00Z",
       "away": {
@@ -27,7 +27,7 @@
     {
       "id": "401873304",
       "status": "live",
-      "detail": "5:03 - 1st",
+      "detail": "1:47 - 1st",
       "network": "CBS Miami",
       "startTime": "2026-08-28T23:00Z",
       "away": {
@@ -49,7 +49,7 @@
     {
       "id": "401873307",
       "status": "live",
-      "detail": "2:43 - 1st",
+      "detail": "14:05 - 2nd",
       "network": "KTRK (ABC)",
       "startTime": "2026-08-28T23:00Z",
       "away": {
@@ -70,8 +70,8 @@
     },
     {
       "id": "401873303",
-      "status": "scheduled",
-      "detail": "8/28 - 7:30 PM EDT",
+      "status": "live",
+      "detail": "10:15 - 1st",
       "network": "WCBS",
       "startTime": "2026-08-28T23:30Z",
       "away": {
@@ -92,8 +92,8 @@
     },
     {
       "id": "401873306",
-      "status": "scheduled",
-      "detail": "8/28 - 7:30 PM EDT",
+      "status": "live",
+      "detail": "10:57 - 1st",
       "network": "FOX30",
       "startTime": "2026-08-28T23:30Z",
       "away": {
