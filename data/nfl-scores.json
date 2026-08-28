@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-28T22:16:12.837Z",
+  "updatedAt": "2026-08-28T22:31:17.736Z",
   "games": [
     {
       "id": "401873302",
       "status": "live",
-      "detail": "10:21 - 1st",
+      "detail": "5:56 - 1st",
       "network": "NFL Net",
       "startTime": "2026-08-28T22:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "2-0",
-        "score": 0,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "note": ""
