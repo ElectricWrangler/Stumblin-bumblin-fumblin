@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T03:31:27.169Z",
+  "updatedAt": "2026-08-29T03:46:14.799Z",
   "games": [
     {
       "id": "401873614",
       "status": "live",
-      "detail": "13:04 - 4th",
+      "detail": "8:08 - 4th",
       "network": "NFL Net",
       "startTime": "2026-08-29T01:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Denver Broncos",
         "abbr": "DEN",
         "record": "1-1",
-        "score": 27,
+        "score": 34,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "note": ""
