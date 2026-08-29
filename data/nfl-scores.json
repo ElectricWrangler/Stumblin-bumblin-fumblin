@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T00:46:23.278Z",
+  "updatedAt": "2026-08-29T01:01:29.096Z",
   "games": [
     {
       "id": "401873302",
       "status": "live",
-      "detail": "12:55 - 4th",
+      "detail": "8:03 - 4th",
       "network": "NFL Net",
       "startTime": "2026-08-28T22:00Z",
       "away": {
@@ -27,7 +27,7 @@
     {
       "id": "401873304",
       "status": "live",
-      "detail": "Halftime",
+      "detail": "11:05 - 3rd",
       "network": "CBS Miami",
       "startTime": "2026-08-28T23:00Z",
       "away": {
@@ -49,7 +49,7 @@
     {
       "id": "401873307",
       "status": "live",
-      "detail": "14:15 - 3rd",
+      "detail": "7:19 - 3rd",
       "network": "KTRK (ABC)",
       "startTime": "2026-08-28T23:00Z",
       "away": {
@@ -71,14 +71,14 @@
     {
       "id": "401873303",
       "status": "live",
-      "detail": "3:45 - 2nd",
+      "detail": "0:43 - 2nd",
       "network": "WCBS",
       "startTime": "2026-08-28T23:30Z",
       "away": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "1-1",
-        "score": 7,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "home": {
@@ -93,7 +93,7 @@
     {
       "id": "401873306",
       "status": "live",
-      "detail": "2:00 - 2nd",
+      "detail": "Halftime",
       "network": "FOX30",
       "startTime": "2026-08-28T23:30Z",
       "away": {
@@ -115,7 +115,7 @@
     {
       "id": "401874048",
       "status": "live",
-      "detail": "0:20 - 1st",
+      "detail": "10:15 - 2nd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -129,7 +129,7 @@
         "name": "Dallas Cowboys",
         "abbr": "DAL",
         "record": "2-0",
-        "score": 3,
+        "score": 6,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
       "note": ""
@@ -137,14 +137,14 @@
     {
       "id": "401874102",
       "status": "live",
-      "detail": "14:06 - 2nd",
+      "detail": "9:17 - 2nd",
       "network": "Packers TV Network",
       "startTime": "2026-08-29T00:00Z",
       "away": {
         "name": "Arizona Cardinals",
         "abbr": "ARI",
         "record": "1-2",
-        "score": 10,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
       },
       "home": {
@@ -159,7 +159,7 @@
     {
       "id": "401873305",
       "status": "live",
-      "detail": "15:00 - 2nd",
+      "detail": "6:12 - 2nd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -173,7 +173,7 @@
         "name": "Kansas City Chiefs",
         "abbr": "KC",
         "record": "0-2",
-        "score": 3,
+        "score": 6,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
       },
       "note": ""
@@ -181,7 +181,7 @@
     {
       "id": "401873301",
       "status": "live",
-      "detail": "End of 1st",
+      "detail": "6:22 - 2nd",
       "network": "CBS",
       "startTime": "2026-08-29T00:00Z",
       "away": {
