@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T00:01:24.566Z",
+  "updatedAt": "2026-08-29T00:16:23.233Z",
   "games": [
     {
       "id": "401873302",
       "status": "live",
-      "detail": "12:22 - 3rd",
+      "detail": "7:45 - 3rd",
       "network": "NFL Net",
       "startTime": "2026-08-28T22:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "2-0",
-        "score": 24,
+        "score": 31,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "note": ""
@@ -27,14 +27,14 @@
     {
       "id": "401873304",
       "status": "live",
-      "detail": "11:49 - 2nd",
+      "detail": "3:28 - 2nd",
       "network": "CBS Miami",
       "startTime": "2026-08-28T23:00Z",
       "away": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "1-1",
-        "score": 7,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "home": {
@@ -49,7 +49,7 @@
     {
       "id": "401873307",
       "status": "live",
-      "detail": "9:02 - 2nd",
+      "detail": "2:00 - 2nd",
       "network": "KTRK (ABC)",
       "startTime": "2026-08-28T23:00Z",
       "away": {
@@ -71,14 +71,14 @@
     {
       "id": "401873303",
       "status": "live",
-      "detail": "3:27 - 1st",
+      "detail": "15:00 - 2nd",
       "network": "WCBS",
       "startTime": "2026-08-28T23:30Z",
       "away": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "1-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "home": {
@@ -93,7 +93,7 @@
     {
       "id": "401873306",
       "status": "live",
-      "detail": "2:04 - 1st",
+      "detail": "13:17 - 2nd",
       "network": "FOX30",
       "startTime": "2026-08-28T23:30Z",
       "away": {
@@ -113,16 +113,38 @@
       "note": ""
     },
     {
+      "id": "401873301",
+      "status": "live",
+      "detail": "9:28 - 1st",
+      "network": "CBS",
+      "startTime": "2026-08-29T00:00Z",
+      "away": {
+        "name": "Cincinnati Bengals",
+        "abbr": "CIN",
+        "record": "2-0",
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
+      },
+      "home": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "0-2",
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+      },
+      "note": ""
+    },
+    {
       "id": "401874048",
-      "status": "scheduled",
-      "detail": "8/28 - 8:00 PM EDT",
+      "status": "live",
+      "detail": "11:47 - 1st",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
         "name": "New Orleans Saints",
         "abbr": "NO",
         "record": "0-2",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
       },
       "home": {
@@ -136,8 +158,8 @@
     },
     {
       "id": "401874102",
-      "status": "scheduled",
-      "detail": "8/28 - 8:00 PM EDT",
+      "status": "live",
+      "detail": "10:00 - 1st",
       "network": "Packers TV Network",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -158,8 +180,8 @@
     },
     {
       "id": "401873305",
-      "status": "scheduled",
-      "detail": "8/28 - 8:00 PM EDT",
+      "status": "live",
+      "detail": "11:25 - 1st",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -175,28 +197,6 @@
         "record": "0-2",
         "score": 0,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873301",
-      "status": "scheduled",
-      "detail": "8/28 - 8:00 PM EDT",
-      "network": "CBS",
-      "startTime": "2026-08-29T00:00Z",
-      "away": {
-        "name": "Cincinnati Bengals",
-        "abbr": "CIN",
-        "record": "2-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
-      },
-      "home": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "0-2",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
     },
