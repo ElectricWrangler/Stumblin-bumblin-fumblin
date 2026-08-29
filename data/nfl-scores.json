@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-28T23:46:13.994Z",
+  "updatedAt": "2026-08-29T00:01:24.566Z",
   "games": [
     {
       "id": "401873302",
       "status": "live",
-      "detail": "Halftime",
+      "detail": "12:22 - 3rd",
       "network": "NFL Net",
       "startTime": "2026-08-28T22:00Z",
       "away": {
@@ -27,7 +27,7 @@
     {
       "id": "401873304",
       "status": "live",
-      "detail": "1:47 - 1st",
+      "detail": "11:49 - 2nd",
       "network": "CBS Miami",
       "startTime": "2026-08-28T23:00Z",
       "away": {
@@ -49,14 +49,14 @@
     {
       "id": "401873307",
       "status": "live",
-      "detail": "14:05 - 2nd",
+      "detail": "9:02 - 2nd",
       "network": "KTRK (ABC)",
       "startTime": "2026-08-28T23:00Z",
       "away": {
         "name": "Houston Texans",
         "abbr": "HOU",
         "record": "0-2",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "home": {
@@ -71,7 +71,7 @@
     {
       "id": "401873303",
       "status": "live",
-      "detail": "10:15 - 1st",
+      "detail": "3:27 - 1st",
       "network": "WCBS",
       "startTime": "2026-08-28T23:30Z",
       "away": {
@@ -85,7 +85,7 @@
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "1-1",
-        "score": 0,
+        "score": 6,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "note": ""
@@ -93,7 +93,7 @@
     {
       "id": "401873306",
       "status": "live",
-      "detail": "10:57 - 1st",
+      "detail": "2:04 - 1st",
       "network": "FOX30",
       "startTime": "2026-08-28T23:30Z",
       "away": {
