@@ -1,18 +1,18 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T18:16:22.396Z",
+  "updatedAt": "2026-08-29T18:31:26.538Z",
   "games": [
     {
       "id": "401873308",
       "status": "live",
-      "detail": "2:47 - 2nd",
+      "detail": "Halftime",
       "network": "NFL Net",
       "startTime": "2026-08-29T17:00Z",
       "away": {
         "name": "Detroit Lions",
         "abbr": "DET",
         "record": "1-1",
-        "score": 13,
+        "score": 19,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
       },
       "home": {
