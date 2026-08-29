@@ -1,24 +1,24 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T02:01:34.402Z",
+  "updatedAt": "2026-08-29T02:16:19.266Z",
   "games": [
     {
       "id": "401873304",
-      "status": "live",
-      "detail": "1:57 - 4th",
+      "status": "final",
+      "detail": "Final",
       "network": "CBS Miami",
       "startTime": "2026-08-28T23:00Z",
       "away": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
-        "record": "1-1",
+        "record": "2-1",
         "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "home": {
         "name": "Miami Dolphins",
         "abbr": "MIA",
-        "record": "0-2",
+        "record": "0-3",
         "score": 12,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
       },
@@ -26,21 +26,21 @@
     },
     {
       "id": "401873307",
-      "status": "live",
-      "detail": "2:00 - 4th",
+      "status": "final",
+      "detail": "Final",
       "network": "KTRK (ABC)",
       "startTime": "2026-08-28T23:00Z",
       "away": {
         "name": "Houston Texans",
         "abbr": "HOU",
-        "record": "0-2",
+        "record": "0-3",
         "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "home": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
-        "record": "2-1",
+        "record": "3-1",
         "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
@@ -49,14 +49,14 @@
     {
       "id": "401873303",
       "status": "live",
-      "detail": "14:50 - 4th",
+      "detail": "8:21 - 4th",
       "network": "WCBS",
       "startTime": "2026-08-28T23:30Z",
       "away": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "1-1",
-        "score": 16,
+        "score": 23,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "home": {
@@ -71,7 +71,7 @@
     {
       "id": "401873306",
       "status": "live",
-      "detail": "8:24 - 4th",
+      "detail": "2:21 - 4th",
       "network": "FOX30",
       "startTime": "2026-08-28T23:30Z",
       "away": {
@@ -85,7 +85,7 @@
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "record": "1-1",
-        "score": 11,
+        "score": 19,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
       },
       "note": ""
@@ -93,7 +93,7 @@
     {
       "id": "401874048",
       "status": "live",
-      "detail": "8:56 - 3rd",
+      "detail": "1:15 - 3rd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -115,7 +115,7 @@
     {
       "id": "401874102",
       "status": "live",
-      "detail": "9:30 - 3rd",
+      "detail": "4:17 - 3rd",
       "network": "Packers TV Network",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -137,14 +137,14 @@
     {
       "id": "401873305",
       "status": "live",
-      "detail": "9:01 - 3rd",
+      "detail": "3:47 - 3rd",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
         "name": "Seattle Seahawks",
         "abbr": "SEA",
         "record": "0-2",
-        "score": 3,
+        "score": 9,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
       },
       "home": {
@@ -159,7 +159,7 @@
     {
       "id": "401873301",
       "status": "live",
-      "detail": "7:16 - 3rd",
+      "detail": "2:05 - 3rd",
       "network": "CBS",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -173,7 +173,7 @@
         "name": "Philadelphia Eagles",
         "abbr": "PHI",
         "record": "0-2",
-        "score": 6,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
@@ -181,7 +181,7 @@
     {
       "id": "401873614",
       "status": "live",
-      "detail": "7:22 - 2nd",
+      "detail": "2:00 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-29T01:00Z",
       "away": {
@@ -195,7 +195,7 @@
         "name": "Denver Broncos",
         "abbr": "DEN",
         "record": "1-1",
-        "score": 10,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "note": ""
