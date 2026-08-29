@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T18:01:37.005Z",
+  "updatedAt": "2026-08-29T18:16:22.396Z",
   "games": [
     {
       "id": "401873308",
       "status": "live",
-      "detail": "6:49 - 2nd",
+      "detail": "2:47 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-08-29T17:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Indianapolis Colts",
         "abbr": "IND",
         "record": "0-1-1",
-        "score": 6,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
       },
       "note": ""
