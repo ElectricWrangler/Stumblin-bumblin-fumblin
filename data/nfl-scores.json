@@ -1,46 +1,24 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T02:46:12.283Z",
+  "updatedAt": "2026-08-29T03:01:25.995Z",
   "games": [
     {
-      "id": "401873303",
+      "id": "401874048",
       "status": "final",
       "detail": "Final",
-      "network": "WCBS",
-      "startTime": "2026-08-28T23:30Z",
-      "away": {
-        "name": "New York Giants",
-        "abbr": "NYG",
-        "record": "2-1",
-        "score": 23,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
-      },
-      "home": {
-        "name": "New York Jets",
-        "abbr": "NYJ",
-        "record": "1-2",
-        "score": 6,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401874048",
-      "status": "live",
-      "detail": "4:20 - 4th",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
         "name": "New Orleans Saints",
         "abbr": "NO",
-        "record": "0-2",
-        "score": 24,
+        "record": "1-2",
+        "score": 27,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
       },
       "home": {
         "name": "Dallas Cowboys",
         "abbr": "DAL",
-        "record": "2-0",
+        "record": "2-1",
         "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
@@ -49,21 +27,21 @@
     {
       "id": "401874102",
       "status": "live",
-      "detail": "5:42 - 4th",
+      "detail": "3:19 - 4th",
       "network": "Packers TV Network",
       "startTime": "2026-08-29T00:00Z",
       "away": {
         "name": "Arizona Cardinals",
         "abbr": "ARI",
         "record": "1-2",
-        "score": 31,
+        "score": 38,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
       },
       "home": {
         "name": "Green Bay Packers",
         "abbr": "GB",
         "record": "1-1",
-        "score": 27,
+        "score": 35,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
       },
       "note": ""
@@ -71,7 +49,7 @@
     {
       "id": "401873305",
       "status": "live",
-      "detail": "9:43 - 4th",
+      "detail": "3:33 - 4th",
       "network": "ESPN Unlmtd",
       "startTime": "2026-08-29T00:00Z",
       "away": {
@@ -93,14 +71,14 @@
     {
       "id": "401873301",
       "status": "live",
-      "detail": "5:28 - 4th",
+      "detail": "2:00 - 4th",
       "network": "CBS",
       "startTime": "2026-08-29T00:00Z",
       "away": {
         "name": "Cincinnati Bengals",
         "abbr": "CIN",
         "record": "2-0",
-        "score": 23,
+        "score": 30,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
       },
       "home": {
@@ -115,7 +93,7 @@
     {
       "id": "401873614",
       "status": "live",
-      "detail": "Halftime",
+      "detail": "10:38 - 3rd",
       "network": "NFL Net",
       "startTime": "2026-08-29T01:00Z",
       "away": {
@@ -197,6 +175,28 @@
         "record": "3-1",
         "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873303",
+      "status": "final",
+      "detail": "Final",
+      "network": "WCBS",
+      "startTime": "2026-08-28T23:30Z",
+      "away": {
+        "name": "New York Giants",
+        "abbr": "NYG",
+        "record": "2-1",
+        "score": 23,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+      },
+      "home": {
+        "name": "New York Jets",
+        "abbr": "NYJ",
+        "record": "1-2",
+        "score": 6,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "note": ""
     },
