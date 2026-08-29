@@ -1,11 +1,11 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T23:16:24.477Z",
+  "updatedAt": "2026-08-29T23:31:22.264Z",
   "games": [
     {
       "id": "401874394",
       "status": "live",
-      "detail": "2:00 - 2nd",
+      "detail": "Halftime",
       "network": "NFL Net",
       "startTime": "2026-08-29T22:00Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Tennessee Titans",
         "abbr": "TEN",
         "record": "2-0",
-        "score": 6,
+        "score": 9,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "note": ""
