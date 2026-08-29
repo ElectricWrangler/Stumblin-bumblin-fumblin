@@ -1,6 +1,6 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-29T20:01:30.362Z",
+  "updatedAt": "2026-08-29T22:16:18.839Z",
   "games": [
     {
       "id": "401873308",
@@ -26,15 +26,15 @@
     },
     {
       "id": "401874394",
-      "status": "scheduled",
-      "detail": "8/29 - 6:00 PM EDT",
+      "status": "live",
+      "detail": "12:25 - 1st",
       "network": "NFL Net",
       "startTime": "2026-08-29T22:00Z",
       "away": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "1-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
