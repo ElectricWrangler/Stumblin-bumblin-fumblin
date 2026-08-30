@@ -1,24 +1,24 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-30T00:46:19.023Z",
+  "updatedAt": "2026-08-30T01:01:30.969Z",
   "games": [
     {
       "id": "401874394",
-      "status": "live",
-      "detail": "3:50 - 4th",
+      "status": "final",
+      "detail": "Final",
       "network": "NFL Net",
       "startTime": "2026-08-29T22:00Z",
       "away": {
         "name": "Chicago Bears",
         "abbr": "CHI",
-        "record": "1-1",
+        "record": "2-1",
         "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
         "name": "Tennessee Titans",
         "abbr": "TEN",
-        "record": "2-0",
+        "record": "2-1",
         "score": 15,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
