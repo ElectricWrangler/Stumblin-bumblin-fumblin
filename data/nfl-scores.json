@@ -1,29 +1,7 @@
 {
   "week": "Preseason 4",
-  "updatedAt": "2026-08-30T01:01:30.969Z",
+  "updatedAt": "2026-08-30T01:16:57.152Z",
   "games": [
-    {
-      "id": "401874394",
-      "status": "final",
-      "detail": "Final",
-      "network": "NFL Net",
-      "startTime": "2026-08-29T22:00Z",
-      "away": {
-        "name": "Chicago Bears",
-        "abbr": "CHI",
-        "record": "2-1",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
-      },
-      "home": {
-        "name": "Tennessee Titans",
-        "abbr": "TEN",
-        "record": "2-1",
-        "score": 15,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
-      },
-      "note": ""
-    },
     {
       "id": "401873308",
       "status": "final",
@@ -43,6 +21,28 @@
         "record": "0-2-1",
         "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401874394",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-08-29T22:00Z",
+      "away": {
+        "name": "Chicago Bears",
+        "abbr": "CHI",
+        "record": "2-1",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
+      },
+      "home": {
+        "name": "Tennessee Titans",
+        "abbr": "TEN",
+        "record": "2-1",
+        "score": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "note": ""
     },
