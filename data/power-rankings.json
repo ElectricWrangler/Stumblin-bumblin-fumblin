@@ -3,7 +3,7 @@
   "season": "2026",
   "week": 1,
   "mode": "preseason",
-  "generated_at": "2026-09-01T15:43:29.799895+00:00",
+  "generated_at": "2026-09-08T15:27:43.817177+00:00",
   "teams": [
     {
       "rank": 1,
@@ -11,9 +11,9 @@
       "team": "alexvandeusen",
       "owner": "alexvandeusen",
       "power_score": 94,
-      "championship_odds": "+400",
-      "implied_probability": 19.9,
-      "reason": "McCaffrey, Achane, Hall, Collins, Bowers and Burrow create elite balance, while Mahomes and Andrews provide exceptional bench depth."
+      "championship_odds": "+425",
+      "implied_probability": 18.8,
+      "reason": "McCaffrey, Achane, Hall, Collins, Bowers and Burrow form an elite, balanced lineup, with Mahomes, Andrews and Godwin supplying exceptional depth."
     },
     {
       "rank": 2,
@@ -21,89 +21,89 @@
       "team": "Kirkumcised Penix",
       "owner": "stickyyye",
       "power_score": 91,
-      "championship_odds": "+500",
-      "implied_probability": 16.8,
-      "reason": "Daniels, Lamb, Cook and Henry headline a formidable lineup, supported by strong receiver depth and Kelce on the bench."
+      "championship_odds": "+525",
+      "implied_probability": 15.9,
+      "reason": "Daniels, Lamb, Henry and Cook headline a loaded starting core, while McLaurin, Flowers, Kelce, Pollard and Purdy provide strong depth."
     },
     {
       "rank": 3,
       "roster_id": 10,
       "team": "arupert12",
       "owner": "arupert12",
-      "power_score": 88,
+      "power_score": 89,
       "championship_odds": "+600",
-      "implied_probability": 14.2,
-      "reason": "Hurts, Taylor and Jefferson anchor a polished roster with Higgins, Olave, Montgomery and Warren supplying excellent balance."
+      "implied_probability": 14.3,
+      "reason": "Jefferson, Taylor and Hurts anchor a balanced lineup featuring Olave, Higgins, Montgomery, Warren and Kraft, with Murray offering premium quarterback insurance."
     },
     {
       "rank": 4,
       "roster_id": 2,
       "team": "OguguaAnunoby",
       "owner": "OguguaAnunoby",
-      "power_score": 85,
+      "power_score": 86,
       "championship_odds": "+725",
       "implied_probability": 12.1,
-      "reason": "Gibbs leads a deep skill group featuring London, Metcalf, Kittle, Walker and Jacobs, though several starters carry questionable designations."
+      "reason": "Gibbs leads an excellent backfield with Walker and Jacobs, complemented by London, Metcalf and Kittle; Maye and inexperienced receivers add uncertainty."
     },
     {
       "rank": 5,
       "roster_id": 9,
-      "team": "4Anthony2",
+      "team": "Allen town",
       "owner": "4Anthony2",
-      "power_score": 82,
+      "power_score": 83,
       "championship_odds": "+875",
       "implied_probability": 10.2,
-      "reason": "Josh Allen, Bijan Robinson and Omarion Hampton offer a powerful core, complemented by solid receiver depth and two capable tight ends."
+      "reason": "Allen, Bijan and Hampton create elite quarterback-running back upside, while Smith and Jameson Williams lead a solid but less proven receiving group."
     },
     {
       "rank": 6,
       "roster_id": 8,
       "team": "Al-Qaeda Crashouts  ",
       "owner": "oehler56",
-      "power_score": 79,
-      "championship_odds": "+1050",
-      "implied_probability": 8.6,
-      "reason": "St. Brown, A.J. Brown and McBride form an elite receiving foundation, with Williams and Irving balancing uncertainty at quarterback."
+      "power_score": 81,
+      "championship_odds": "+1000",
+      "implied_probability": 9.1,
+      "reason": "Amon-Ra, A.J. Brown and McBride provide elite receiving strength, supported by Kyren and Bucky; Dart is the lineup\u2019s clearest uncertainty."
     },
     {
       "rank": 7,
-      "roster_id": 7,
-      "team": "shmeems",
-      "owner": "shmeems",
-      "power_score": 76,
-      "championship_odds": "+1275",
-      "implied_probability": 7.3,
-      "reason": "Lamar Jackson, Nacua, Rice and LaPorta provide major upside, but the running back group is youthful and carries several questionable designations."
-    },
-    {
-      "rank": 8,
       "roster_id": 1,
       "team": "Chase\u2019n Skattehoes",
       "owner": "brizzzyy",
-      "power_score": 73,
-      "championship_odds": "+1525",
-      "implied_probability": 6.2,
-      "reason": "Ja'Marr Chase, McConkey, Pickens and Chase Brown create a strong core, while Caleb Williams and several young starters add upside."
+      "power_score": 78,
+      "championship_odds": "+1200",
+      "implied_probability": 7.7,
+      "reason": "Ja'Marr Chase headlines a deep receiving corps with McConkey, Pickens and Harrison, but the running backs and Fannin carry more projection risk."
+    },
+    {
+      "rank": 8,
+      "roster_id": 7,
+      "team": "shmeems",
+      "owner": "shmeems",
+      "power_score": 75,
+      "championship_odds": "+1425",
+      "implied_probability": 6.6,
+      "reason": "Lamar, Puka, Rice and LaPorta offer a strong ceiling, but the starting backfield relies heavily on young, uncertain options and Swift."
     },
     {
       "rank": 9,
       "roster_id": 3,
       "team": "Secret service chat",
       "owner": "Towny7062",
-      "power_score": 70,
-      "championship_odds": "+1800",
-      "implied_probability": 5.2,
-      "reason": "Smith-Njigba and Jeanty provide star potential, with Prescott, Adams and Etienne adding stability; overall depth is less imposing than higher-ranked rosters."
+      "power_score": 72,
+      "championship_odds": "+1700",
+      "implied_probability": 5.5,
+      "reason": "Smith-Njigba and Jeanty provide star upside alongside Dak, Adams and Etienne, though Pitts and several starters have wider preseason outcome ranges."
     },
     {
       "rank": 10,
       "roster_id": 5,
       "team": "Chef Boyardee",
       "owner": "Valk474",
-      "power_score": 67,
-      "championship_odds": "+2150",
-      "implied_probability": 4.4,
-      "reason": "Barkley, Nabers and Garrett Wilson offer a strong ceiling, but Lawrence and an inexperienced running back group create more preseason uncertainty."
+      "power_score": 69,
+      "championship_odds": "+2025",
+      "implied_probability": 4.7,
+      "reason": "Saquon, Nabers and Garrett Wilson form a powerful foundation, but Lawrence and a highly inexperienced starting backfield beyond Saquon reduce lineup certainty."
     }
   ]
 }
