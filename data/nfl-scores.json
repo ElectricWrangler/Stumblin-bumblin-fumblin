@@ -1,11 +1,11 @@
 {
   "week": 1,
-  "updatedAt": "2026-08-30T04:16:27.595Z",
+  "updatedAt": "2026-09-10T01:02:42.232Z",
   "games": [
     {
       "id": "401872656",
-      "status": "scheduled",
-      "detail": "9/9 - 8:20 PM EDT",
+      "status": "live",
+      "detail": "12:21 - 2nd",
       "network": "NBC",
       "startTime": "2026-09-10T00:20Z",
       "away": {
