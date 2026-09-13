@@ -1,33 +1,33 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-13T06:22:24.442Z",
+  "updatedAt": "2026-09-13T18:46:30.478Z",
   "games": [
     {
       "id": "401872925",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "14:16 - 3rd",
       "network": "FOX",
       "startTime": "2026-09-13T17:00Z",
       "away": {
         "name": "Tampa Bay Buccaneers",
         "abbr": "TB",
         "record": "0-0",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "home": {
         "name": "Cincinnati Bengals",
         "abbr": "CIN",
         "record": "0-0",
-        "score": 0,
+        "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
       },
       "note": ""
     },
     {
       "id": "401872923",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "Halftime",
       "network": "FOX",
       "startTime": "2026-09-13T17:00Z",
       "away": {
@@ -41,103 +41,103 @@
         "name": "Detroit Lions",
         "abbr": "DET",
         "record": "0-0",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
       },
       "note": ""
     },
     {
       "id": "401872924",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "13:01 - 3rd",
       "network": "CBS",
       "startTime": "2026-09-13T17:00Z",
       "away": {
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "0-0",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "home": {
         "name": "Tennessee Titans",
         "abbr": "TEN",
         "record": "0-0",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "note": ""
     },
     {
       "id": "401872659",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "Halftime",
       "network": "CBS",
       "startTime": "2026-09-13T17:00Z",
       "away": {
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "0-0",
-        "score": 0,
+        "score": 31,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "home": {
         "name": "Indianapolis Colts",
         "abbr": "IND",
         "record": "0-0",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
       },
       "note": ""
     },
     {
       "id": "401872658",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "Halftime",
       "network": "FOX",
       "startTime": "2026-09-13T17:00Z",
       "away": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "0-0",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "home": {
         "name": "Pittsburgh Steelers",
         "abbr": "PIT",
         "record": "0-0",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png"
       },
       "note": ""
     },
     {
       "id": "401872661",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "0:05 - 2nd",
       "network": "FOX",
       "startTime": "2026-09-13T17:00Z",
       "away": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "0-0",
-        "score": 0,
+        "score": 31,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
         "record": "0-0",
-        "score": 0,
+        "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "note": ""
     },
     {
       "id": "401872922",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "12:08 - 3rd",
       "network": "CBS",
       "startTime": "2026-09-13T17:00Z",
       "away": {
@@ -151,29 +151,29 @@
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "record": "0-0",
-        "score": 0,
+        "score": 31,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
       },
       "note": ""
     },
     {
       "id": "401872660",
-      "status": "scheduled",
-      "detail": "9/13 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "Halftime",
       "network": "CBS",
       "startTime": "2026-09-13T17:00Z",
       "away": {
         "name": "Buffalo Bills",
         "abbr": "BUF",
         "record": "0-0",
-        "score": 0,
+        "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
       },
       "home": {
         "name": "Houston Texans",
         "abbr": "HOU",
         "record": "0-0",
-        "score": 0,
+        "score": 21,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "note": ""
