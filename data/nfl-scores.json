@@ -1,25 +1,25 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-13T21:11:30.245Z",
+  "updatedAt": "2026-09-13T23:07:01.333Z",
   "games": [
     {
       "id": "401872928",
       "status": "live",
-      "detail": "10:22 - 2nd",
+      "detail": "5:58 - 4th",
       "network": "FOX",
       "startTime": "2026-09-13T20:25Z",
       "away": {
         "name": "Miami Dolphins",
         "abbr": "MIA",
         "record": "0-0",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
       },
       "home": {
         "name": "Las Vegas Raiders",
         "abbr": "LV",
         "record": "0-0",
-        "score": 10,
+        "score": 27,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
       },
       "note": ""
@@ -27,21 +27,21 @@
     {
       "id": "401872927",
       "status": "live",
-      "detail": "0:09 - 1st",
+      "detail": "10:01 - 4th",
       "network": "CBS",
       "startTime": "2026-09-13T20:25Z",
       "away": {
         "name": "Green Bay Packers",
         "abbr": "GB",
         "record": "0-0",
-        "score": 9,
+        "score": 22,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
       },
       "home": {
         "name": "Minnesota Vikings",
         "abbr": "MIN",
         "record": "0-0",
-        "score": 3,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
       },
       "note": ""
@@ -49,21 +49,21 @@
     {
       "id": "401872929",
       "status": "live",
-      "detail": "12:58 - 2nd",
+      "detail": "9:59 - 4th",
       "network": "FOX",
       "startTime": "2026-09-13T20:25Z",
       "away": {
         "name": "Washington Commanders",
         "abbr": "WSH",
         "record": "0-0",
-        "score": 3,
+        "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
       },
       "home": {
         "name": "Philadelphia Eagles",
         "abbr": "PHI",
         "record": "0-0",
-        "score": 7,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
@@ -71,21 +71,21 @@
     {
       "id": "401872926",
       "status": "live",
-      "detail": "10:31 - 2nd",
+      "detail": "4:44 - 4th",
       "network": "CBS",
       "startTime": "2026-09-13T20:25Z",
       "away": {
         "name": "Arizona Cardinals",
         "abbr": "ARI",
         "record": "0-0",
-        "score": 7,
+        "score": 23,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
       },
       "home": {
         "name": "Los Angeles Chargers",
         "abbr": "LAC",
         "record": "0-0",
-        "score": 7,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
       },
       "note": ""
