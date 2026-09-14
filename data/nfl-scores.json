@@ -1,92 +1,26 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-13T23:07:01.333Z",
+  "updatedAt": "2026-09-14T01:00:22.728Z",
   "games": [
     {
-      "id": "401872928",
+      "id": "401872930",
       "status": "live",
-      "detail": "5:58 - 4th",
-      "network": "FOX",
-      "startTime": "2026-09-13T20:25Z",
+      "detail": "15:00 - 2nd",
+      "network": "NBC",
+      "startTime": "2026-09-14T00:20Z",
       "away": {
-        "name": "Miami Dolphins",
-        "abbr": "MIA",
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
         "record": "0-0",
-        "score": 13,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
       "home": {
-        "name": "Las Vegas Raiders",
-        "abbr": "LV",
+        "name": "New York Giants",
+        "abbr": "NYG",
         "record": "0-0",
-        "score": 27,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401872927",
-      "status": "live",
-      "detail": "10:01 - 4th",
-      "network": "CBS",
-      "startTime": "2026-09-13T20:25Z",
-      "away": {
-        "name": "Green Bay Packers",
-        "abbr": "GB",
-        "record": "0-0",
-        "score": 22,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
-      },
-      "home": {
-        "name": "Minnesota Vikings",
-        "abbr": "MIN",
-        "record": "0-0",
-        "score": 17,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401872929",
-      "status": "live",
-      "detail": "9:59 - 4th",
-      "network": "FOX",
-      "startTime": "2026-09-13T20:25Z",
-      "away": {
-        "name": "Washington Commanders",
-        "abbr": "WSH",
-        "record": "0-0",
-        "score": 16,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
-      },
-      "home": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "0-0",
-        "score": 17,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401872926",
-      "status": "live",
-      "detail": "4:44 - 4th",
-      "network": "CBS",
-      "startTime": "2026-09-13T20:25Z",
-      "away": {
-        "name": "Arizona Cardinals",
-        "abbr": "ARI",
-        "record": "0-0",
-        "score": 23,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
-      },
-      "home": {
-        "name": "Los Angeles Chargers",
-        "abbr": "LAC",
-        "record": "0-0",
-        "score": 14,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
+        "score": 7,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "note": ""
     },
@@ -267,24 +201,90 @@
       "note": ""
     },
     {
-      "id": "401872930",
-      "status": "scheduled",
-      "detail": "9/13 - 8:20 PM EDT",
-      "network": "NBC",
-      "startTime": "2026-09-14T00:20Z",
+      "id": "401872928",
+      "status": "final",
+      "detail": "Final",
+      "network": "FOX",
+      "startTime": "2026-09-13T20:25Z",
       "away": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "0-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+        "name": "Miami Dolphins",
+        "abbr": "MIA",
+        "record": "0-1",
+        "score": 13,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
       },
       "home": {
-        "name": "New York Giants",
-        "abbr": "NYG",
-        "record": "0-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+        "name": "Las Vegas Raiders",
+        "abbr": "LV",
+        "record": "1-0",
+        "score": 27,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872927",
+      "status": "final",
+      "detail": "Final",
+      "network": "CBS",
+      "startTime": "2026-09-13T20:25Z",
+      "away": {
+        "name": "Green Bay Packers",
+        "abbr": "GB",
+        "record": "0-1",
+        "score": 22,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
+      },
+      "home": {
+        "name": "Minnesota Vikings",
+        "abbr": "MIN",
+        "record": "1-0",
+        "score": 39,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872929",
+      "status": "final",
+      "detail": "Final",
+      "network": "FOX",
+      "startTime": "2026-09-13T20:25Z",
+      "away": {
+        "name": "Washington Commanders",
+        "abbr": "WSH",
+        "record": "0-1",
+        "score": 22,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
+      },
+      "home": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "1-0",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872926",
+      "status": "final",
+      "detail": "Final",
+      "network": "CBS",
+      "startTime": "2026-09-13T20:25Z",
+      "away": {
+        "name": "Arizona Cardinals",
+        "abbr": "ARI",
+        "record": "1-0",
+        "score": 26,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+      },
+      "home": {
+        "name": "Los Angeles Chargers",
+        "abbr": "LAC",
+        "record": "0-1",
+        "score": 14,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
       },
       "note": ""
     },
