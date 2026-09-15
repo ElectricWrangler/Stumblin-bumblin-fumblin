@@ -3,67 +3,67 @@
   "season": "2026",
   "week": 1,
   "mode": "in-season",
-  "generated_at": "2026-09-15T18:23:46.927835+00:00",
+  "generated_at": "2026-09-15T18:58:39.974258+00:00",
   "teams": [
     {
       "rank": 1,
       "roster_id": 10,
       "team": "arupert12",
       "owner": "arupert12",
-      "power_score": 95,
+      "power_score": 96,
       "championship_odds": "+325",
-      "implied_probability": 23.1,
-      "reason": "League-best 177.82 points and a 2-0 start complement elite starters Jalen Hurts, Justin Jefferson, Jonathan Taylor, Chris Olave and Tee Higgins."
+      "implied_probability": 23.7,
+      "reason": "League-best 177.82 points and a 2-0 start complement an elite Hurts, Taylor, Jefferson, Higgins and Olave core."
     },
     {
       "rank": 2,
       "roster_id": 9,
       "team": "Allen town",
       "owner": "4Anthony2",
-      "power_score": 91,
-      "championship_odds": "+450",
-      "implied_probability": 18.5,
-      "reason": "A 2-0 start with 158.96 points strengthens a balanced core led by Josh Allen, Bijan Robinson, Omarion Hampton and DeVonta Smith."
+      "power_score": 92,
+      "championship_odds": "+425",
+      "implied_probability": 19.0,
+      "reason": "A 2-0 start with 158.96 points, powered by Josh Allen and Bijan Robinson, creates an excellent championship outlook."
     },
     {
       "rank": 3,
-      "roster_id": 6,
-      "team": "alexvandeusen",
-      "owner": "alexvandeusen",
-      "power_score": 87,
-      "championship_odds": "+575",
-      "implied_probability": 14.8,
-      "reason": "Scored 150.36 despite splitting results, with Christian McCaffrey, De'Von Achane, Breece Hall and Nico Collins providing elite upside; Brock Bowers is out."
-    },
-    {
-      "rank": 4,
-      "roster_id": 4,
-      "team": "Kirkumcised Penix",
-      "owner": "stickyyye",
-      "power_score": 85,
-      "championship_odds": "+650",
-      "implied_probability": 13.3,
-      "reason": "The 2-0 start and 142.2 points pair well with CeeDee Lamb, James Cook, Derrick Henry and strong depth, though Zay Flowers is out."
-    },
-    {
-      "rank": 5,
       "roster_id": 8,
       "team": "RoCknCoCk Crashouts ",
       "owner": "oehler56",
+      "power_score": 88,
+      "championship_odds": "+550",
+      "implied_probability": 15.2,
+      "reason": "The 2-0 start and 160.2 points shine, while Amon-Ra St. Brown, Trey McBride and Kyren Williams anchor the lineup."
+    },
+    {
+      "rank": 4,
+      "roster_id": 6,
+      "team": "alexvandeusen",
+      "owner": "alexvandeusen",
+      "power_score": 85,
+      "championship_odds": "+675",
+      "implied_probability": 12.8,
+      "reason": "McCaffrey, Achane, Hall and Collins form an imposing core, and 150.36 points offset the 1-1 result and Bowers being out."
+    },
+    {
+      "rank": 5,
+      "roster_id": 4,
+      "team": "Kirkumcised Penix",
+      "owner": "stickyyye",
       "power_score": 82,
-      "championship_odds": "+800",
-      "implied_probability": 11.2,
-      "reason": "A 2-0 start and 160.2 points demand respect; Amon-Ra St. Brown, Trey McBride and Kyren Williams lead, but A.J. Brown is on IR."
+      "championship_odds": "+825",
+      "implied_probability": 10.9,
+      "reason": "A balanced 2-0 roster scored 142.2 behind Lamb, Cook and Henry, though Flowers being out limits the receiving corps."
     },
     {
       "rank": 6,
       "roster_id": 2,
       "team": "OguguaAnunoby",
       "owner": "OguguaAnunoby",
-      "power_score": 76,
-      "championship_odds": "+1150",
-      "implied_probability": 8.1,
-      "reason": "Jahmyr Gibbs, Drake London, Kenneth Walker and George Kittle form a deep roster, while 133.22 points and a 1-1 result provide a steady opening."
+      "power_score": 77,
+      "championship_odds": "+1125",
+      "implied_probability": 8.2,
+      "reason": "Gibbs, Walker, London and Kittle provide strong balance and depth; the 1-1 start and 133.22 points remain solid."
     },
     {
       "rank": 7,
@@ -71,9 +71,9 @@
       "team": "Secret service chat",
       "owner": "Towny7062",
       "power_score": 70,
-      "championship_odds": "+1625",
-      "implied_probability": 5.8,
-      "reason": "The 0-2 result tempers a promising lineup featuring Jaxon Smith-Njigba, Ashton Jeanty, Emeka Egbuka and Dak Prescott, though 132.2 points remain competitive."
+      "championship_odds": "+1700",
+      "implied_probability": 5.6,
+      "reason": "Smith-Njigba, Jeanty, Egbuka and Adams offer considerable upside, while 132.2 points suggest the 0-2 record could improve."
     },
     {
       "rank": 8,
@@ -81,9 +81,9 @@
       "team": "Chef Boyardee",
       "owner": "Valk474",
       "power_score": 65,
-      "championship_odds": "+2175",
-      "implied_probability": 4.4,
-      "reason": "Saquon Barkley, Malik Nabers and Garrett Wilson preserve considerable upside, but the 0-2 start and 125.9 points place this roster behind early leaders."
+      "championship_odds": "+2275",
+      "implied_probability": 4.2,
+      "reason": "Barkley, Nabers and Garrett Wilson preserve substantial upside, but the 0-2 start and 125.9 points trail the leading teams."
     },
     {
       "rank": 9,
@@ -91,19 +91,19 @@
       "team": "Chase\u2019n Skattehoes",
       "owner": "brizzzyy",
       "power_score": 61,
-      "championship_odds": "+2750",
-      "implied_probability": 3.5,
-      "reason": "Ja'Marr Chase anchors a capable lineup with Chase Brown and George Pickens, but an 0-2 start, 125.76 points and Ladd McConkey's questionable tag lower confidence."
+      "championship_odds": "+2850",
+      "implied_probability": 3.4,
+      "reason": "Ja'Marr Chase leads a capable lineup, but the 0-2 start, 125.76 points and McConkey's questionable designation lower the outlook."
     },
     {
       "rank": 10,
       "roster_id": 7,
       "team": "Pukakke",
       "owner": "shmeems",
-      "power_score": 53,
-      "championship_odds": "+4350",
-      "implied_probability": 2.2,
-      "reason": "Lamar Jackson, Puka Nacua, Rashee Rice and Sam LaPorta offer recovery potential, but 104.06 points are league-low and TreVeyon Henderson is out."
+      "power_score": 52,
+      "championship_odds": "+4775",
+      "implied_probability": 2.1,
+      "reason": "Jackson, Nacua, Rice and LaPorta provide star power, but a league-low 104.06 points, 0-2 start and thin current backfield hurt."
     }
   ]
 }
