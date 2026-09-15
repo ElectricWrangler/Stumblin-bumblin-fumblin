@@ -2,108 +2,108 @@
   "league": "Stumblin Bumblin & Fumblin",
   "season": "2026",
   "week": 1,
-  "mode": "preseason",
-  "generated_at": "2026-09-08T15:27:43.817177+00:00",
+  "mode": "in-season",
+  "generated_at": "2026-09-15T18:23:46.927835+00:00",
   "teams": [
     {
       "rank": 1,
-      "roster_id": 6,
-      "team": "alexvandeusen",
-      "owner": "alexvandeusen",
-      "power_score": 94,
-      "championship_odds": "+425",
-      "implied_probability": 18.8,
-      "reason": "McCaffrey, Achane, Hall, Collins, Bowers and Burrow form an elite, balanced lineup, with Mahomes, Andrews and Godwin supplying exceptional depth."
-    },
-    {
-      "rank": 2,
-      "roster_id": 4,
-      "team": "Kirkumcised Penix",
-      "owner": "stickyyye",
-      "power_score": 91,
-      "championship_odds": "+525",
-      "implied_probability": 15.9,
-      "reason": "Daniels, Lamb, Henry and Cook headline a loaded starting core, while McLaurin, Flowers, Kelce, Pollard and Purdy provide strong depth."
-    },
-    {
-      "rank": 3,
       "roster_id": 10,
       "team": "arupert12",
       "owner": "arupert12",
-      "power_score": 89,
-      "championship_odds": "+600",
-      "implied_probability": 14.3,
-      "reason": "Jefferson, Taylor and Hurts anchor a balanced lineup featuring Olave, Higgins, Montgomery, Warren and Kraft, with Murray offering premium quarterback insurance."
+      "power_score": 95,
+      "championship_odds": "+325",
+      "implied_probability": 23.1,
+      "reason": "League-best 177.82 points and a 2-0 start complement elite starters Jalen Hurts, Justin Jefferson, Jonathan Taylor, Chris Olave and Tee Higgins."
     },
     {
-      "rank": 4,
-      "roster_id": 2,
-      "team": "OguguaAnunoby",
-      "owner": "OguguaAnunoby",
-      "power_score": 86,
-      "championship_odds": "+725",
-      "implied_probability": 12.1,
-      "reason": "Gibbs leads an excellent backfield with Walker and Jacobs, complemented by London, Metcalf and Kittle; Maye and inexperienced receivers add uncertainty."
-    },
-    {
-      "rank": 5,
+      "rank": 2,
       "roster_id": 9,
       "team": "Allen town",
       "owner": "4Anthony2",
-      "power_score": 83,
-      "championship_odds": "+875",
-      "implied_probability": 10.2,
-      "reason": "Allen, Bijan and Hampton create elite quarterback-running back upside, while Smith and Jameson Williams lead a solid but less proven receiving group."
+      "power_score": 91,
+      "championship_odds": "+450",
+      "implied_probability": 18.5,
+      "reason": "A 2-0 start with 158.96 points strengthens a balanced core led by Josh Allen, Bijan Robinson, Omarion Hampton and DeVonta Smith."
+    },
+    {
+      "rank": 3,
+      "roster_id": 6,
+      "team": "alexvandeusen",
+      "owner": "alexvandeusen",
+      "power_score": 87,
+      "championship_odds": "+575",
+      "implied_probability": 14.8,
+      "reason": "Scored 150.36 despite splitting results, with Christian McCaffrey, De'Von Achane, Breece Hall and Nico Collins providing elite upside; Brock Bowers is out."
+    },
+    {
+      "rank": 4,
+      "roster_id": 4,
+      "team": "Kirkumcised Penix",
+      "owner": "stickyyye",
+      "power_score": 85,
+      "championship_odds": "+650",
+      "implied_probability": 13.3,
+      "reason": "The 2-0 start and 142.2 points pair well with CeeDee Lamb, James Cook, Derrick Henry and strong depth, though Zay Flowers is out."
+    },
+    {
+      "rank": 5,
+      "roster_id": 8,
+      "team": "RoCknCoCk Crashouts ",
+      "owner": "oehler56",
+      "power_score": 82,
+      "championship_odds": "+800",
+      "implied_probability": 11.2,
+      "reason": "A 2-0 start and 160.2 points demand respect; Amon-Ra St. Brown, Trey McBride and Kyren Williams lead, but A.J. Brown is on IR."
     },
     {
       "rank": 6,
-      "roster_id": 8,
-      "team": "Al-Qaeda Crashouts  ",
-      "owner": "oehler56",
-      "power_score": 81,
-      "championship_odds": "+1000",
-      "implied_probability": 9.1,
-      "reason": "Amon-Ra, A.J. Brown and McBride provide elite receiving strength, supported by Kyren and Bucky; Dart is the lineup\u2019s clearest uncertainty."
+      "roster_id": 2,
+      "team": "OguguaAnunoby",
+      "owner": "OguguaAnunoby",
+      "power_score": 76,
+      "championship_odds": "+1150",
+      "implied_probability": 8.1,
+      "reason": "Jahmyr Gibbs, Drake London, Kenneth Walker and George Kittle form a deep roster, while 133.22 points and a 1-1 result provide a steady opening."
     },
     {
       "rank": 7,
-      "roster_id": 1,
-      "team": "Chase\u2019n Skattehoes",
-      "owner": "brizzzyy",
-      "power_score": 78,
-      "championship_odds": "+1200",
-      "implied_probability": 7.7,
-      "reason": "Ja'Marr Chase headlines a deep receiving corps with McConkey, Pickens and Harrison, but the running backs and Fannin carry more projection risk."
-    },
-    {
-      "rank": 8,
-      "roster_id": 7,
-      "team": "shmeems",
-      "owner": "shmeems",
-      "power_score": 75,
-      "championship_odds": "+1425",
-      "implied_probability": 6.6,
-      "reason": "Lamar, Puka, Rice and LaPorta offer a strong ceiling, but the starting backfield relies heavily on young, uncertain options and Swift."
-    },
-    {
-      "rank": 9,
       "roster_id": 3,
       "team": "Secret service chat",
       "owner": "Towny7062",
-      "power_score": 72,
-      "championship_odds": "+1700",
-      "implied_probability": 5.5,
-      "reason": "Smith-Njigba and Jeanty provide star upside alongside Dak, Adams and Etienne, though Pitts and several starters have wider preseason outcome ranges."
+      "power_score": 70,
+      "championship_odds": "+1625",
+      "implied_probability": 5.8,
+      "reason": "The 0-2 result tempers a promising lineup featuring Jaxon Smith-Njigba, Ashton Jeanty, Emeka Egbuka and Dak Prescott, though 132.2 points remain competitive."
     },
     {
-      "rank": 10,
+      "rank": 8,
       "roster_id": 5,
       "team": "Chef Boyardee",
       "owner": "Valk474",
-      "power_score": 69,
-      "championship_odds": "+2025",
-      "implied_probability": 4.7,
-      "reason": "Saquon, Nabers and Garrett Wilson form a powerful foundation, but Lawrence and a highly inexperienced starting backfield beyond Saquon reduce lineup certainty."
+      "power_score": 65,
+      "championship_odds": "+2175",
+      "implied_probability": 4.4,
+      "reason": "Saquon Barkley, Malik Nabers and Garrett Wilson preserve considerable upside, but the 0-2 start and 125.9 points place this roster behind early leaders."
+    },
+    {
+      "rank": 9,
+      "roster_id": 1,
+      "team": "Chase\u2019n Skattehoes",
+      "owner": "brizzzyy",
+      "power_score": 61,
+      "championship_odds": "+2750",
+      "implied_probability": 3.5,
+      "reason": "Ja'Marr Chase anchors a capable lineup with Chase Brown and George Pickens, but an 0-2 start, 125.76 points and Ladd McConkey's questionable tag lower confidence."
+    },
+    {
+      "rank": 10,
+      "roster_id": 7,
+      "team": "Pukakke",
+      "owner": "shmeems",
+      "power_score": 53,
+      "championship_odds": "+4350",
+      "implied_probability": 2.2,
+      "reason": "Lamar Jackson, Puka Nacua, Rashee Rice and Sam LaPorta offer recovery potential, but 104.06 points are league-low and TreVeyon Henderson is out."
     }
   ]
 }
