@@ -1,29 +1,7 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-14T06:12:47.949Z",
+  "updatedAt": "2026-09-15T04:48:44.517Z",
   "games": [
-    {
-      "id": "401872931",
-      "status": "scheduled",
-      "detail": "9/14 - 8:15 PM EDT",
-      "network": "ESPN",
-      "startTime": "2026-09-15T00:15Z",
-      "away": {
-        "name": "Denver Broncos",
-        "abbr": "DEN",
-        "record": "0-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
-      },
-      "home": {
-        "name": "Kansas City Chiefs",
-        "abbr": "KC",
-        "record": "0-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872656",
       "status": "final",
@@ -351,6 +329,28 @@
         "record": "1-0",
         "score": 28,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872931",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN",
+      "startTime": "2026-09-15T00:15Z",
+      "away": {
+        "name": "Denver Broncos",
+        "abbr": "DEN",
+        "record": "0-1",
+        "score": 10,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+      },
+      "home": {
+        "name": "Kansas City Chiefs",
+        "abbr": "KC",
+        "record": "1-0",
+        "score": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
       },
       "note": ""
     }
