@@ -1,5 +1,6 @@
 import { escapeHTML } from "./data.js";
 
+
 function standingsRows(
   teams,
   limit = 5
@@ -47,11 +48,13 @@ function standingsRows(
     .join("");
 }
 
+
 async function loadPowerRankings() {
   try {
-    const response = await fetch(
-      `data/power-rankings.json?ts=${Date.now()}`
-    );
+    const response =
+      await fetch(
+        `data/power-rankings.json?ts=${Date.now()}`
+      );
 
     if (!response.ok) {
       throw new Error(
@@ -85,6 +88,36 @@ async function loadPowerRankings() {
   }
 }
 
+
+async function loadLatestRecap() {
+  try {
+
+    const response =
+      await fetch(
+        `recaps/latest.json?ts=${Date.now()}`,
+        {
+          cache: "no-store"
+        }
+      );
+
+    if (!response.ok) {
+      return null;
+    }
+
+    return await response.json();
+
+  } catch (error) {
+
+    console.warn(
+      "Latest recap unavailable:",
+      error
+    );
+
+    return null;
+  }
+}
+
+
 function fallbackOdds(
   teams
 ) {
@@ -110,6 +143,7 @@ function fallbackOdds(
     .join("");
 }
 
+
 function officialOdds(
   rankingData,
   data
@@ -124,11 +158,6 @@ function officialOdds(
       )
     );
 
-  /*
-    =====================================================
-    NORMAL GENERATED ODDS ORDER
-    =====================================================
-  */
 
   let orderedTeams =
     rankingData.teams
@@ -146,16 +175,12 @@ function officialOdds(
 
 
   /*
-    =====================================================
     PRESEASON COMMISSIONER OVERRIDE
-    =====================================================
 
-    Muth Juice is temporarily placed
-    at #3 in Championship Odds.
-
-    Once actual Week 1 fantasy scoring
-    begins, this automatically turns off.
-    =====================================================
+    This remains here so the old
+    preseason setup still behaves
+    correctly if preseason data is
+    ever displayed again.
   */
 
   const weekOneHasStarted =
@@ -170,6 +195,7 @@ function officialOdds(
     !weekOneHasStarted &&
     rankingData?.mode ===
       "preseason";
+
 
   if (
     preseasonOverrideActive
@@ -191,16 +217,18 @@ function officialOdds(
             )
       );
 
+
     if (
       muthIndex !== -1
     ) {
 
       const [
         muthJuice
-      ] = orderedTeams.splice(
-        muthIndex,
-        1
-      );
+      ] =
+        orderedTeams.splice(
+          muthIndex,
+          1
+        );
 
       orderedTeams.splice(
         2,
@@ -210,12 +238,6 @@ function officialOdds(
     }
   }
 
-
-  /*
-    =====================================================
-    DISPLAY ODDS
-    =====================================================
-  */
 
   return orderedTeams
     .slice(0, 10)
@@ -242,22 +264,11 @@ function officialOdds(
         const reason =
           team.reason || "";
 
-        /*
-          During the preseason override,
-          Muth Juice inherits the odds
-          value for the #3 position.
-
-          Everyone below shifts down one
-          odds slot.
-
-          Once Week 1 starts, all teams
-          return to their official
-          generated odds.
-        */
-
         let displayedOdds =
           team.championship_odds
-          || "—";
+          ||
+          "—";
+
 
         if (
           preseasonOverrideActive
@@ -287,6 +298,7 @@ function officialOdds(
               oddsForPosition;
           }
         }
+
 
         return `
           <div class="odds-row">
@@ -326,6 +338,404 @@ function officialOdds(
     .join("");
 }
 
+
+/*
+  =====================================================
+  WEEKLY RECAP SECTION HELPERS
+  =====================================================
+
+  These read the actual generated recap HTML.
+
+  That means Home automatically follows
+  whatever the newest weekly recap says.
+  =====================================================
+*/
+
+
+function makeRecapWrapper(
+  recap
+) {
+  const wrapper =
+    document.createElement(
+      "div"
+    );
+
+  wrapper.innerHTML =
+    recap?.html || "";
+
+  return wrapper;
+}
+
+
+function findRecapSection(
+  wrapper,
+  sectionName
+) {
+  const headings =
+    Array.from(
+      wrapper.querySelectorAll(
+        "h2"
+      )
+    );
+
+  const heading =
+    headings.find(
+      node =>
+        node.textContent
+          .trim()
+          .toLowerCase() ===
+        sectionName
+          .trim()
+          .toLowerCase()
+    );
+
+  if (!heading) {
+    return [];
+  }
+
+
+  const nodes = [];
+
+  let current =
+    heading.nextElementSibling;
+
+
+  while (
+    current &&
+    current.tagName !== "H2"
+  ) {
+
+    nodes.push(
+      current
+    );
+
+    current =
+      current.nextElementSibling;
+  }
+
+
+  return nodes;
+}
+
+
+function cleanText(value) {
+  return String(
+    value || ""
+  )
+    .replace(
+      /\s+/g,
+      " "
+    )
+    .trim();
+}
+
+
+function parseFraudWatch(
+  wrapper,
+  week
+) {
+  const nodes =
+    findRecapSection(
+      wrapper,
+      "Fraud Watch"
+    );
+
+  const titleNode =
+    nodes.find(
+      node =>
+        node.tagName === "H3"
+    );
+
+  let copyNode = null;
+
+  if (titleNode) {
+
+    const titleIndex =
+      nodes.indexOf(
+        titleNode
+      );
+
+    copyNode =
+      nodes
+        .slice(
+          titleIndex + 1
+        )
+        .find(
+          node =>
+            node.tagName === "P"
+        );
+  }
+
+
+  if (!titleNode) {
+    return {
+      title:
+        "Fraud Watch pending",
+
+      copy:
+        `Week ${week} Fraud Watch will appear here when the recap publishes.`
+    };
+  }
+
+
+  return {
+    title:
+      cleanText(
+        titleNode.textContent
+      ),
+
+    copy:
+      cleanText(
+        copyNode?.textContent
+      )
+      ||
+      `Featured on the Week ${week} Fraud Watch list.`
+  };
+}
+
+
+function parseStockUp(
+  wrapper,
+  week
+) {
+  const nodes =
+    findRecapSection(
+      wrapper,
+      "Stock Up"
+    );
+
+  const listItem =
+    nodes
+      .flatMap(
+        node =>
+          node.tagName === "UL" ||
+          node.tagName === "OL"
+            ? Array.from(
+                node.querySelectorAll(
+                  ":scope > li"
+                )
+              )
+            : node.tagName === "LI"
+              ? [node]
+              : []
+      )[0];
+
+
+  if (!listItem) {
+    return {
+      title:
+        "Stock Up pending",
+
+      copy:
+        `Week ${week} Stock Up will appear here when the recap publishes.`
+    };
+  }
+
+
+  const strong =
+    listItem.querySelector(
+      "strong"
+    );
+
+  const title =
+    cleanText(
+      strong?.textContent
+    ).replace(
+      /:$/,
+      ""
+    );
+
+
+  let copy =
+    cleanText(
+      listItem.textContent
+    );
+
+
+  if (
+    strong?.textContent
+  ) {
+    copy =
+      cleanText(
+        copy.replace(
+          strong.textContent,
+          ""
+        )
+      )
+        .replace(
+          /^:\s*/,
+          ""
+        );
+  }
+
+
+  return {
+    title:
+      title ||
+      `Week ${week}`,
+
+    copy:
+      copy ||
+      "Stock is moving up."
+  };
+}
+
+
+function parseWeeklyAward(
+  wrapper,
+  week
+) {
+  const nodes =
+    findRecapSection(
+      wrapper,
+      "Weekly Awards"
+    );
+
+
+  const listItem =
+    nodes
+      .flatMap(
+        node =>
+          node.tagName === "UL" ||
+          node.tagName === "OL"
+            ? Array.from(
+                node.querySelectorAll(
+                  ":scope > li"
+                )
+              )
+            : node.tagName === "LI"
+              ? [node]
+              : []
+      )[0];
+
+
+  if (!listItem) {
+    return {
+      title:
+        "Weekly Award pending",
+
+      copy:
+        `The Week ${week} award winner will appear here when the recap publishes.`
+    };
+  }
+
+
+  const strong =
+    listItem.querySelector(
+      "strong"
+    );
+
+
+  const awardName =
+    cleanText(
+      strong?.textContent
+    ).replace(
+      /:$/,
+      ""
+    );
+
+
+  let copy =
+    cleanText(
+      listItem.textContent
+    );
+
+
+  if (
+    strong?.textContent
+  ) {
+
+    copy =
+      cleanText(
+        copy.replace(
+          strong.textContent,
+          ""
+        )
+      )
+        .replace(
+          /^:\s*/,
+          ""
+        );
+  }
+
+
+  return {
+    title:
+      awardName ||
+      `Week ${week} Award`,
+
+    copy:
+      copy ||
+      "This week's award winner."
+  };
+}
+
+
+function getWeeklyFeatures(
+  recap
+) {
+  if (!recap) {
+    return {
+      week: null,
+
+      fraud: {
+        title:
+          "No suspects yet",
+
+        copy:
+          "Fraud Watch will update when the next weekly recap publishes."
+      },
+
+      stock: {
+        title:
+          "Waiting for kickoff",
+
+        copy:
+          "Stock Up will update from the newest weekly recap."
+      },
+
+      award: {
+        title:
+          "Award pending",
+
+        copy:
+          "The newest weekly award will appear here automatically."
+      }
+    };
+  }
+
+
+  const wrapper =
+    makeRecapWrapper(
+      recap
+    );
+
+
+  return {
+    week:
+      recap.week,
+
+    fraud:
+      parseFraudWatch(
+        wrapper,
+        recap.week
+      ),
+
+    stock:
+      parseStockUp(
+        wrapper,
+        recap.week
+      ),
+
+    award:
+      parseWeeklyAward(
+        wrapper,
+        recap.week
+      )
+  };
+}
+
+
 export async function renderHome(
   data
 ) {
@@ -338,8 +748,21 @@ export async function renderHome(
     return;
   }
 
-  const rankingData =
-    await loadPowerRankings();
+
+  /*
+    Load the newest rankings and newest
+    weekly recap together.
+  */
+
+  const [
+    rankingData,
+    recap
+  ] =
+    await Promise.all([
+      loadPowerRankings(),
+      loadLatestRecap()
+    ]);
+
 
   const odds =
     rankingData
@@ -351,6 +774,13 @@ export async function renderHome(
           data.teams
         );
 
+
+  /*
+    =====================================================
+    LATEST EDITION CARD
+    =====================================================
+  */
+
   let latest = {
     headline:
       "Preseason Headquarters",
@@ -359,44 +789,42 @@ export async function renderHome(
       "Your generated recap will appear here automatically."
   };
 
-  try {
 
-    const response =
-      await fetch(
-        `recaps/latest.json?ts=${Date.now()}`
+  if (recap) {
+
+    const wrapper =
+      makeRecapWrapper(
+        recap
       );
 
-    if (response.ok) {
+    latest = {
+      headline:
+        recap.headline
+        ||
+        wrapper
+          .querySelector(
+            "h2,h3"
+          )
+          ?.textContent
+        ||
+        `Week ${recap.week} Recap`,
 
-      const recap =
-        await response.json();
+      copy:
+        `Week ${recap.week} has been published on the SBF Network.`
+    };
+  }
 
-      const wrapper =
-        document.createElement(
-          "div"
-        );
 
-      wrapper.innerHTML =
-        recap.html || "";
+  /*
+    =====================================================
+    DYNAMIC WEEKLY FEATURES
+    =====================================================
+  */
 
-      latest = {
-        headline:
-          wrapper
-            .querySelector(
-              "h2,h3"
-            )
-            ?.textContent
-          ||
-          recap.headline
-          ||
-          `Week ${recap.week} Recap`,
-
-        copy:
-          `Week ${recap.week} has been published automatically.`
-      };
-    }
-
-  } catch {}
+  const weeklyFeatures =
+    getWeeklyFeatures(
+      recap
+    );
 
 
   /*
@@ -413,13 +841,16 @@ export async function renderHome(
         ) > 0
     );
 
+
   const preseasonOverrideActive =
     rankingData?.mode ===
       "preseason"
     &&
     !weekOneHasStarted;
 
+
   let oddsLabel;
+
 
   if (
     preseasonOverrideActive
@@ -456,6 +887,7 @@ export async function renderHome(
     =====================================================
   */
 
+
   container.innerHTML = `
 
     <section class="hero">
@@ -484,6 +916,7 @@ export async function renderHome(
           )}
         </p>
 
+
         <div class="actions">
 
           <button
@@ -492,6 +925,7 @@ export async function renderHome(
           >
             Latest recap
           </button>
+
 
           <button
             class="secondary"
@@ -653,15 +1087,29 @@ export async function renderHome(
 
         <p class="eyebrow">
           Fraud Watch
+          ${
+            weeklyFeatures.week
+              ? `• Week ${escapeHTML(
+                  weeklyFeatures.week
+                )}`
+              : ""
+          }
         </p>
 
         <h3>
-          No suspects yet
+          ${escapeHTML(
+            weeklyFeatures
+              .fraud
+              .title
+          )}
         </h3>
 
         <p>
-          Everyone is innocent until
-          the games begin.
+          ${escapeHTML(
+            weeklyFeatures
+              .fraud
+              .copy
+          )}
         </p>
 
       </article>
@@ -675,15 +1123,29 @@ export async function renderHome(
 
         <p class="eyebrow">
           Stock Up
+          ${
+            weeklyFeatures.week
+              ? `• Week ${escapeHTML(
+                  weeklyFeatures.week
+                )}`
+              : ""
+          }
         </p>
 
         <h3>
-          League engagement
+          ${escapeHTML(
+            weeklyFeatures
+              .stock
+              .title
+          )}
         </h3>
 
         <p>
-          The site and recap engine
-          are both live.
+          ${escapeHTML(
+            weeklyFeatures
+              .stock
+              .copy
+          )}
         </p>
 
       </article>
@@ -697,15 +1159,29 @@ export async function renderHome(
 
         <p class="eyebrow">
           Weekly Award
+          ${
+            weeklyFeatures.week
+              ? `• Week ${escapeHTML(
+                  weeklyFeatures.week
+                )}`
+              : ""
+          }
         </p>
 
         <h3>
-          Preseason Optimist
+          ${escapeHTML(
+            weeklyFeatures
+              .award
+              .title
+          )}
         </h3>
 
         <p>
-          Every manager currently
-          thinks they built a champion.
+          ${escapeHTML(
+            weeklyFeatures
+              .award
+              .copy
+          )}
         </p>
 
       </article>
@@ -713,27 +1189,30 @@ export async function renderHome(
     </section>
   `;
 
+
   container
     .querySelectorAll(
       "[data-route-jump]"
     )
-    .forEach(button => {
+    .forEach(
+      button => {
 
-      button.addEventListener(
-        "click",
-        () => {
+        button.addEventListener(
+          "click",
+          () => {
 
-          const route =
-            button.dataset.routeJump;
+            const route =
+              button.dataset.routeJump;
 
-          document
-            .querySelector(
-              `[data-route="${route}"]`
-            )
-            ?.click();
+            document
+              .querySelector(
+                `[data-route="${route}"]`
+              )
+              ?.click();
 
-        }
-      );
+          }
+        );
 
-    });
+      }
+    );
 }

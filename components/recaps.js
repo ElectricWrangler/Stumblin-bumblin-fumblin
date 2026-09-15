@@ -3,6 +3,7 @@ import { escapeHTML } from "./data.js";
 const RECAP_API =
   "https://sbf-recap-api.bobbyg9296.workers.dev";
 
+
 async function fetchJSON(path) {
   const response = await fetch(
     `${path}?ts=${Date.now()}`
@@ -14,6 +15,7 @@ async function fetchJSON(path) {
 
   return response.json();
 }
+
 
 async function saveRecapToGitHub(
   file,
@@ -32,10 +34,7 @@ async function saveRecapToGitHub(
 
       body: JSON.stringify({
         pin,
-
-        file:
-          `recaps/${file}`,
-
+        file: `recaps/${file}`,
         recap
       })
     }
@@ -44,8 +43,7 @@ async function saveRecapToGitHub(
   let result = null;
 
   try {
-    result =
-      await response.json();
+    result = await response.json();
   } catch {
     result = {
       ok: false,
@@ -67,6 +65,7 @@ async function saveRecapToGitHub(
   return result;
 }
 
+
 function recapLabel(recap) {
   if (recap?.type === "draft") {
     return `${recap.season} Draft Edition`;
@@ -74,6 +73,7 @@ function recapLabel(recap) {
 
   return `Week ${recap?.week} • ${recap?.season}`;
 }
+
 
 function archiveLabel(recap) {
   if (recap?.type === "draft") {
@@ -83,71 +83,155 @@ function archiveLabel(recap) {
   return `Week ${recap?.week}`;
 }
 
-function renderDraftFeature(draft) {
-  if (!draft) {
+
+function formatDate(recap) {
+  if (!recap?.generated_at) {
     return "";
   }
 
+  try {
+    return new Date(
+      recap.generated_at
+    ).toLocaleDateString();
+  } catch {
+    return "";
+  }
+}
+
+
+function renderLatestFeature(latest) {
+  if (!latest) {
+    return `
+      <section
+        class="draft-special-section latest-recap-section"
+      >
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Latest Edition
+          </p>
+
+          <h2>
+            Weekly Recap
+          </h2>
+
+        </div>
+
+        <article class="panel">
+
+          <h3>
+            No weekly recap published yet
+          </h3>
+
+          <p>
+            The newest SBF weekly recap
+            will automatically appear here.
+          </p>
+
+        </article>
+
+      </section>
+    `;
+  }
+
+  const date =
+    formatDate(latest);
+
   return `
-    <section class="draft-special-section">
+    <section
+      class="draft-special-section latest-recap-section"
+    >
 
       <div class="section-heading">
 
         <p class="eyebrow">
-          SBF Network Special
+          Latest Edition
         </p>
 
         <h2>
-          Draft Edition
+          Week ${escapeHTML(
+            latest.week
+          )} Recap
         </h2>
 
       </div>
 
+
       <article
         class="draft-special-card"
-        data-file="draft-2026.json"
+        data-file="latest.json"
       >
 
         <div class="draft-special-badge">
-          2026 Draft Special
+          Week ${escapeHTML(
+            latest.week
+          )} • SBF Network
         </div>
+
 
         <h2>
           ${escapeHTML(
-            draft.headline ||
-            "2026 SBF Draft Recap"
+            latest.headline ||
+            `Week ${latest.week} Recap`
           )}
         </h2>
 
+
         <p>
-          Draft grades, steals,
-          questionable decisions,
-          preseason contenders and
-          everything that happened
-          across 15 rounds.
+          The latest edition of the
+          Stumblin' Bumblin' Times.
+          Scores, storylines, chaos,
+          awards and everything that
+          happened around the league.
         </p>
+
 
         <div class="draft-special-stats">
 
           <div>
-            <strong>10</strong>
-            <span>Teams</span>
+            <strong>
+              ${escapeHTML(
+                latest.week
+              )}
+            </strong>
+
+            <span>
+              Week
+            </span>
           </div>
 
-          <div>
-            <strong>150</strong>
-            <span>Picks</span>
-          </div>
 
           <div>
-            <strong>15</strong>
-            <span>Rounds</span>
+            <strong>
+              10
+            </strong>
+
+            <span>
+              Teams
+            </span>
+          </div>
+
+
+          <div>
+            <strong>
+              ${date
+                ? escapeHTML(date)
+                : "LIVE"}
+            </strong>
+
+            <span>
+              Published
+            </span>
           </div>
 
         </div>
 
+
         <button type="button">
-          Read Draft Recap →
+          Read Week ${escapeHTML(
+            latest.week
+          )} Recap →
         </button>
 
       </article>
@@ -156,17 +240,14 @@ function renderDraftFeature(draft) {
   `;
 }
 
+
 function renderArchiveCard(
   item,
   file,
   isDraft = false
 ) {
   const date =
-    item.generated_at
-      ? new Date(
-          item.generated_at
-        ).toLocaleDateString()
-      : "";
+    formatDate(item);
 
   return `
     <article
@@ -184,6 +265,7 @@ function renderArchiveCard(
         )}
       </p>
 
+
       <h3>
         ${escapeHTML(
           item.headline ||
@@ -194,6 +276,7 @@ function renderArchiveCard(
           )
         )}
       </h3>
+
 
       <p>
         ${
@@ -209,6 +292,7 @@ function renderArchiveCard(
     </article>
   `;
 }
+
 
 function renderReader(
   recap,
@@ -229,6 +313,7 @@ function renderReader(
           )}
         </p>
 
+
         <div class="recap-reader-actions">
 
           <button
@@ -238,6 +323,7 @@ function renderReader(
           >
             ✏️ Edit Recap
           </button>
+
 
           <button
             type="button"
@@ -251,13 +337,15 @@ function renderReader(
 
       </div>
 
+
       <div id="recap-article-content">
-        ${recap.html}
+        ${recap.html || ""}
       </div>
 
     </article>
   `;
 }
+
 
 function renderEditor(
   recap,
@@ -283,6 +371,7 @@ function renderEditor(
           </h2>
 
         </div>
+
 
         <button
           type="button"
@@ -334,7 +423,9 @@ function renderEditor(
       </div>
 
 
-      <div class="recap-editor-field recap-pin-field">
+      <div
+        class="recap-editor-field recap-pin-field"
+      >
 
         <label for="recap-pin-input">
           Commissioner PIN
@@ -402,6 +493,7 @@ function renderEditor(
 
         </div>
 
+
         <article
           class="panel article recap-featured-reader"
         >
@@ -418,6 +510,7 @@ function renderEditor(
   `;
 }
 
+
 function attachOpenedRecapEvents(
   readerSection,
   recap,
@@ -432,6 +525,7 @@ function attachOpenedRecapEvents(
     document.getElementById(
       "edit-recap-button"
     );
+
 
   if (closeButton) {
     closeButton.addEventListener(
@@ -448,7 +542,7 @@ function attachOpenedRecapEvents(
 
         document
           .querySelector(
-            ".draft-special-section"
+            ".latest-recap-section"
           )
           ?.scrollIntoView({
             behavior: "smooth",
@@ -458,6 +552,7 @@ function attachOpenedRecapEvents(
       }
     );
   }
+
 
   if (editButton) {
     editButton.addEventListener(
@@ -487,6 +582,7 @@ function attachOpenedRecapEvents(
     );
   }
 }
+
 
 function attachEditorEvents(
   readerSection,
@@ -544,13 +640,19 @@ function attachEditorEvents(
       ...originalRecap,
 
       headline:
-        headlineInput?.value.trim() ||
-        originalRecap.headline ||
+        headlineInput
+          ?.value
+          .trim()
+        ||
+        originalRecap.headline
+        ||
         "",
 
       html:
-        htmlInput?.value ||
-        originalRecap.html ||
+        htmlInput?.value
+        ||
+        originalRecap.html
+        ||
         ""
     };
   }
@@ -695,6 +797,7 @@ function attachEditorEvents(
           `;
         }
 
+
         try {
 
           const result =
@@ -727,6 +830,7 @@ function attachEditorEvents(
             result
           );
 
+
           setTimeout(() => {
 
             readerSection.innerHTML =
@@ -742,6 +846,7 @@ function attachEditorEvents(
             );
 
           }, 1500);
+
 
         } catch (error) {
 
@@ -770,13 +875,13 @@ function attachEditorEvents(
 
           saveButton.textContent =
             "💾 Save Changes";
-
         }
 
       }
     );
   }
 }
+
 
 function attachReaderEvents(
   container
@@ -831,6 +936,7 @@ function attachReaderEvents(
               block: "start"
             });
 
+
           } catch (error) {
 
             console.error(
@@ -846,6 +952,7 @@ function attachReaderEvents(
     });
 }
 
+
 export async function renderRecaps() {
   const container =
     document.getElementById(
@@ -855,6 +962,7 @@ export async function renderRecaps() {
   if (!container) {
     return;
   }
+
 
   container.innerHTML = `
     <article class="panel">
@@ -870,25 +978,11 @@ export async function renderRecaps() {
     </article>
   `;
 
+
   let latest = null;
   let draft = null;
   let archiveItems = [];
 
-  try {
-
-    draft =
-      await fetchJSON(
-        "recaps/draft-2026.json"
-      );
-
-  } catch (error) {
-
-    console.warn(
-      "Draft recap unavailable:",
-      error
-    );
-
-  }
 
   try {
 
@@ -906,6 +1000,24 @@ export async function renderRecaps() {
 
   }
 
+
+  try {
+
+    draft =
+      await fetchJSON(
+        "recaps/draft-2026.json"
+      );
+
+  } catch (error) {
+
+    console.warn(
+      "Draft recap unavailable:",
+      error
+    );
+
+  }
+
+
   try {
 
     const index =
@@ -914,7 +1026,9 @@ export async function renderRecaps() {
       );
 
     if (
-      Array.isArray(index.items)
+      Array.isArray(
+        index.items
+      )
     ) {
 
       archiveItems =
@@ -922,17 +1036,23 @@ export async function renderRecaps() {
           .slice()
           .sort(
             (a, b) =>
-              Number(b.week || 0) -
-              Number(a.week || 0)
+              Number(
+                b.week || 0
+              )
+              -
+              Number(
+                a.week || 0
+              )
           );
 
     }
 
-  } catch (error) {
+  } catch {
     /*
-      No index yet is okay.
+      No archive index yet is okay.
     */
   }
+
 
   if (
     archiveItems.length === 0 &&
@@ -942,20 +1062,40 @@ export async function renderRecaps() {
     archiveItems = [
       {
         ...latest,
-        file: "latest.json"
+        file:
+          `week-${latest.week}.json`
       }
     ];
 
   }
 
+
+  /*
+    Keep the currently featured week
+    out of the archive.
+
+    Once Week 2 publishes, Week 1
+    automatically moves into the archive.
+  */
+
+  const olderWeeklyItems =
+    archiveItems.filter(
+      item =>
+        !latest ||
+        Number(item.week) !==
+        Number(latest.week)
+    );
+
+
   let weeklyArchiveHTML = "";
 
+
   if (
-    archiveItems.length > 0
+    olderWeeklyItems.length > 0
   ) {
 
     weeklyArchiveHTML =
-      archiveItems
+      olderWeeklyItems
         .map(item => {
 
           const file =
@@ -977,14 +1117,16 @@ export async function renderRecaps() {
       <article class="panel">
 
         <p>
-          Weekly recaps begin after
-          Week 1.
+          Older weekly editions will
+          appear here as the season
+          continues.
         </p>
 
       </article>
     `;
 
   }
+
 
   const draftArchiveHTML =
     draft
@@ -994,6 +1136,7 @@ export async function renderRecaps() {
           true
         )
       : "";
+
 
   container.innerHTML = `
 
@@ -1008,15 +1151,18 @@ export async function renderRecaps() {
       </h1>
 
       <p>
-        Draft specials, weekly recaps,
-        league chaos and every edition
-        of the SBF Network season.
+        Weekly recaps, league chaos,
+        awards, draft specials and
+        every edition of the
+        SBF Network season.
       </p>
 
     </header>
 
 
-    ${renderDraftFeature(draft)}
+    ${renderLatestFeature(
+      latest
+    )}
 
 
     <section
@@ -1025,7 +1171,9 @@ export async function renderRecaps() {
     ></section>
 
 
-    <section class="recap-archive-section">
+    <section
+      class="recap-archive-section"
+    >
 
       <div class="section-heading">
 
@@ -1034,22 +1182,30 @@ export async function renderRecaps() {
         </p>
 
         <h2>
-          All Editions
+          Previous Editions
         </h2>
 
       </div>
 
+
       <div class="archive-grid">
+
+        ${olderWeeklyItems.length
+          ? weeklyArchiveHTML
+          : ""}
 
         ${draftArchiveHTML}
 
-        ${weeklyArchiveHTML}
+        ${!olderWeeklyItems.length
+          ? weeklyArchiveHTML
+          : ""}
 
       </div>
 
     </section>
 
   `;
+
 
   attachReaderEvents(
     container

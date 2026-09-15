@@ -53,6 +53,7 @@ let refreshTimer = null;
 let playerDatabasePromise = null;
 let detailRequestNumber = 0;
 
+
 function normalizeNFLTeam(team) {
   const value = String(team || "")
     .trim()
@@ -63,6 +64,7 @@ function normalizeNFLTeam(team) {
     : value;
 }
 
+
 function normalizePlayerName(name) {
   return String(name || "")
     .normalize("NFD")
@@ -71,6 +73,7 @@ function normalizePlayerName(name) {
     .replace(/\b(jr|sr|ii|iii|iv)\b/g, "")
     .replace(/[^a-z0-9]/g, "");
 }
+
 
 function getTeamInfo(team) {
   const info =
@@ -92,6 +95,7 @@ function getTeamInfo(team) {
   };
 }
 
+
 function getRecord(competitor) {
   const records =
     competitor.records || [];
@@ -105,6 +109,7 @@ function getRecord(competitor) {
 
   return overall?.summary || "";
 }
+
 
 function getGameStatus(competition) {
   const status =
@@ -130,6 +135,7 @@ function getGameStatus(competition) {
   ) {
     return {
       status: "live",
+
       detail:
         type.shortDetail ||
         type.detail ||
@@ -145,12 +151,14 @@ function getGameStatus(competition) {
 
   return {
     status: "scheduled",
+
     detail:
       type.shortDetail ||
       type.detail ||
       ""
   };
 }
+
 
 function getNetwork(competition) {
   const broadcasts =
@@ -164,6 +172,7 @@ function getNetwork(competition) {
 
   return names[0] || "NFL";
 }
+
 
 function buildTeam(competitor) {
   const team =
@@ -193,7 +202,11 @@ function buildTeam(competitor) {
   };
 }
 
-function transformGame(event) {
+
+function transformGame(
+  event,
+  fantasyWeek = null
+) {
   const competition =
     event.competitions?.[0] || {};
 
@@ -221,9 +234,19 @@ function transformGame(event) {
       competition
     );
 
+  const parsedFantasyWeek =
+    Number(fantasyWeek);
+
   return {
     id:
       String(event.id),
+
+    fantasyWeek:
+      Number.isFinite(
+        parsedFantasyWeek
+      )
+        ? parsedFantasyWeek
+        : null,
 
     status:
       status.status,
@@ -252,6 +275,7 @@ function transformGame(event) {
   };
 }
 
+
 function buildWeekLabel(data) {
   const seasonType =
     data.season?.type;
@@ -274,6 +298,7 @@ function buildWeekLabel(data) {
   return week || "—";
 }
 
+
 async function loadCachedScores() {
   const response =
     await fetch(
@@ -295,6 +320,7 @@ async function loadCachedScores() {
   };
 }
 
+
 async function loadLiveScores() {
   try {
     const response =
@@ -314,14 +340,36 @@ async function loadLiveScores() {
     const raw =
       await response.json();
 
+    const nflWeek =
+      Number(
+        raw.week?.number
+      );
+
     const games =
       (raw.events || [])
-        .map(transformGame)
+        .map(
+          event =>
+            transformGame(
+              event,
+              Number.isFinite(
+                nflWeek
+              )
+                ? nflWeek
+                : null
+            )
+        )
         .filter(Boolean);
 
     return {
       week:
         buildWeekLabel(raw),
+
+      fantasyWeek:
+        Number.isFinite(
+          nflWeek
+        )
+          ? nflWeek
+          : null,
 
       updatedAt:
         new Date().toISOString(),
@@ -339,6 +387,7 @@ async function loadLiveScores() {
 
     try {
       return await loadCachedScores();
+
     } catch (fallbackError) {
       console.warn(
         "Cached NFL ScoreCenter data unavailable:",
@@ -348,12 +397,14 @@ async function loadLiveScores() {
       return {
         updatedAt: null,
         week: null,
+        fantasyWeek: null,
         games: [],
         source: "unavailable"
       };
     }
   }
 }
+
 
 function formatKickoff(dateString) {
   if (!dateString) {
@@ -372,6 +423,7 @@ function formatKickoff(dateString) {
     }
   );
 }
+
 
 function renderGameStatus(game) {
   if (game.status === "final") {
@@ -403,6 +455,7 @@ function renderGameStatus(game) {
     </span>
   `;
 }
+
 
 function renderTeam(team) {
   const info =
@@ -472,6 +525,7 @@ function renderTeam(team) {
   `;
 }
 
+
 function renderGame(game) {
   const selected =
     String(selectedGameId) ===
@@ -536,6 +590,7 @@ function renderGame(game) {
   `;
 }
 
+
 function renderSection(
   title,
   games,
@@ -579,6 +634,7 @@ function renderSection(
   `;
 }
 
+
 function findGame(gameId) {
   return (
     currentData
@@ -591,6 +647,7 @@ function findGame(gameId) {
     null
   );
 }
+
 
 function findLabelValue(
   labels,
@@ -611,6 +668,7 @@ function findLabelValue(
 
   return stats[index] ?? null;
 }
+
 
 function buildStatLine(
   category,
@@ -765,6 +823,7 @@ function buildStatLine(
   `.trim();
 }
 
+
 function extractESPNPlayerStats(summary) {
   const byPlayer =
     new Map();
@@ -824,6 +883,7 @@ function extractESPNPlayerStats(summary) {
               if (!player) {
                 player = {
                   name,
+
                   team:
                     teamAbbr,
 
@@ -878,6 +938,7 @@ function extractESPNPlayerStats(summary) {
   return byPlayer;
 }
 
+
 async function loadGameSummary(gameId) {
   try {
     const response =
@@ -910,11 +971,93 @@ async function loadGameSummary(gameId) {
   }
 }
 
-async function loadFantasyContext() {
+
+/*
+  =====================================================
+  FANTASY WEEK DETECTION
+  =====================================================
+
+  Previously GameTracker always used:
+
+      leagueData.currentWeek
+
+  That caused completed games from Week 1
+  to load Week 2 Sleeper scoring after
+  Sleeper advanced the league.
+
+  Now each NFL game keeps the NFL week it
+  belongs to, and GameTracker requests that
+  same week from Sleeper.
+  =====================================================
+*/
+
+function getFantasyWeekForGame(game) {
+  const gameWeek =
+    Number(
+      game?.fantasyWeek
+    );
+
+  if (
+    Number.isFinite(gameWeek) &&
+    gameWeek >= 1
+  ) {
+    return gameWeek;
+  }
+
+  const scoreCenterWeek =
+    Number(
+      currentData?.fantasyWeek
+    );
+
+  if (
+    Number.isFinite(
+      scoreCenterWeek
+    ) &&
+    scoreCenterWeek >= 1
+  ) {
+    return scoreCenterWeek;
+  }
+
+  const weekLabel =
+    String(
+      currentData?.week ?? ""
+    );
+
+  if (
+    /^\d+$/.test(
+      weekLabel
+    )
+  ) {
+    const parsedWeek =
+      Number(weekLabel);
+
+    if (
+      Number.isFinite(
+        parsedWeek
+      ) &&
+      parsedWeek >= 1
+    ) {
+      return parsedWeek;
+    }
+  }
+
+  return Math.max(
+    1,
+    Number(
+      leagueData?.currentWeek || 1
+    )
+  );
+}
+
+
+async function loadFantasyContext(
+  game
+) {
   if (!leagueData) {
     return {
       players: {},
-      matchups: []
+      matchups: [],
+      week: 1
     };
   }
 
@@ -922,6 +1065,11 @@ async function loadFantasyContext() {
     playerDatabasePromise =
       loadNFLPlayers();
   }
+
+  const fantasyWeek =
+    getFantasyWeekForGame(
+      game
+    );
 
   const [
     players,
@@ -931,16 +1079,18 @@ async function loadFantasyContext() {
       playerDatabasePromise,
 
       loadWeekMatchups(
-        leagueData.currentWeek,
+        fantasyWeek,
         leagueData
       )
     ]);
 
   return {
     players,
-    matchups
+    matchups,
+    week: fantasyWeek
   };
 }
+
 
 function getPlayersOwnedInGame(
   game,
@@ -952,6 +1102,7 @@ function getPlayersOwnedInGame(
       normalizeNFLTeam(
         game.away.abbr
       ),
+
       normalizeNFLTeam(
         game.home.abbr
       )
@@ -1080,6 +1231,7 @@ function getPlayersOwnedInGame(
     }
   );
 }
+
 
 function renderFantasyPlayer(
   player,
@@ -1222,6 +1374,7 @@ function renderFantasyPlayer(
   `;
 }
 
+
 function renderDetailLoading(game) {
   return `
     <section class="nfl-game-detail">
@@ -1264,6 +1417,7 @@ function renderDetailLoading(game) {
   `;
 }
 
+
 async function renderSelectedGameDetail() {
   const host =
     document.getElementById(
@@ -1302,7 +1456,10 @@ async function renderSelectedGameDetail() {
     summary
   ] =
     await Promise.all([
-      loadFantasyContext(),
+      loadFantasyContext(
+        game
+      ),
+
       loadGameSummary(
         game.id
       )
@@ -1367,6 +1524,13 @@ async function renderSelectedGameDetail() {
                       )
                     )
             }
+          </p>
+
+          <p class="nfl-detail-status">
+            SBF Fantasy Week
+            ${escapeHTML(
+              fantasyContext.week
+            )}
           </p>
 
         </div>
@@ -1489,6 +1653,7 @@ async function renderSelectedGameDetail() {
   attachDetailCloseHandler();
 }
 
+
 function attachDetailCloseHandler() {
   document
     .querySelector(
@@ -1525,6 +1690,7 @@ function attachDetailCloseHandler() {
       }
     );
 }
+
 
 function attachGameHandlers() {
   document
@@ -1585,6 +1751,7 @@ function attachGameHandlers() {
       }
     );
 }
+
 
 function renderScoreCenter() {
   const container =
@@ -1751,6 +1918,7 @@ function renderScoreCenter() {
   }
 }
 
+
 async function refreshNFL() {
   const nflPage =
     document.getElementById(
@@ -1774,6 +1942,7 @@ async function refreshNFL() {
     );
   }
 }
+
 
 function startLiveRefresh() {
   if (refreshTimer) {
@@ -1806,6 +1975,7 @@ function startLiveRefresh() {
       30000
     );
 }
+
 
 export async function renderNFL(data) {
   leagueData = data;
