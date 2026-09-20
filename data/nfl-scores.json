@@ -1,29 +1,7 @@
 {
   "week": 2,
-  "updatedAt": "2026-09-18T06:48:27.168Z",
+  "updatedAt": "2026-09-20T06:58:50.092Z",
   "games": [
-    {
-      "id": "401872932",
-      "status": "final",
-      "detail": "Final",
-      "network": "Prime Video",
-      "startTime": "2026-09-18T00:15Z",
-      "away": {
-        "name": "Detroit Lions",
-        "abbr": "DET",
-        "record": "1-1",
-        "score": 31,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
-      },
-      "home": {
-        "name": "Buffalo Bills",
-        "abbr": "BUF",
-        "record": "2-0",
-        "score": 41,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872933",
       "status": "scheduled",
@@ -329,6 +307,28 @@
         "record": "1-0",
         "score": 0,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872932",
+      "status": "final",
+      "detail": "Final",
+      "network": "Prime Video",
+      "startTime": "2026-09-18T00:15Z",
+      "away": {
+        "name": "Detroit Lions",
+        "abbr": "DET",
+        "record": "1-1",
+        "score": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
+      },
+      "home": {
+        "name": "Buffalo Bills",
+        "abbr": "BUF",
+        "record": "2-0",
+        "score": 41,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
       },
       "note": ""
     },
