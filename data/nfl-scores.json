@@ -1,29 +1,7 @@
 {
   "week": 2,
-  "updatedAt": "2026-09-22T00:48:22.811Z",
+  "updatedAt": "2026-09-22T05:32:39.686Z",
   "games": [
-    {
-      "id": "401872947",
-      "status": "live",
-      "detail": "0:11 - 1st",
-      "network": "ESPN",
-      "startTime": "2026-09-22T00:15Z",
-      "away": {
-        "name": "New York Giants",
-        "abbr": "NYG",
-        "record": "1-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
-      },
-      "home": {
-        "name": "Los Angeles Rams",
-        "abbr": "LAR",
-        "record": "0-1",
-        "score": 6,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872932",
       "status": "final",
@@ -351,6 +329,28 @@
         "record": "2-0",
         "score": 33,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872947",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN",
+      "startTime": "2026-09-22T00:15Z",
+      "away": {
+        "name": "New York Giants",
+        "abbr": "NYG",
+        "record": "1-1",
+        "score": 6,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+      },
+      "home": {
+        "name": "Los Angeles Rams",
+        "abbr": "LAR",
+        "record": "1-1",
+        "score": 28,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "note": ""
     }
