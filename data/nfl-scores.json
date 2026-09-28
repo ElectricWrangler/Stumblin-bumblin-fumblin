@@ -1,48 +1,26 @@
 {
   "week": 3,
-  "updatedAt": "2026-09-27T23:27:17.193Z",
+  "updatedAt": "2026-09-28T01:49:23.602Z",
   "games": [
     {
-      "id": "401872960",
+      "id": "401872962",
       "status": "live",
-      "detail": "1:47 - 4th",
-      "network": "CBS",
-      "startTime": "2026-09-27T20:25Z",
+      "detail": "0:34 - 2nd",
+      "network": "NBC",
+      "startTime": "2026-09-28T00:20Z",
       "away": {
-        "name": "Baltimore Ravens",
-        "abbr": "BAL",
+        "name": "Los Angeles Rams",
+        "abbr": "LAR",
         "record": "1-1",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
+        "score": 13,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "home": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
+        "name": "Denver Broncos",
+        "abbr": "DEN",
         "record": "1-1",
-        "score": 28,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-      },
-      "note": "NFL Rio Game"
-    },
-    {
-      "id": "401872961",
-      "status": "live",
-      "detail": "3:00 - 4th",
-      "network": "CBS",
-      "startTime": "2026-09-27T20:25Z",
-      "away": {
-        "name": "Las Vegas Raiders",
-        "abbr": "LV",
-        "record": "2-0",
-        "score": 35,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
-      },
-      "home": {
-        "name": "New Orleans Saints",
-        "abbr": "NO",
-        "record": "1-1",
-        "score": 27,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
+        "score": 0,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "note": ""
     },
@@ -289,24 +267,46 @@
       "note": ""
     },
     {
-      "id": "401872962",
-      "status": "scheduled",
-      "detail": "9/27 - 8:20 PM EDT",
-      "network": "NBC",
-      "startTime": "2026-09-28T00:20Z",
+      "id": "401872960",
+      "status": "final",
+      "detail": "Final",
+      "network": "CBS",
+      "startTime": "2026-09-27T20:25Z",
       "away": {
-        "name": "Los Angeles Rams",
-        "abbr": "LAR",
-        "record": "1-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
+        "name": "Baltimore Ravens",
+        "abbr": "BAL",
+        "record": "2-1",
+        "score": 34,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "home": {
-        "name": "Denver Broncos",
-        "abbr": "DEN",
-        "record": "1-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
+        "record": "1-2",
+        "score": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+      },
+      "note": "NFL Rio Game"
+    },
+    {
+      "id": "401872961",
+      "status": "final",
+      "detail": "Final",
+      "network": "CBS",
+      "startTime": "2026-09-27T20:25Z",
+      "away": {
+        "name": "Las Vegas Raiders",
+        "abbr": "LV",
+        "record": "3-0",
+        "score": 35,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+      },
+      "home": {
+        "name": "New Orleans Saints",
+        "abbr": "NO",
+        "record": "1-2",
+        "score": 27,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
       },
       "note": ""
     },
