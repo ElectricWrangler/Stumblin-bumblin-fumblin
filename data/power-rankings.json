@@ -3,7 +3,7 @@
   "season": "2026",
   "week": 3,
   "mode": "in-season",
-  "generated_at": "2026-09-29T19:20:01.584997+00:00",
+  "generated_at": "2026-09-29T19:58:24.509919+00:00",
   "teams": [
     {
       "rank": 1,
@@ -12,8 +12,8 @@
       "owner": "OguguaAnunoby",
       "power_score": 94,
       "championship_odds": "+325",
-      "implied_probability": 23.7,
-      "reason": "Elite 4-2 outlook with strong scoring, a 184.46-point current week, and excellent Gibbs, London, Walker, Kittle, and Maye balance."
+      "implied_probability": 22.9,
+      "reason": "Elite scoring, a 4-2 record and a 184.46-point current week complement Gibbs, London, Walker, Kittle and strong depth."
     },
     {
       "rank": 2,
@@ -21,29 +21,29 @@
       "team": "Kirkumcised Penix",
       "owner": "stickyyye",
       "power_score": 91,
-      "championship_odds": "+400",
-      "implied_probability": 20.1,
-      "reason": "League-best 5-1 record pairs with strong scoring and a formidable Lamb, Cook, Henry, Flowers, Kelce, and Purdy starting core."
+      "championship_odds": "+425",
+      "implied_probability": 19.4,
+      "reason": "The 5-1 record, solid scoring and core of Lamb, Cook, Henry, Flowers and Kelce outweigh Daniels' current absence."
     },
     {
       "rank": 3,
       "roster_id": 9,
       "team": "Allen town",
       "owner": "4Anthony2",
-      "power_score": 87,
-      "championship_odds": "+525",
-      "implied_probability": 16.1,
-      "reason": "The 5-1 record and Allen-Bijan foundation inspire confidence, though the 105.26-point current week and Allen's questionable designation temper momentum."
+      "power_score": 88,
+      "championship_odds": "+500",
+      "implied_probability": 16.4,
+      "reason": "A 5-1 start and Allen, Bijan, Hampton, Smith and Kincaid provide an excellent foundation, though current-week scoring has dipped."
     },
     {
       "rank": 4,
       "roster_id": 8,
       "team": "RoCknCoCk Crashouts ",
       "owner": "oehler56",
-      "power_score": 83,
-      "championship_odds": "+675",
-      "implied_probability": 12.9,
-      "reason": "A 4-2 record and balanced St. Brown, McBride, Kyren, and Irving core outweigh the current scoring dip and A.J. Brown's IR status."
+      "power_score": 84,
+      "championship_odds": "+650",
+      "implied_probability": 13.2,
+      "reason": "A 4-2 record pairs with premium starters Amon-Ra, McBride, Kyren and Irving, but Brown's IR status reduces receiving depth."
     },
     {
       "rank": 5,
@@ -51,59 +51,59 @@
       "team": "Secret service chat",
       "owner": "Towny7062",
       "power_score": 80,
-      "championship_odds": "+825",
-      "implied_probability": 10.9,
-      "reason": "League-leading total points and a 152.3-point current week elevate this 3-3 team, led by Smith-Njigba, Jeanty, Prescott, and Adams."
+      "championship_odds": "+850",
+      "implied_probability": 10.5,
+      "reason": "League-leading total points and a 152.3-point current week elevate this 3-3 team, despite Etienne being out."
     },
     {
       "rank": 6,
       "roster_id": 10,
       "team": "arupert12",
       "owner": "arupert12",
-      "power_score": 75,
-      "championship_odds": "+1100",
-      "implied_probability": 8.3,
-      "reason": "The 2-4 record disappoints, but 432.42 points and a powerful Mahomes, Taylor, Jefferson, Higgins, Olave, and Kraft roster preserve substantial upside."
+      "power_score": 76,
+      "championship_odds": "+1075",
+      "implied_probability": 8.4,
+      "reason": "Strong total points and a deep Mahomes, Taylor, Jefferson, Higgins and Olave core counterbalance the 2-4 record and Jefferson's absence."
     },
     {
       "rank": 7,
       "roster_id": 6,
       "team": "alexvandeusen",
       "owner": "alexvandeusen",
-      "power_score": 70,
-      "championship_odds": "+1500",
-      "implied_probability": 6.3,
-      "reason": "Strong total scoring and Burrow, McCaffrey, Bowers, and Waddle provide upside, but a 3-3 record, recent 116.78, and key outs reduce confidence."
+      "power_score": 71,
+      "championship_odds": "+1475",
+      "implied_probability": 6.4,
+      "reason": "McCaffrey, Burrow and Bowers anchor a talented 3-3 roster, but the latest 116.78 score and absences of Collins and Hall create concern."
     },
     {
       "rank": 8,
       "roster_id": 1,
       "team": "Chase\u2019n Skattehoes",
       "owner": "brizzzyy",
-      "power_score": 63,
-      "championship_odds": "+2250",
-      "implied_probability": 4.2,
-      "reason": "A 141.6-point current week helps, while Chase, Brown, Pickens, and McConkey offer strength; modest total scoring and quarterback uncertainty limit the ceiling."
+      "power_score": 66,
+      "championship_odds": "+1975",
+      "implied_probability": 4.8,
+      "reason": "A 141.6-point current week and Chase-led receiving group offer upside, but mediocre overall scoring, quarterback uncertainty and a 3-3 record limit confidence."
     },
     {
       "rank": 9,
       "roster_id": 5,
       "team": "Chef Boyardee",
       "owner": "Valk474",
-      "power_score": 49,
-      "championship_odds": "+5025",
-      "implied_probability": 1.9,
-      "reason": "Barkley, Nabers, Wilson, and Warren provide quality building blocks, but the 1-5 record, low total scoring, and limited depth create major concerns."
+      "power_score": 52,
+      "championship_odds": "+4400",
+      "implied_probability": 2.2,
+      "reason": "Barkley, Nabers, Wilson and Warren provide meaningful talent, but a 1-5 record, low total scoring and multiple unavailable reserves hurt the outlook."
     },
     {
       "rank": 10,
       "roster_id": 7,
       "team": "Pukakke",
       "owner": "shmeems",
-      "power_score": 28,
+      "power_score": 29,
       "championship_odds": "+9900",
       "implied_probability": 0.6,
-      "reason": "Lamar, Rice, LaPorta, and young running backs offer talent, but an 0-6 record, league-low scoring, 91.14 current points, and Nacua's absence dominate."
+      "reason": "Lamar, Rice and LaPorta preserve upside, but an 0-6 record, league-low scoring, a 91.14 current week and Nacua's absence demand last place."
     }
   ]
 }
