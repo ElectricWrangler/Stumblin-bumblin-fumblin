@@ -1,29 +1,7 @@
 {
   "week": 3,
-  "updatedAt": "2026-09-29T01:21:39.892Z",
+  "updatedAt": "2026-09-29T07:04:17.367Z",
   "games": [
-    {
-      "id": "401872963",
-      "status": "live",
-      "detail": "3:45 - 2nd",
-      "network": "ESPN",
-      "startTime": "2026-09-29T00:15Z",
-      "away": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "2-0",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
-      },
-      "home": {
-        "name": "Chicago Bears",
-        "abbr": "CHI",
-        "record": "1-1",
-        "score": 7,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872948",
       "status": "final",
@@ -351,6 +329,28 @@
         "record": "2-1",
         "score": 30,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872963",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN",
+      "startTime": "2026-09-29T00:15Z",
+      "away": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "2-1",
+        "score": 7,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+      },
+      "home": {
+        "name": "Chicago Bears",
+        "abbr": "CHI",
+        "record": "2-1",
+        "score": 27,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "note": ""
     }
