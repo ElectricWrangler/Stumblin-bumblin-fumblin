@@ -1,11 +1,11 @@
 {
   "week": 3,
-  "updatedAt": "2026-09-28T07:50:34.136Z",
+  "updatedAt": "2026-09-29T01:21:39.892Z",
   "games": [
     {
       "id": "401872963",
-      "status": "scheduled",
-      "detail": "9/28 - 8:15 PM EDT",
+      "status": "live",
+      "detail": "3:45 - 2nd",
       "network": "ESPN",
       "startTime": "2026-09-29T00:15Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "1-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "note": ""
