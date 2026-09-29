@@ -51,6 +51,7 @@ function standingsRows(
 
 async function loadPowerRankings() {
   try {
+
     const response =
       await fetch(
         `data/power-rankings.json?ts=${Date.now()}`
@@ -174,15 +175,6 @@ function officialOdds(
       );
 
 
-  /*
-    PRESEASON COMMISSIONER OVERRIDE
-
-    This remains here so the old
-    preseason setup still behaves
-    correctly if preseason data is
-    ever displayed again.
-  */
-
   const weekOneHasStarted =
     data.teams.some(
       team =>
@@ -190,6 +182,7 @@ function officialOdds(
           team.pointsFor
         ) > 0
     );
+
 
   const preseasonOverrideActive =
     !weekOneHasStarted &&
@@ -343,12 +336,6 @@ function officialOdds(
   =====================================================
   WEEKLY RECAP SECTION HELPERS
   =====================================================
-
-  These read the actual generated recap HTML.
-
-  That means Home automatically follows
-  whatever the newest weekly recap says.
-  =====================================================
 */
 
 
@@ -430,104 +417,43 @@ function cleanText(value) {
 }
 
 
-function parseFraudWatch(
-  wrapper,
-  week
+function getFirstListItem(
+  nodes
 ) {
-  const nodes =
-    findRecapSection(
-      wrapper,
-      "Fraud Watch"
-    );
-
-  const titleNode =
-    nodes.find(
+  return nodes
+    .flatMap(
       node =>
-        node.tagName === "H3"
-    );
 
-  let copyNode = null;
+        node.tagName === "UL" ||
+        node.tagName === "OL"
 
-  if (titleNode) {
+          ? Array.from(
+              node.querySelectorAll(
+                ":scope > li"
+              )
+            )
 
-    const titleIndex =
-      nodes.indexOf(
-        titleNode
-      );
+          : node.tagName === "LI"
 
-    copyNode =
-      nodes
-        .slice(
-          titleIndex + 1
-        )
-        .find(
-          node =>
-            node.tagName === "P"
-        );
-  }
+            ? [node]
 
-
-  if (!titleNode) {
-    return {
-      title:
-        "Fraud Watch pending",
-
-      copy:
-        `Week ${week} Fraud Watch will appear here when the recap publishes.`
-    };
-  }
-
-
-  return {
-    title:
-      cleanText(
-        titleNode.textContent
-      ),
-
-    copy:
-      cleanText(
-        copyNode?.textContent
-      )
-      ||
-      `Featured on the Week ${week} Fraud Watch list.`
-  };
+            : []
+    )[0] || null;
 }
 
 
-function parseStockUp(
-  wrapper,
-  week
+function parseListItem(
+  listItem,
+  fallbackTitle,
+  fallbackCopy
 ) {
-  const nodes =
-    findRecapSection(
-      wrapper,
-      "Stock Up"
-    );
-
-  const listItem =
-    nodes
-      .flatMap(
-        node =>
-          node.tagName === "UL" ||
-          node.tagName === "OL"
-            ? Array.from(
-                node.querySelectorAll(
-                  ":scope > li"
-                )
-              )
-            : node.tagName === "LI"
-              ? [node]
-              : []
-      )[0];
-
-
   if (!listItem) {
     return {
       title:
-        "Stock Up pending",
+        fallbackTitle,
 
       copy:
-        `Week ${week} Stock Up will appear here when the recap publishes.`
+        fallbackCopy
     };
   }
 
@@ -537,13 +463,15 @@ function parseStockUp(
       "strong"
     );
 
+
   const title =
     cleanText(
       strong?.textContent
-    ).replace(
-      /:$/,
-      ""
-    );
+    )
+      .replace(
+        /:$/,
+        ""
+      );
 
 
   let copy =
@@ -555,6 +483,7 @@ function parseStockUp(
   if (
     strong?.textContent
   ) {
+
     copy =
       cleanText(
         copy.replace(
@@ -572,12 +501,133 @@ function parseStockUp(
   return {
     title:
       title ||
-      `Week ${week}`,
+      fallbackTitle,
 
     copy:
       copy ||
-      "Stock is moving up."
+      fallbackCopy
   };
+}
+
+
+/*
+  Fraud Watch can be generated in either:
+
+  OLD FORMAT:
+
+  <h3>Team Name</h3>
+  <p>Description</p>
+
+  OR NEW FORMAT:
+
+  <ul>
+    <li>
+      <strong>Team Name:</strong>
+      Description
+    </li>
+  </ul>
+
+  This supports both.
+*/
+
+function parseFraudWatch(
+  wrapper,
+  week
+) {
+  const nodes =
+    findRecapSection(
+      wrapper,
+      "Fraud Watch"
+    );
+
+
+  /*
+    First check for the older
+    heading + paragraph format.
+  */
+
+  const titleNode =
+    nodes.find(
+      node =>
+        node.tagName === "H3"
+    );
+
+
+  if (titleNode) {
+
+    const titleIndex =
+      nodes.indexOf(
+        titleNode
+      );
+
+    const copyNode =
+      nodes
+        .slice(
+          titleIndex + 1
+        )
+        .find(
+          node =>
+            node.tagName === "P"
+        );
+
+
+    return {
+      title:
+        cleanText(
+          titleNode.textContent
+        ),
+
+      copy:
+        cleanText(
+          copyNode?.textContent
+        )
+        ||
+        `Featured on the Week ${week} Fraud Watch list.`
+    };
+  }
+
+
+  /*
+    If there is no H3, check
+    the newer bullet-list format.
+  */
+
+  const listItem =
+    getFirstListItem(
+      nodes
+    );
+
+
+  return parseListItem(
+    listItem,
+    "Fraud Watch pending",
+    `Week ${week} Fraud Watch will appear here when the recap publishes.`
+  );
+}
+
+
+function parseStockUp(
+  wrapper,
+  week
+) {
+  const nodes =
+    findRecapSection(
+      wrapper,
+      "Stock Up"
+    );
+
+
+  const listItem =
+    getFirstListItem(
+      nodes
+    );
+
+
+  return parseListItem(
+    listItem,
+    `Week ${week}`,
+    "Stock is moving up."
+  );
 }
 
 
@@ -593,81 +643,16 @@ function parseWeeklyAward(
 
 
   const listItem =
-    nodes
-      .flatMap(
-        node =>
-          node.tagName === "UL" ||
-          node.tagName === "OL"
-            ? Array.from(
-                node.querySelectorAll(
-                  ":scope > li"
-                )
-              )
-            : node.tagName === "LI"
-              ? [node]
-              : []
-      )[0];
-
-
-  if (!listItem) {
-    return {
-      title:
-        "Weekly Award pending",
-
-      copy:
-        `The Week ${week} award winner will appear here when the recap publishes.`
-    };
-  }
-
-
-  const strong =
-    listItem.querySelector(
-      "strong"
+    getFirstListItem(
+      nodes
     );
 
 
-  const awardName =
-    cleanText(
-      strong?.textContent
-    ).replace(
-      /:$/,
-      ""
-    );
-
-
-  let copy =
-    cleanText(
-      listItem.textContent
-    );
-
-
-  if (
-    strong?.textContent
-  ) {
-
-    copy =
-      cleanText(
-        copy.replace(
-          strong.textContent,
-          ""
-        )
-      )
-        .replace(
-          /^:\s*/,
-          ""
-        );
-  }
-
-
-  return {
-    title:
-      awardName ||
-      `Week ${week} Award`,
-
-    copy:
-      copy ||
-      "This week's award winner."
-  };
+  return parseListItem(
+    listItem,
+    `Week ${week} Award`,
+    "This week's award winner."
+  );
 }
 
 
@@ -675,6 +660,7 @@ function getWeeklyFeatures(
   recap
 ) {
   if (!recap) {
+
     return {
       week: null,
 
@@ -749,11 +735,6 @@ export async function renderHome(
   }
 
 
-  /*
-    Load the newest rankings and newest
-    weekly recap together.
-  */
-
   const [
     rankingData,
     recap
@@ -774,12 +755,6 @@ export async function renderHome(
           data.teams
         );
 
-
-  /*
-    =====================================================
-    LATEST EDITION CARD
-    =====================================================
-  */
 
   let latest = {
     headline:
@@ -815,23 +790,11 @@ export async function renderHome(
   }
 
 
-  /*
-    =====================================================
-    DYNAMIC WEEKLY FEATURES
-    =====================================================
-  */
-
   const weeklyFeatures =
     getWeeklyFeatures(
       recap
     );
 
-
-  /*
-    =====================================================
-    ODDS BOARD LABEL
-    =====================================================
-  */
 
   const weekOneHasStarted =
     data.teams.some(
@@ -879,13 +842,6 @@ export async function renderHome(
     oddsLabel =
       "Fallback board";
   }
-
-
-  /*
-    =====================================================
-    PAGE
-    =====================================================
-  */
 
 
   container.innerHTML = `
