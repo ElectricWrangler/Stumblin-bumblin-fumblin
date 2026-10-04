@@ -1,204 +1,204 @@
 {
   "week": 4,
-  "updatedAt": "2026-10-04T15:53:08.411Z",
+  "updatedAt": "2026-10-04T18:52:10.692Z",
   "games": [
     {
-      "id": "401872965",
-      "status": "live",
-      "detail": "3:29 - 3rd",
-      "network": "NFL Net",
-      "startTime": "2026-10-04T13:30Z",
-      "away": {
-        "name": "Indianapolis Colts",
-        "abbr": "IND",
-        "record": "1-2",
-        "score": 20,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
-      },
-      "home": {
-        "name": "Washington Commanders",
-        "abbr": "WSH",
-        "record": "1-2",
-        "score": 13,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
-      },
-      "note": "NFL London Games"
-    },
-    {
       "id": "401872971",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "9:22 - 3rd",
       "network": "CBS",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "New England Patriots",
         "abbr": "NE",
         "record": "1-2",
-        "score": 0,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
       },
       "home": {
         "name": "Buffalo Bills",
         "abbr": "BUF",
         "record": "3-0",
-        "score": 0,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
       },
       "note": ""
     },
     {
       "id": "401872972",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "8:52 - 3rd",
       "network": "FOX",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "1-2",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "home": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "2-1",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "note": ""
     },
     {
       "id": "401872969",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "8:48 - 3rd",
       "network": "CBS",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "record": "2-1",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
       },
       "home": {
         "name": "Cincinnati Bengals",
         "abbr": "CIN",
         "record": "2-1",
-        "score": 0,
+        "score": 9,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
       },
       "note": ""
     },
     {
       "id": "401872966",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "13:38 - 3rd",
       "network": "CBS",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Arizona Cardinals",
         "abbr": "ARI",
         "record": "1-2",
-        "score": 0,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
       },
       "home": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "2-1",
-        "score": 0,
+        "score": 19,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "note": ""
     },
     {
       "id": "401872970",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "14:39 - 3rd",
       "network": "FOX",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Los Angeles Rams",
         "abbr": "LAR",
         "record": "1-2",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "home": {
         "name": "Philadelphia Eagles",
         "abbr": "PHI",
         "record": "2-1",
-        "score": 0,
+        "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
     },
     {
       "id": "401872968",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "8:43 - 3rd",
       "network": "FOX",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Green Bay Packers",
         "abbr": "GB",
         "record": "1-2",
-        "score": 0,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
       },
       "home": {
         "name": "Tampa Bay Buccaneers",
         "abbr": "TB",
         "record": "0-3",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "note": ""
     },
     {
       "id": "401872973",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "12:42 - 3rd",
       "network": "CBS",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Tennessee Titans",
         "abbr": "TEN",
         "record": "0-3",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "home": {
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "2-1",
-        "score": 0,
+        "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "note": ""
     },
     {
       "id": "401872967",
-      "status": "scheduled",
-      "detail": "10/4 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "10:57 - 3rd",
       "network": "FOX",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Dallas Cowboys",
         "abbr": "DAL",
         "record": "1-2",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
       "home": {
         "name": "Houston Texans",
         "abbr": "HOU",
         "record": "0-3",
-        "score": 0,
+        "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "note": ""
+    },
+    {
+      "id": "401872965",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-10-04T13:30Z",
+      "away": {
+        "name": "Indianapolis Colts",
+        "abbr": "IND",
+        "record": "2-2",
+        "score": 30,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
+      },
+      "home": {
+        "name": "Washington Commanders",
+        "abbr": "WSH",
+        "record": "1-3",
+        "score": 13,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
+      },
+      "note": "NFL London Games"
     },
     {
       "id": "401872974",
