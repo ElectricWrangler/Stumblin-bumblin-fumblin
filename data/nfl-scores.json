@@ -1,6 +1,6 @@
 {
   "week": 4,
-  "updatedAt": "2026-10-05T06:22:30.593Z",
+  "updatedAt": "2026-10-05T21:59:04.720Z",
   "games": [
     {
       "id": "401872979",
@@ -94,7 +94,7 @@
       "id": "401872972",
       "status": "final",
       "detail": "Final",
-      "network": "FOX",
+      "network": "Fox",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "New York Jets",
@@ -160,7 +160,7 @@
       "id": "401872970",
       "status": "final",
       "detail": "Final",
-      "network": "FOX",
+      "network": "Fox",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Los Angeles Rams",
@@ -182,7 +182,7 @@
       "id": "401872968",
       "status": "final",
       "detail": "Final",
-      "network": "FOX",
+      "network": "Fox",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Green Bay Packers",
@@ -226,7 +226,7 @@
       "id": "401872967",
       "status": "final",
       "detail": "Final",
-      "network": "FOX",
+      "network": "Fox",
       "startTime": "2026-10-04T17:00Z",
       "away": {
         "name": "Dallas Cowboys",
@@ -248,7 +248,7 @@
       "id": "401872974",
       "status": "final",
       "detail": "Final",
-      "network": "FOX",
+      "network": "Fox",
       "startTime": "2026-10-04T20:05Z",
       "away": {
         "name": "Miami Dolphins",
