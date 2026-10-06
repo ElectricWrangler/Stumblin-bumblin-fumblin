@@ -1,25 +1,25 @@
 {
   "week": 4,
-  "updatedAt": "2026-10-05T21:59:04.720Z",
+  "updatedAt": "2026-10-06T02:03:49.768Z",
   "games": [
     {
       "id": "401872979",
-      "status": "scheduled",
-      "detail": "10/5 - 8:15 PM EDT",
+      "status": "live",
+      "detail": "Halftime",
       "network": "ESPN",
       "startTime": "2026-10-06T00:15Z",
       "away": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "1-2",
-        "score": 0,
+        "score": 24,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "home": {
         "name": "New Orleans Saints",
         "abbr": "NO",
         "record": "1-2",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
       },
       "note": ""
