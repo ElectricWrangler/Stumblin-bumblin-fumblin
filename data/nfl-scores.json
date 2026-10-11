@@ -1,29 +1,7 @@
 {
   "week": 5,
-  "updatedAt": "2026-10-09T07:34:03.517Z",
+  "updatedAt": "2026-10-11T07:23:52.160Z",
   "games": [
-    {
-      "id": "401872980",
-      "status": "final",
-      "detail": "Final",
-      "network": "Prime Video",
-      "startTime": "2026-10-09T00:15Z",
-      "away": {
-        "name": "Tampa Bay Buccaneers",
-        "abbr": "TB",
-        "record": "1-4",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
-      },
-      "home": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "2-3",
-        "score": 16,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872981",
       "status": "scheduled",
@@ -307,6 +285,28 @@
         "record": "2-2",
         "score": 0,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872980",
+      "status": "final",
+      "detail": "Final",
+      "network": "Prime Video",
+      "startTime": "2026-10-09T00:15Z",
+      "away": {
+        "name": "Tampa Bay Buccaneers",
+        "abbr": "TB",
+        "record": "1-4",
+        "score": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+      },
+      "home": {
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
+        "record": "2-3",
+        "score": 16,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
       "note": ""
     },
