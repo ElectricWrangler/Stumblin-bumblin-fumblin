@@ -1,11 +1,11 @@
 {
   "week": 5,
-  "updatedAt": "2026-10-11T07:23:52.160Z",
+  "updatedAt": "2026-10-11T14:14:12.862Z",
   "games": [
     {
       "id": "401872981",
-      "status": "scheduled",
-      "detail": "10/11 - 9:30 AM EDT",
+      "status": "live",
+      "detail": "1:13 - 1st",
       "network": "NFL Net",
       "startTime": "2026-10-11T13:30Z",
       "away": {
@@ -19,7 +19,7 @@
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "record": "3-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
       },
       "note": "NFL London Games"
