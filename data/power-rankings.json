@@ -1,109 +1,109 @@
 {
   "league": "Stumblin Bumblin & Fumblin",
   "season": "2026",
-  "week": 4,
+  "week": 5,
   "mode": "in-season",
-  "generated_at": "2026-10-06T20:17:03.653072+00:00",
+  "generated_at": "2026-10-13T20:03:50.376840+00:00",
   "teams": [
     {
       "rank": 1,
-      "roster_id": 2,
-      "team": "OguguaAnunoby",
-      "owner": "OguguaAnunoby",
-      "power_score": 96,
-      "championship_odds": "+275",
-      "implied_probability": 25.9,
-      "reason": "Elite 6-2 record, league-best scoring, 193.46 current output, and a deep lineup led by Jahmyr Gibbs, Drake London, and George Kittle."
-    },
-    {
-      "rank": 2,
-      "roster_id": 4,
-      "team": "Kirkumcised Penix",
-      "owner": "stickyyye",
-      "power_score": 93,
-      "championship_odds": "+350",
-      "implied_probability": 21.9,
-      "reason": "League-best 7-1 record with a strong current week and a formidable core of CeeDee Lamb, James Cook, Derrick Henry, and Travis Kelce."
-    },
-    {
-      "rank": 3,
       "roster_id": 6,
       "team": "alexvandeusen",
       "owner": "alexvandeusen",
-      "power_score": 89,
-      "championship_odds": "+475",
-      "implied_probability": 17.5,
-      "reason": "Second-highest total scoring, a 5-3 record, and 171.82 current points complement Christian McCaffrey, Joe Burrow, Nico Collins, and Brock Bowers."
+      "power_score": 94,
+      "championship_odds": "+325",
+      "implied_probability": 23.2,
+      "reason": "Elite 7-3 contender with 781.06 points, a league-best 177.4 current week, and premium anchors McCaffrey, Burrow, Collins, and Bowers."
+    },
+    {
+      "rank": 2,
+      "roster_id": 2,
+      "team": "OguguaAnunoby",
+      "owner": "OguguaAnunoby",
+      "power_score": 92,
+      "championship_odds": "+375",
+      "implied_probability": 20.8,
+      "reason": "Strong 7-3 record, league-leading 789.4 points, and excellent depth around Gibbs, London, Maye, Kittle, Jacobs, and Walker."
+    },
+    {
+      "rank": 3,
+      "roster_id": 4,
+      "team": "Kirkumcised Penix",
+      "owner": "stickyyye",
+      "power_score": 88,
+      "championship_odds": "+500",
+      "implied_probability": 16.6,
+      "reason": "League-best 8-2 record combines with Lamb, Henry, Cook, Flowers, and strong quarterback depth, though scoring trails the other leading contenders."
     },
     {
       "rank": 4,
-      "roster_id": 9,
-      "team": "Allen town",
-      "owner": "4Anthony2",
-      "power_score": 85,
-      "championship_odds": "+625",
-      "implied_probability": 14.0,
-      "reason": "A 6-2 record and elite Josh Allen-Bijan Robinson foundation provide a strong outlook, though overall and recent scoring trail the top three."
-    },
-    {
-      "rank": 5,
-      "roster_id": 3,
-      "team": "Secret service chat",
-      "owner": "Towny7062",
-      "power_score": 76,
-      "championship_odds": "+1075",
-      "implied_probability": 8.5,
-      "reason": "Balanced 4-4 results and solid scoring pair well with Jaxon Smith-Njigba, Ashton Jeanty, Dak Prescott, and Davante Adams, despite two players on IR."
-    },
-    {
-      "rank": 6,
       "roster_id": 8,
       "team": "RoCknCoCk Crashouts ",
       "owner": "oehler56",
-      "power_score": 73,
-      "championship_odds": "+1300",
-      "implied_probability": 7.2,
-      "reason": "A 4-4 record and strong Amon-Ra St. Brown, Trey McBride, and Kyren Williams core offset modest scoring and A.J. Brown's IR designation."
+      "power_score": 83,
+      "championship_odds": "+700",
+      "implied_probability": 12.6,
+      "reason": "A 6-4 record, 720.44 points, and a 175.18 current week support a strong core led by St. Brown, McBride, and Kyren Williams."
     },
     {
-      "rank": 7,
+      "rank": 5,
       "roster_id": 10,
       "team": "arupert12",
       "owner": "arupert12",
-      "power_score": 69,
-      "championship_odds": "+1625",
-      "implied_probability": 5.8,
-      "reason": "Strong scoring for a 3-5 team and excellent talent led by Jonathan Taylor and Patrick Mahomes, but Justin Jefferson's absence lowers the current outlook."
+      "power_score": 81,
+      "championship_odds": "+775",
+      "implied_probability": 11.3,
+      "reason": "Despite a 4-6 record, 719.72 points and a balanced Hurts, Jefferson, Taylor, Higgins, Olave lineup create major rebound and championship upside."
+    },
+    {
+      "rank": 6,
+      "roster_id": 9,
+      "team": "Allen town",
+      "owner": "4Anthony2",
+      "power_score": 72,
+      "championship_odds": "+1375",
+      "implied_probability": 6.8,
+      "reason": "A 6-4 record plus Josh Allen, Bijan Robinson, and Omarion Hampton provides upside, but 662.66 points and multiple unavailable receivers limit confidence."
+    },
+    {
+      "rank": 7,
+      "roster_id": 3,
+      "team": "Secret service chat",
+      "owner": "Towny7062",
+      "power_score": 66,
+      "championship_odds": "+1950",
+      "implied_probability": 4.9,
+      "reason": "A 4-6 record is offset by 694.2 points and quality starters Prescott, Jeanty, Smith-Njigba, Adams, and Rice; injuries weaken running-back depth."
     },
     {
       "rank": 8,
-      "roster_id": 1,
-      "team": "Chase\u2019n Skattehoes",
-      "owner": "brizzzyy",
-      "power_score": 54,
-      "championship_odds": "+3900",
-      "implied_probability": 2.5,
-      "reason": "A 3-5 record, low total scoring, and multiple players listed out limit a roster still featuring Ja'Marr Chase, Chase Brown, and George Pickens."
+      "roster_id": 7,
+      "team": "Pukakke",
+      "owner": "shmeems",
+      "power_score": 62,
+      "championship_odds": "+2450",
+      "implied_probability": 3.9,
+      "reason": "The 3-7 record and 584.98 points are concerning, but a league-high 181.7 current week and Puka-led young core suggest renewed upside."
     },
     {
       "rank": 9,
       "roster_id": 5,
       "team": "Chef Boyardee",
       "owner": "Valk474",
-      "power_score": 36,
-      "championship_odds": "+9900",
-      "implied_probability": 0.9,
-      "reason": "Malik Nabers, Tyler Warren, and Garrett Wilson offer upside, but a 1-7 record, low scoring, Saquon Barkley's absence, and thin healthy depth hurt."
+      "power_score": 57,
+      "championship_odds": "+3275",
+      "implied_probability": 3.0,
+      "reason": "A 154.74 current week shows upside, but the 2-8 record, 621.36 points, and unavailable Barkley, Samuel, Pierce, and Mason sharply reduce outlook."
     },
     {
       "rank": 10,
-      "roster_id": 7,
-      "team": "Pukakke",
-      "owner": "shmeems",
-      "power_score": 33,
-      "championship_odds": "+9900",
-      "implied_probability": 0.8,
-      "reason": "Puka Nacua, Lamar Jackson, and Sam LaPorta provide quality, but the 1-7 record and league-low scoring create the weakest current championship outlook."
+      "roster_id": 1,
+      "team": "Chase\u2019n Skattehoes",
+      "owner": "brizzzyy",
+      "power_score": 49,
+      "championship_odds": "+5150",
+      "implied_probability": 1.9,
+      "reason": "Chase, Pickens, and promising young pieces offer upside, but a 3-7 record, 588.44 points, and uncertainty at quarterback create the weakest outlook."
     }
   ]
 }
