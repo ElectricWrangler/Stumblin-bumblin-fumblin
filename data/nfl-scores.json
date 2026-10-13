@@ -1,29 +1,7 @@
 {
   "week": 5,
-  "updatedAt": "2026-10-12T08:11:44.125Z",
+  "updatedAt": "2026-10-13T04:14:08.246Z",
   "games": [
-    {
-      "id": "401872994",
-      "status": "scheduled",
-      "detail": "10/12 - 8:15 PM EDT",
-      "network": "ESPN",
-      "startTime": "2026-10-13T00:15Z",
-      "away": {
-        "name": "Buffalo Bills",
-        "abbr": "BUF",
-        "record": "3-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
-      },
-      "home": {
-        "name": "Los Angeles Rams",
-        "abbr": "LAR",
-        "record": "2-2",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872980",
       "status": "final",
@@ -329,6 +307,28 @@
         "record": "2-3",
         "score": 23,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872994",
+      "status": "final",
+      "detail": "Final/OT",
+      "network": "ESPN",
+      "startTime": "2026-10-13T00:15Z",
+      "away": {
+        "name": "Buffalo Bills",
+        "abbr": "BUF",
+        "record": "4-1",
+        "score": 37,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
+      },
+      "home": {
+        "name": "Los Angeles Rams",
+        "abbr": "LAR",
+        "record": "2-3",
+        "score": 34,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "note": ""
     }
