@@ -1,25 +1,25 @@
 {
   "week": 6,
-  "updatedAt": "2026-10-14T06:50:26.249Z",
+  "updatedAt": "2026-10-16T01:16:35.355Z",
   "games": [
     {
       "id": "401872995",
-      "status": "scheduled",
-      "detail": "10/15 - 8:15 PM EDT",
+      "status": "live",
+      "detail": "5:15 - 2nd",
       "network": "Prime Video",
       "startTime": "2026-10-16T00:15Z",
       "away": {
         "name": "Seattle Seahawks",
         "abbr": "SEA",
         "record": "3-2",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
       },
       "home": {
         "name": "Denver Broncos",
         "abbr": "DEN",
         "record": "3-2",
-        "score": 0,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "note": ""
