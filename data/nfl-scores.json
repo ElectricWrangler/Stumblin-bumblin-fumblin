@@ -1,69 +1,47 @@
 {
   "week": 6,
-  "updatedAt": "2026-10-18T21:39:53.016Z",
+  "updatedAt": "2026-10-18T23:38:09.708Z",
   "games": [
     {
-      "id": "401873004",
-      "status": "live",
-      "detail": "14:46 - 3rd",
-      "network": "Fox",
-      "startTime": "2026-10-18T20:05Z",
-      "away": {
-        "name": "Arizona Cardinals",
-        "abbr": "ARI",
-        "record": "1-4",
-        "score": 9,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
-      },
-      "home": {
-        "name": "Los Angeles Rams",
-        "abbr": "LAR",
-        "record": "2-3",
-        "score": 9,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
-      },
-      "note": ""
-    },
-    {
       "id": "401873006",
-      "status": "live",
-      "detail": "1:49 - 2nd",
+      "status": "final",
+      "detail": "Final",
       "network": "CBS",
       "startTime": "2026-10-18T20:25Z",
       "away": {
         "name": "Los Angeles Chargers",
         "abbr": "LAC",
-        "record": "0-5",
-        "score": 3,
+        "record": "0-6",
+        "score": 6,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
       },
       "home": {
         "name": "Kansas City Chiefs",
         "abbr": "KC",
-        "record": "4-0",
-        "score": 16,
+        "record": "5-0",
+        "score": 22,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
       },
       "note": ""
     },
     {
       "id": "401873005",
-      "status": "live",
-      "detail": "0:15 - 2nd",
+      "status": "final",
+      "detail": "Final",
       "network": "CBS",
       "startTime": "2026-10-18T20:25Z",
       "away": {
         "name": "Buffalo Bills",
         "abbr": "BUF",
-        "record": "4-1",
-        "score": 13,
+        "record": "5-1",
+        "score": 33,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
       },
       "home": {
         "name": "Las Vegas Raiders",
         "abbr": "LV",
-        "record": "3-2",
-        "score": 10,
+        "record": "3-3",
+        "score": 30,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
       },
       "note": ""
@@ -241,6 +219,28 @@
         "record": "1-5",
         "score": 19,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873004",
+      "status": "final",
+      "detail": "Final",
+      "network": "Fox",
+      "startTime": "2026-10-18T20:05Z",
+      "away": {
+        "name": "Arizona Cardinals",
+        "abbr": "ARI",
+        "record": "2-4",
+        "score": 18,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+      },
+      "home": {
+        "name": "Los Angeles Rams",
+        "abbr": "LAR",
+        "record": "2-4",
+        "score": 16,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
       },
       "note": ""
     },
