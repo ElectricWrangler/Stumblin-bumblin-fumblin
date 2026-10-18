@@ -1,29 +1,7 @@
 {
   "week": 6,
-  "updatedAt": "2026-10-16T05:58:33.068Z",
+  "updatedAt": "2026-10-18T06:07:28.546Z",
   "games": [
-    {
-      "id": "401872995",
-      "status": "final",
-      "detail": "Final/OT",
-      "network": "Prime Video",
-      "startTime": "2026-10-16T00:15Z",
-      "away": {
-        "name": "Seattle Seahawks",
-        "abbr": "SEA",
-        "record": "3-3",
-        "score": 14,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
-      },
-      "home": {
-        "name": "Denver Broncos",
-        "abbr": "DEN",
-        "record": "4-2",
-        "score": 17,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
-      },
-      "note": ""
-    },
     {
       "id": "401872996",
       "status": "scheduled",
@@ -285,6 +263,28 @@
         "record": "3-2",
         "score": 0,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401872995",
+      "status": "final",
+      "detail": "Final/OT",
+      "network": "Prime Video",
+      "startTime": "2026-10-16T00:15Z",
+      "away": {
+        "name": "Seattle Seahawks",
+        "abbr": "SEA",
+        "record": "3-3",
+        "score": 14,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
+      },
+      "home": {
+        "name": "Denver Broncos",
+        "abbr": "DEN",
+        "record": "4-2",
+        "score": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "note": ""
     },
