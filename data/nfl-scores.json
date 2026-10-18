@@ -1,40 +1,18 @@
 {
   "week": 6,
-  "updatedAt": "2026-10-18T14:14:36.962Z",
+  "updatedAt": "2026-10-18T17:23:06.402Z",
   "games": [
     {
-      "id": "401872996",
-      "status": "live",
-      "detail": "14:15 - 2nd",
-      "network": "NFL Net",
-      "startTime": "2026-10-18T13:30Z",
-      "away": {
-        "name": "Houston Texans",
-        "abbr": "HOU",
-        "record": "1-4",
-        "score": 7,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
-      },
-      "home": {
-        "name": "Jacksonville Jaguars",
-        "abbr": "JAX",
-        "record": "4-1",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
-      },
-      "note": "NFL London Games"
-    },
-    {
       "id": "401872999",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "5:56 - 1st",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "3-2",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
@@ -48,15 +26,15 @@
     },
     {
       "id": "401872997",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "6:33 - 1st",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "4-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "home": {
@@ -70,8 +48,8 @@
     },
     {
       "id": "401873003",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "5:26 - 1st",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
@@ -92,15 +70,15 @@
     },
     {
       "id": "401873001",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "5:18 - 1st",
       "network": "CBS",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "2-3",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "home": {
@@ -114,8 +92,8 @@
     },
     {
       "id": "401873000",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "5:14 - 1st",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
@@ -129,22 +107,22 @@
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "3-1-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "note": ""
     },
     {
       "id": "401872998",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "7:57 - 1st",
       "network": "CBS",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
         "record": "2-2",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "home": {
@@ -158,8 +136,8 @@
     },
     {
       "id": "401873002",
-      "status": "scheduled",
-      "detail": "10/18 - 1:00 PM EDT",
+      "status": "live",
+      "detail": "7:51 - 1st",
       "network": "CBS",
       "startTime": "2026-10-18T17:00Z",
       "away": {
@@ -173,10 +151,32 @@
         "name": "Tampa Bay Buccaneers",
         "abbr": "TB",
         "record": "1-4",
-        "score": 0,
+        "score": 3,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "note": ""
+    },
+    {
+      "id": "401872996",
+      "status": "final",
+      "detail": "Final",
+      "network": "NFL Net",
+      "startTime": "2026-10-18T13:30Z",
+      "away": {
+        "name": "Houston Texans",
+        "abbr": "HOU",
+        "record": "2-4",
+        "score": 34,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
+      },
+      "home": {
+        "name": "Jacksonville Jaguars",
+        "abbr": "JAX",
+        "record": "4-2",
+        "score": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
+      },
+      "note": "NFL London Games"
     },
     {
       "id": "401873004",
