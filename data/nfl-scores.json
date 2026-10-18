@@ -1,25 +1,25 @@
 {
   "week": 6,
-  "updatedAt": "2026-10-18T17:23:06.402Z",
+  "updatedAt": "2026-10-18T19:29:43.521Z",
   "games": [
     {
       "id": "401872999",
       "status": "live",
-      "detail": "5:56 - 1st",
+      "detail": "End of 3rd",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "3-2",
-        "score": 7,
+        "score": 28,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "home": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "2-3",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "note": ""
@@ -27,21 +27,21 @@
     {
       "id": "401872997",
       "status": "live",
-      "detail": "6:33 - 1st",
+      "detail": "7:53 - 4th",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "4-1",
-        "score": 7,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "home": {
         "name": "Cleveland Browns",
         "abbr": "CLE",
         "record": "3-2",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
       },
       "note": ""
@@ -49,21 +49,21 @@
     {
       "id": "401873003",
       "status": "live",
-      "detail": "5:26 - 1st",
+      "detail": "11:35 - 4th",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Tennessee Titans",
         "abbr": "TEN",
         "record": "0-5",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "home": {
         "name": "Indianapolis Colts",
         "abbr": "IND",
         "record": "2-3",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
       },
       "note": ""
@@ -71,21 +71,21 @@
     {
       "id": "401873001",
       "status": "live",
-      "detail": "5:18 - 1st",
+      "detail": "12:53 - 4th",
       "network": "CBS",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "2-3",
-        "score": 3,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "home": {
         "name": "New England Patriots",
         "abbr": "NE",
         "record": "3-2",
-        "score": 0,
+        "score": 23,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
       },
       "note": ""
@@ -93,21 +93,21 @@
     {
       "id": "401873000",
       "status": "live",
-      "detail": "5:14 - 1st",
+      "detail": "14:50 - 4th",
       "network": "Fox",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "New Orleans Saints",
         "abbr": "NO",
         "record": "1-4",
-        "score": 0,
+        "score": 27,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
       },
       "home": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "3-1-1",
-        "score": 7,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "note": ""
@@ -115,21 +115,21 @@
     {
       "id": "401872998",
       "status": "live",
-      "detail": "7:57 - 1st",
+      "detail": "2:36 - 3rd",
       "network": "CBS",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
         "record": "2-2",
-        "score": 3,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "home": {
         "name": "Philadelphia Eagles",
         "abbr": "PHI",
         "record": "2-3",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
@@ -137,21 +137,21 @@
     {
       "id": "401873002",
       "status": "live",
-      "detail": "7:51 - 1st",
+      "detail": "13:48 - 4th",
       "network": "CBS",
       "startTime": "2026-10-18T17:00Z",
       "away": {
         "name": "Pittsburgh Steelers",
         "abbr": "PIT",
         "record": "3-2",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png"
       },
       "home": {
         "name": "Tampa Bay Buccaneers",
         "abbr": "TB",
         "record": "1-4",
-        "score": 3,
+        "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "note": ""
