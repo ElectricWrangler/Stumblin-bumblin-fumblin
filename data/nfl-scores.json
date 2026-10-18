@@ -1,18 +1,18 @@
 {
   "week": 6,
-  "updatedAt": "2026-10-18T06:07:28.546Z",
+  "updatedAt": "2026-10-18T14:14:36.962Z",
   "games": [
     {
       "id": "401872996",
-      "status": "scheduled",
-      "detail": "10/18 - 9:30 AM EDT",
+      "status": "live",
+      "detail": "14:15 - 2nd",
       "network": "NFL Net",
       "startTime": "2026-10-18T13:30Z",
       "away": {
         "name": "Houston Texans",
         "abbr": "HOU",
         "record": "1-4",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "home": {
