@@ -1,25 +1,25 @@
 {
   "week": 7,
-  "updatedAt": "2026-10-21T06:35:02.023Z",
+  "updatedAt": "2026-10-23T01:58:56.222Z",
   "games": [
     {
       "id": "401873010",
-      "status": "scheduled",
-      "detail": "10/22 - 8:15 PM EDT",
+      "status": "live",
+      "detail": "Halftime",
       "network": "Prime Video",
       "startTime": "2026-10-23T00:15Z",
       "away": {
         "name": "New England Patriots",
         "abbr": "NE",
         "record": "4-2",
-        "score": 0,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
       },
       "home": {
         "name": "Chicago Bears",
         "abbr": "CHI",
         "record": "4-2",
-        "score": 0,
+        "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "note": ""
