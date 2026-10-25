@@ -1,25 +1,25 @@
 {
   "week": 7,
-  "updatedAt": "2026-10-25T17:17:59.225Z",
+  "updatedAt": "2026-10-25T19:48:02.030Z",
   "games": [
     {
       "id": "401873017",
       "status": "live",
-      "detail": "7:52 - 1st",
+      "detail": "5:05 - 4th",
       "network": "Fox",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "San Francisco 49ers",
         "abbr": "SF",
         "record": "6-0",
-        "score": 7,
+        "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
       },
       "home": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "2-4",
-        "score": 0,
+        "score": 26,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "note": ""
@@ -27,43 +27,43 @@
     {
       "id": "401873013",
       "status": "live",
-      "detail": "9:23 - 1st",
+      "detail": "4:39 - 4th",
       "network": "CBS",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "Cleveland Browns",
         "abbr": "CLE",
         "record": "4-2",
-        "score": 0,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
       },
       "home": {
         "name": "Tennessee Titans",
         "abbr": "TEN",
         "record": "1-5",
-        "score": 7,
+        "score": 17,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
       },
       "note": ""
     },
     {
       "id": "401873014",
-      "status": "live",
-      "detail": "7:52 - 1st",
+      "status": "final",
+      "detail": "Final",
       "network": "CBS",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "Indianapolis Colts",
         "abbr": "IND",
-        "record": "2-4",
-        "score": 7,
+        "record": "2-5",
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
       },
       "home": {
         "name": "Minnesota Vikings",
         "abbr": "MIN",
-        "record": "5-0",
-        "score": 0,
+        "record": "6-0",
+        "score": 16,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
       },
       "note": ""
@@ -71,21 +71,21 @@
     {
       "id": "401873015",
       "status": "live",
-      "detail": "8:37 - 1st",
+      "detail": "3:24 - 4th",
       "network": "CBS",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "Miami Dolphins",
         "abbr": "MIA",
         "record": "0-5",
-        "score": 7,
+        "score": 28,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
       },
       "home": {
         "name": "New York Jets",
         "abbr": "NYJ",
         "record": "2-4",
-        "score": 7,
+        "score": 25,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
       },
       "note": ""
@@ -93,21 +93,21 @@
     {
       "id": "401873018",
       "status": "live",
-      "detail": "6:51 - 1st",
+      "detail": "1:12 - 4th",
       "network": "Fox",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "Tampa Bay Buccaneers",
         "abbr": "TB",
         "record": "1-5",
-        "score": 7,
+        "score": 43,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "home": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
         "record": "3-2",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "note": ""
@@ -115,21 +115,21 @@
     {
       "id": "401873012",
       "status": "live",
-      "detail": "10:28 - 1st",
+      "detail": "4:39 - 4th",
       "network": "CBS",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "Cincinnati Bengals",
         "abbr": "CIN",
         "record": "3-2",
-        "score": 0,
+        "score": 35,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
       },
       "home": {
         "name": "Baltimore Ravens",
         "abbr": "BAL",
         "record": "4-2",
-        "score": 7,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
       },
       "note": ""
@@ -137,21 +137,21 @@
     {
       "id": "401873016",
       "status": "live",
-      "detail": "10:21 - 1st",
+      "detail": "7:38 - 4th",
       "network": "Fox",
       "startTime": "2026-10-25T17:00Z",
       "away": {
         "name": "New York Giants",
         "abbr": "NYG",
         "record": "3-2-1",
-        "score": 0,
+        "score": 21,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
       },
       "home": {
         "name": "Houston Texans",
         "abbr": "HOU",
         "record": "2-4",
-        "score": 3,
+        "score": 14,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "note": ""
