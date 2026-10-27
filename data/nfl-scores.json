@@ -1,29 +1,7 @@
 {
   "week": 7,
-  "updatedAt": "2026-10-27T00:50:04.765Z",
+  "updatedAt": "2026-10-27T05:46:29.019Z",
   "games": [
-    {
-      "id": "401873009",
-      "status": "live",
-      "detail": "0:08 - 1st",
-      "network": "ESPN",
-      "startTime": "2026-10-27T00:15Z",
-      "away": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "2-4",
-        "score": 10,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-      },
-      "home": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "2-4",
-        "score": 7,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
-      },
-      "note": ""
-    },
     {
       "id": "401873010",
       "status": "final",
@@ -307,6 +285,28 @@
         "record": "4-3",
         "score": 20,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873009",
+      "status": "final",
+      "detail": "Final",
+      "network": "ESPN",
+      "startTime": "2026-10-27T00:15Z",
+      "away": {
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
+        "record": "3-4",
+        "score": 38,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+      },
+      "home": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "2-5",
+        "score": 21,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
     }
