@@ -1,25 +1,25 @@
 {
   "week": 7,
-  "updatedAt": "2026-10-26T05:02:59.701Z",
+  "updatedAt": "2026-10-27T00:50:04.765Z",
   "games": [
     {
       "id": "401873009",
-      "status": "scheduled",
-      "detail": "10/26 - 8:15 PM EDT",
+      "status": "live",
+      "detail": "0:08 - 1st",
       "network": "ESPN",
       "startTime": "2026-10-27T00:15Z",
       "away": {
         "name": "Dallas Cowboys",
         "abbr": "DAL",
         "record": "2-4",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
       "home": {
         "name": "Philadelphia Eagles",
         "abbr": "PHI",
         "record": "2-4",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
       },
       "note": ""
