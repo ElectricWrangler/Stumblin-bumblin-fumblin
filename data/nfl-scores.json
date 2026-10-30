@@ -1,25 +1,25 @@
 {
   "week": 8,
-  "updatedAt": "2026-10-28T05:39:22.657Z",
+  "updatedAt": "2026-10-30T02:56:23.799Z",
   "games": [
     {
       "id": "401873023",
-      "status": "scheduled",
-      "detail": "10/29 - 8:15 PM EDT",
+      "status": "live",
+      "detail": "7:11 - 4th",
       "network": "Prime Video",
       "startTime": "2026-10-30T00:15Z",
       "away": {
         "name": "Carolina Panthers",
         "abbr": "CAR",
         "record": "3-3",
-        "score": 0,
+        "score": 13,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
       },
       "home": {
         "name": "Green Bay Packers",
         "abbr": "GB",
         "record": "4-3",
-        "score": 0,
+        "score": 27,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
       },
       "note": ""
