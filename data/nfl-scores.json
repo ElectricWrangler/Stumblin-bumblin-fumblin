@@ -1,25 +1,25 @@
 {
   "week": 9,
-  "updatedAt": "2026-11-08T08:12:17.367Z",
+  "updatedAt": "2026-11-08T15:09:06.770Z",
   "games": [
     {
       "id": "401873038",
-      "status": "scheduled",
-      "detail": "11/8 - 9:30 AM EST",
+      "status": "live",
+      "detail": "2:12 - 1st",
       "network": "NFL Net",
       "startTime": "2026-11-08T14:30Z",
       "away": {
         "name": "Cincinnati Bengals",
         "abbr": "CIN",
         "record": "5-2",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
       },
       "home": {
         "name": "Atlanta Falcons",
         "abbr": "ATL",
         "record": "3-5",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
       },
       "note": "NFL Madrid Game"
