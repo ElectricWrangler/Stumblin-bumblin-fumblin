@@ -1,92 +1,26 @@
 {
   "week": 9,
-  "updatedAt": "2026-11-08T23:07:22.115Z",
+  "updatedAt": "2026-11-09T02:37:19.406Z",
   "games": [
     {
-      "id": "401873046",
+      "id": "401873050",
       "status": "live",
-      "detail": "12:49 - 3rd",
-      "network": "CBS",
-      "startTime": "2026-11-08T21:05Z",
+      "detail": "2:56 - 2nd",
+      "network": "NBC",
+      "startTime": "2026-11-09T01:20Z",
       "away": {
-        "name": "Houston Texans",
-        "abbr": "HOU",
-        "record": "2-5",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
-      },
-      "home": {
-        "name": "Los Angeles Chargers",
-        "abbr": "LAC",
-        "record": "0-7",
-        "score": 9,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873049",
-      "status": "live",
-      "detail": "Halftime",
-      "network": "Fox",
-      "startTime": "2026-11-08T21:25Z",
-      "away": {
-        "name": "Green Bay Packers",
-        "abbr": "GB",
-        "record": "5-3",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
-      },
-      "home": {
-        "name": "New England Patriots",
-        "abbr": "NE",
-        "record": "5-3",
-        "score": 14,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873047",
-      "status": "live",
-      "detail": "7:46 - 3rd",
-      "network": "Fox",
-      "startTime": "2026-11-08T21:25Z",
-      "away": {
-        "name": "Las Vegas Raiders",
-        "abbr": "LV",
-        "record": "4-4",
-        "score": 17,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
-      },
-      "home": {
-        "name": "San Francisco 49ers",
-        "abbr": "SF",
-        "record": "6-1",
-        "score": 28,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873048",
-      "status": "live",
-      "detail": "Halftime",
-      "network": "Fox",
-      "startTime": "2026-11-08T21:25Z",
-      "away": {
-        "name": "Arizona Cardinals",
-        "abbr": "ARI",
+        "name": "Tampa Bay Buccaneers",
+        "abbr": "TB",
         "record": "3-5",
         "score": 3,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
       },
       "home": {
-        "name": "Seattle Seahawks",
-        "abbr": "SEA",
-        "record": "4-4",
-        "score": 14,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
+        "name": "Chicago Bears",
+        "abbr": "CHI",
+        "record": "6-2",
+        "score": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
       },
       "note": ""
     },
@@ -267,24 +201,90 @@
       "note": ""
     },
     {
-      "id": "401873050",
-      "status": "scheduled",
-      "detail": "11/8 - 8:20 PM EST",
-      "network": "NBC",
-      "startTime": "2026-11-09T01:20Z",
+      "id": "401873046",
+      "status": "final",
+      "detail": "Final",
+      "network": "CBS",
+      "startTime": "2026-11-08T21:05Z",
       "away": {
-        "name": "Tampa Bay Buccaneers",
-        "abbr": "TB",
+        "name": "Houston Texans",
+        "abbr": "HOU",
         "record": "3-5",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+        "score": 44,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
       },
       "home": {
-        "name": "Chicago Bears",
-        "abbr": "CHI",
-        "record": "6-2",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
+        "name": "Los Angeles Chargers",
+        "abbr": "LAC",
+        "record": "0-8",
+        "score": 22,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873049",
+      "status": "final",
+      "detail": "Final",
+      "network": "Fox",
+      "startTime": "2026-11-08T21:25Z",
+      "away": {
+        "name": "Green Bay Packers",
+        "abbr": "GB",
+        "record": "6-3",
+        "score": 45,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
+      },
+      "home": {
+        "name": "New England Patriots",
+        "abbr": "NE",
+        "record": "5-4",
+        "score": 27,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873047",
+      "status": "final",
+      "detail": "Final",
+      "network": "Fox",
+      "startTime": "2026-11-08T21:25Z",
+      "away": {
+        "name": "Las Vegas Raiders",
+        "abbr": "LV",
+        "record": "4-5",
+        "score": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+      },
+      "home": {
+        "name": "San Francisco 49ers",
+        "abbr": "SF",
+        "record": "7-1",
+        "score": 38,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873048",
+      "status": "final",
+      "detail": "Final",
+      "network": "Fox",
+      "startTime": "2026-11-08T21:25Z",
+      "away": {
+        "name": "Arizona Cardinals",
+        "abbr": "ARI",
+        "record": "3-6",
+        "score": 3,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+      },
+      "home": {
+        "name": "Seattle Seahawks",
+        "abbr": "SEA",
+        "record": "5-4",
+        "score": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
       },
       "note": ""
     },
