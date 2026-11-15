@@ -1,25 +1,25 @@
 {
   "week": 10,
-  "updatedAt": "2026-11-15T11:28:10.855Z",
+  "updatedAt": "2026-11-15T17:54:00.772Z",
   "games": [
     {
       "id": "401873053",
-      "status": "scheduled",
-      "detail": "11/15 - 9:30 AM EST",
+      "status": "final",
+      "detail": "Final",
       "network": "Fox",
       "startTime": "2026-11-15T14:30Z",
       "away": {
         "name": "New England Patriots",
         "abbr": "NE",
-        "record": "5-4",
-        "score": 0,
+        "record": "5-5",
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
       },
       "home": {
         "name": "Detroit Lions",
         "abbr": "DET",
-        "record": "6-2",
-        "score": 0,
+        "record": "7-2",
+        "score": 35,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
       },
       "note": "NFL Munich Game"
