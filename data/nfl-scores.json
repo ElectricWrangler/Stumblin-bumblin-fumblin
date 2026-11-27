@@ -1,70 +1,70 @@
 {
   "week": 12,
-  "updatedAt": "2026-11-26T20:31:15.630Z",
+  "updatedAt": "2026-11-27T03:15:25.472Z",
   "games": [
     {
-      "id": "401873081",
-      "status": "live",
-      "detail": "3:09 - 3rd",
-      "network": "CBS",
-      "startTime": "2026-11-26T18:00Z",
-      "away": {
-        "name": "Chicago Bears",
-        "abbr": "CHI",
-        "record": "8-2",
-        "score": 24,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
-      },
-      "home": {
-        "name": "Detroit Lions",
-        "abbr": "DET",
-        "record": "8-2",
-        "score": 26,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
-      },
-      "note": ""
-    },
-    {
-      "id": "401873080",
-      "status": "scheduled",
-      "detail": "11/26 - 4:30 PM EST",
-      "network": "Fox",
-      "startTime": "2026-11-26T21:30Z",
-      "away": {
-        "name": "Philadelphia Eagles",
-        "abbr": "PHI",
-        "record": "3-7",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
-      },
-      "home": {
-        "name": "Dallas Cowboys",
-        "abbr": "DAL",
-        "record": "5-6",
-        "score": 0,
-        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-      },
-      "note": ""
-    },
-    {
       "id": "401873082",
-      "status": "scheduled",
-      "detail": "11/26 - 8:20 PM EST",
+      "status": "live",
+      "detail": "11:28 - 3rd",
       "network": "NBC",
       "startTime": "2026-11-27T01:20Z",
       "away": {
         "name": "Kansas City Chiefs",
         "abbr": "KC",
         "record": "8-2",
-        "score": 0,
+        "score": 10,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
       },
       "home": {
         "name": "Buffalo Bills",
         "abbr": "BUF",
         "record": "9-1",
-        "score": 0,
+        "score": 7,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873081",
+      "status": "final",
+      "detail": "Final",
+      "network": "CBS",
+      "startTime": "2026-11-26T18:00Z",
+      "away": {
+        "name": "Chicago Bears",
+        "abbr": "CHI",
+        "record": "9-2",
+        "score": 39,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
+      },
+      "home": {
+        "name": "Detroit Lions",
+        "abbr": "DET",
+        "record": "8-3",
+        "score": 35,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
+      },
+      "note": ""
+    },
+    {
+      "id": "401873080",
+      "status": "final",
+      "detail": "Final",
+      "network": "Fox",
+      "startTime": "2026-11-26T21:30Z",
+      "away": {
+        "name": "Philadelphia Eagles",
+        "abbr": "PHI",
+        "record": "4-7",
+        "score": 39,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+      },
+      "home": {
+        "name": "Dallas Cowboys",
+        "abbr": "DAL",
+        "record": "5-7",
+        "score": 38,
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
       },
       "note": ""
     },
