@@ -1,25 +1,25 @@
 {
   "week": 12,
-  "updatedAt": "2026-11-27T21:42:57.361Z",
+  "updatedAt": "2026-11-28T03:31:20.227Z",
   "games": [
     {
       "id": "401873083",
-      "status": "live",
-      "detail": "12:45 - 3rd",
+      "status": "final",
+      "detail": "Final",
       "network": "Prime Video",
       "startTime": "2026-11-27T20:00Z",
       "away": {
         "name": "Denver Broncos",
         "abbr": "DEN",
-        "record": "8-2",
+        "record": "8-3",
         "score": 5,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
       },
       "home": {
         "name": "Pittsburgh Steelers",
         "abbr": "PIT",
-        "record": "6-4",
-        "score": 24,
+        "record": "7-4",
+        "score": 27,
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png"
       },
       "note": ""
